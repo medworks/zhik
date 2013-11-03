@@ -1,30 +1,46 @@
-/*
- * Archtek - Responsive Modern HTML Template
- * By UXbarn
- * Themeforest Profile: http://themeforest.net/user/UXbarn?ref=UXbarn
- * Demo URL: http://themes.uxbarn.com/redirect.php?theme=archtek_html
- * Created: May 19, 2013
- */
-
-
-
-/* Table of Content
- ==================================================
- #General Styles
- #Page Structure
- #Blog Page
- #Elements
- #Widgets and Plugins
- #Custom CSS of Foundation Framework
- #Media Queries
- 
-
-
+/* #Fonts
+================================================== */
+@font-face{
+    font-family: 'bmitra';
+    src: url('../fonts/BMitra.eot');
+    src: url('../fonts/BMitra.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BMitra.woff') format('woff'),
+         url('../fonts/BMitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* #IE alert
+================================================== */
+div.alert{
+  background-color: yellow;
+  margin: 25px auto 0;
+  padding: 45px 0;
+}
+div.alert img{
+  margin-left: 50px;
+}
+div.alert p{
+  margin-right: 10px;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: "normal";
+}
 /* #General Styles
 ================================================== */
 body {
 	background: #efefee;
 	cursor:	auto;
+	font-family: 'bmitra';
+}
+
+.ltr{
+	direction: ltr;
+}
+
+h1,h2,h3,h4,h5,h6,a,p,strong,input,span{
+	direction: rtl;
+	font-family: 'bmitra' !important;
+	font-weight: normal !important;
 }
 
 a, a:visited {
@@ -215,7 +231,7 @@ strong {
 
 #logo-wrapper {
 	float: left;
-	padding: 60px 40px 17px;
+	padding: 32px 40px 17px;
 }
 
 #logo {
@@ -251,7 +267,7 @@ strong {
 
 #root-menu > li > a {
 	display: inline-block; /* Can solve mysterious 1px diff in FF and Chrome. */
-	font-size: 17px;
+	font-size: 24px;
 	line-height: 1;
 	padding: 18px 16px 17px;
 	
@@ -393,7 +409,7 @@ span.sf-sub-indicator {
 	display: inline-block;
 	font-size: 18px;
 	margin: 0;
-	padding: 21px 21px 21px 22px;
+	padding: 27px 21px 21px 22px;
 	text-decoration: none;
 }
 
@@ -580,6 +596,7 @@ span.sf-sub-indicator {
 #content-container p {
 	line-height: 1.5;
 	margin-bottom: 18px;
+	font-size: 16px;
 }
 
 #content-container h1,
@@ -607,7 +624,7 @@ span.sf-sub-indicator {
 
 #content-container h3,
 #content-container h2.smaller {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 24px;
 	margin-bottom: 12px;
 }
@@ -661,7 +678,7 @@ span.sf-sub-indicator {
 	color: #333;
 	font-size: 42px;
 	font-weight: 300 !important;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	line-height: 54px;
 	margin-bottom: 36px;
 }
@@ -774,7 +791,7 @@ span.sf-sub-indicator {
 	border-bottom: 3px solid #fff;*/
 	border-bottom: 1px solid #fff;
 	color: #fff !important; 
-	font-size: 18px !important;
+	font-size: 24px !important;
 	font-weight: 600 !important;
 	line-height: 1 !important;
 	margin-bottom: 24px !important;
@@ -813,6 +830,10 @@ span.sf-sub-indicator {
 .portfolio-item-hover a {
 	color: #fff !important;
 	text-decoration: none;
+}
+
+.portfolio-item-hover ul li a{
+	font-size: 18px;
 }
 
 .portfolio-item-hover a:hover {
@@ -1137,7 +1158,7 @@ span.sf-sub-indicator {
 #footer-content h5 {
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 12px;
@@ -1756,11 +1777,12 @@ ul.children {
 .button.bottom-right {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	left: 0;
 }
 
 .button.angle {
-	padding-right: 42px;
+	/*padding-right: 42px;*/
+	font-size: 15px;
 }
 
 .button.angle span {
@@ -1768,7 +1790,7 @@ ul.children {
 	border-left: 1px solid rgba(255,255,255,0.4);
 	display: inline-block;
 	position: absolute;
-	padding: 8px 13px 6px;
+	padding: 9px 13px 6px;
 	top: 2px;
 	margin-left: 10px;
 	font-size: 18px;

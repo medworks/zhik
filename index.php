@@ -7,9 +7,9 @@
 
 <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 Remove this if you use the .htaccess -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-<title>Archtek. | The modern template for your business.</title>
+<title>Zhik</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <script type="text/javascript">
@@ -39,7 +39,7 @@ try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",ba
 <script src="js/custom.modernizr.js"></script>
 
 <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-<link rel="shortcut icon" href="images/favicon.png">
+<link rel="shortcut icon" href="images/favicon.ico">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <script type="text/javascript">
 /* <![CDATA[ */
@@ -59,12 +59,20 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </head>
 
     <body>
-
+        <script type="text/javascript" src="js/CFInstall.js"></script>
+        <script>
+           CFInstall.check({
+                url: "./ie.html",
+                mode: "overlay",
+                destination: "http://www.mediateq.ir/zhik",
+           });
+        </script>
         <div id="header-container" class="content-width">
     <!-- Logo -->
     <div id="logo-wrapper">
         <div id="logo">
-            <a href="index.php"><img src="images/logo.png" alt="Zhik"></a>
+            <a href="./"><img src="images/logo.png" alt="Zhik"></a>
+            <p class="ltr">Zhik.pro</p>
         </div>
     </div>
     <!-- Menu -->
@@ -219,23 +227,29 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                 <div class="home-slider-item">
                     <img src="images/demo/slider/slide1.jpg" alt="Slide 1">
                     <div class="slider-caption">
-                        <h2>We create &amp; deliver great design.</h2>
+                        <h2>برج پزشکی ژیک.</h2>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                            برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
                         </p>
                     </div>
                 </div>
                 <div class="home-slider-item">
                     <img src="images/demo/slider/slide3.jpg" alt="Slide 2">
                     <div class="slider-caption">
-                        <h2>Great development.</h2>
+                        <h2>برج پزشکی ژیک.</h2>
                         <p>
-                            Natus error sit voluptatem accusantium doloremque.
+                            برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
                         </p>
                     </div>
                 </div>
                 <div class="home-slider-item">
                     <img src="images/demo/slider/slide3-new2.jpg" alt="Slide 3">
+                    <div class="slider-caption">
+                        <h2>برج پزشکی ژیک.</h2>
+                        <p>
+                            برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div id="slider-controller" class="content-width">
@@ -252,13 +266,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             <!-- Page Intro -->
             <div id="intro" class="row">
                 <div class="large-12 columns">
-                    <h1>Welcome to <strong>Archtek.</strong> The modern template.</h1>
+                    <h1>به ژیک خوش آمدید.</h1>
                     <div id="intro-line">
                         <hr class="stick">
                         <hr>
                     </div>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.
+                        پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... 
                     </p>
                 </div>
             </div>
@@ -271,12 +285,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                             <img src="images/demo/feature1.jpg" alt="" class="stretch-image">
                         </div>
                         <div class="large-6 columns height-510 bottom-line">
-                            <h2 class="smaller">All New Approach.</h2>
-                            <h3 class="light uppercase larger">Today's Most Modern Business.</h3>
+                            <h2 class="smaller">نمایش بهینه سایت.</h2>
+                            <h3 class="light uppercase larger">نمایش بهینه سایت بروی تمام ابزارها.</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                امروزه صفحه نمایش ها از 320 پیکسل شروع شده و به 2560 پیکسل و حتی بزرگتر ختم میشود. بنابراین طرح های سنتی و قدیمی با عرض ثابت جوابگو نیست و طراحی های جدید نیاز به استفاده از روش انطباقی (Responsive) دارد.
                             </p>
-                            <a href="#" class="bottom-right angle flat button">Learn more<span class="angle"><i class="icon-angle-right"></i></span></a>
+                            <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -286,11 +300,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                             <img src="images/demo/feature2.jpg" alt="" class="stretch-image">
                         </div>
                         <div class="large-6 columns height-255 bottom-line">
-                            <h2 class="smaller">Fully Responsive.</h2>
+                            <h2 class="smaller">نمایش رسپانسیو سایت.</h2>
                             <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                امروزه صفحه نمایش ها از 320 پیکسل شروع شده و به 2560 پیکسل و حتی بزرگتر ختم میشود. بنابراین طرح های سنتی و.....
                             </p>
-                            <a href="#" class="bottom-right angle flat button">Learn more<span class="angle"><i class="icon-angle-right"></i></span></a>
+                            <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                         </div>
                     </div>
                     <div class="row">
@@ -298,11 +312,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                             <img src="images/demo/feature3.jpg" alt="" class="stretch-image">
                         </div>
                         <div class="large-6 columns height-255 bottom-line">
-                            <h2 class="smaller">Project Showcase.</h2>
+                            <h2 class="smaller">رتبه سایت.</h2>
                             <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                ممکن است که وب سایت یا وبلاگ شخصی داشته باشید که این روزها اکثر افراد دارند. در راه اندازی سایت، مراحل متعددی مانند طراحی، محتوا و بهینه ...
                             </p>
-                            <a href="#" class="bottom-right angle flat button">Learn more<span class="angle"><i class="icon-angle-right"></i></span></a>
+                            <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -315,22 +329,22 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <div class="portfolio-wrapper">
 
                         <div class="fixed-box portfolio-item bottom-line">
-                            <h2 class="smaller">Our Recent Projects.</h2>
+                            <h2 class="smaller">پروژه های ما.</h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nunc feugiat mi a tellus at consequat. Proinquam. Etiam ultrices.
+                                توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... 
                             </p>
-                            <a href="portfolio-list.php" class="bottom-right angle flat button">View all projects<span class="angle"><i class="icon-angle-right"></i></span></a>
+                            <a href="portfolio-list.php" class="bottom-right angle flat button">نمایش همه پروژه ها<span class="angle"><i class="icon-angle-left"></i></span></a>
                         </div>
     
                         <div class="kitchen mockup portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">Modern Kitchen Development</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Kitchen</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Mock-up</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
                                 </ul>
                             </div>
@@ -338,13 +352,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                         </div>
                         <div class="furniture interior portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">Creamy Living Room</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Furniture</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Interior</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
                                 </ul>
                             </div>
@@ -353,13 +367,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     
                         <div class="room interior portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">New Sense Bathroom</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Interior</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Room</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
                                 </ul>
                             </div>
@@ -367,47 +381,47 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                         </div>
                         <div class="interior mockup room portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">Open-Style &amp; Modern Living Room</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Interior</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Mock-up</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">Room</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                             <img src="images/demo/portfolio/project-thumb4.jpg" alt="" class="stretch-image">
                         </div>
                         <div class="interior mockup furniture portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">Comfortable Brown Sofa</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Furniture</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Interior</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">Mock-up</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                             <img src="images/demo/portfolio/project-thumb5.jpg" alt="" class="stretch-image">
                         </div>
                         <div class="kitchen interior portfolio-item">
                             <div class="portfolio-item-hover">
-                                <h3><a href="portfolio-single.php">Clean Wooden Kitchen</a></h3>
+                                <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Interior</a>
+                                        <a href="#">عکسها</a>
                                     </li>
                                     <li>
-                                        <a href="#">Kitchen</a>
+                                        <a href="#">مشخصات</a>
                                     </li>
                                 </ul>
                             </div>
@@ -420,7 +434,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             </div>
 
             <!-- Testimonial Slider -->
-            <div class="row top-margin no-bg">
+            <!-- <div class="row top-margin no-bg">
                 <div class="large-12 columns no-padding">
                     
                     <div class="testimonial-wrapper">
@@ -462,13 +476,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     </div>
                     
                 </div>
-            </div>
+            </div> -->
 
             <!-- Blog -->
             <div class="row top-margin">
                 <div class="large-12 columns bottom-line">
-                    <h3 class="no-margin">News Update.</h3>
-                    <a href="blog-list.php" class="bottom-right angle flat button">View all news<span class="angle"><i class="icon-angle-right"></i></span></a>
+                    <h3 class="no-margin">آخرین خبرها...</h3>
+                    <a href="blog-list.php" class="bottom-right angle flat button">نمایش خبرها<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
             <div class="row">
@@ -476,12 +490,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <div class="right-border row">
                         <div class="large-12 columns height-255">
                             <div class="blog-meta">
-                                <span class="date">May 30, 2013</span>
+                                <span class="date">1392/08/12</span>
                             </div>
                             <hr>
-                            <h4 class="blog-title"><a href="blog-single.php">Sed ut perspicia unde omnis iste natus labore et dolore mag</a></h4>
+                            <h4 class="blog-title"><a href="blog-single.php">برج پزشکی ژیک</a></h4>
                             <p class="excerpt">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر 11500 متر مربع در 14 طبقه مشتمل بر 70 واحد پزشکی با متراژهای مختلف افتتاح گردید.
                             </p>
                         </div>
                     </div>
@@ -495,10 +509,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <div class="right-border row">
                         <div class="large-12 columns height-255">
                             <div class="blog-meta">
-                                <span class="date">May 15, 2013</span>
+                                <span class="date">1392/08/12</span>
                             </div>
                             <hr>
-                            <h4 class="sub-blog-title"><a href="blog-single.php">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
+                            <h4 class="sub-blog-title"><a href="blog-single.php">برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر...</a></h4>
                         </div>
                     </div>
                     <div class="row">
@@ -511,10 +525,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <div class="row">
                         <div class="large-12 columns height-255">
                             <div class="blog-meta">
-                                <span class="date">May 9, 2013</span>
+                                <span class="date">1392/08/12</span>
                             </div>
                             <hr>
-                            <h4 class="sub-blog-title"><a href="blog-single.php">Ut enim ad minim veniam consectetur adipisicing elit, sed do eiusmod</a></h4>
+                            <h4 class="sub-blog-title"><a href="blog-single.php">برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر...</a></h4>
                         </div>
                     </div>
                     <div class="row">
@@ -532,18 +546,24 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <div id="footer-content-container">
     <div id="footer-content-inner-wrapper" class="content-width">
         <div id="footer-content" class="row top-margin">
-            <div class="large-4 columns less-padding">
+            <!-- <div class="large-4 columns less-padding">
                 <img id="footer-logo" src="images/logo.png" alt="">
                 <p>
                     Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Pellentesque nibh.
                 </p>
-            </div>
+            </div> -->
             <div class="large-4 columns less-padding">
-                <h5>Contact Info.</h5>
+                <h5>اخبار</h5>
                 <p>
-                    456 Fifth Avenue, 39th floor. New York, USA
+                    سه خبر آخر در این قسمت قرار میگیرد 
                 </p>
-                <ul>
+                <p>
+                    سه خبر آخر در این قسمت قرار میگیرد 
+                </p>
+                <p>
+                    سه خبر آخر در این قسمت قرار میگیرد 
+                </p>
+                <!-- <ul>
                     <li>
                         Phone: +123.456.789
                     </li>
@@ -557,14 +577,35 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 /* ]]> */
 </script></a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <div class="large-4 columns less-padding">
-                <h5>Join Us.</h5>
+                <h5>پروژه ها</h5>
                 <p>
-                    Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                    سه پروژه آخر در این قسمت قرار میگیرد 
                 </p>
-                <a href="#" class="flat button">See Career Opportunity</a>
+                <p>
+                    سه پروژه آخر در این قسمت قرار میگیرد 
+                </p>
+                <p>
+                    سه پروژه آخر در این قسمت قرار میگیرد 
+                </p>
+                <!-- <a href="#" class="flat button">See Career Opportunity</a> -->
+            </div>
+            <div class="large-4 columns less-padding">
+                <h5>مقالات</h5>
+                <p>
+                    سه مقاله آخر در این قسمت قرار میگیرد 
+                </p>
+                <p>
+                    سه مقاله آخر در این قسمت قرار میگیرد 
+                </p>
+                <p>
+                    سه مقاله آخر در این قسمت قرار میگیرد 
+                </p>
+                <p>
+                    سه مقاله آخر در این قسمت قرار میگیرد 
+                </p>
             </div>
         </div>
     </div>
@@ -574,11 +615,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <div id="footer-bar-container" class="row">
     <div id="footer-bar-inner-wrapper" class="content-width">
         <div class="large-6 columns less-padding">
-            2013 © Archtek. Premium Template by <a href="http://themeforest.net/user/UXbarn?ref=UXbarn">UXbarn</a>.
+            Zhik © Copyright 2013, All rights reserved by Zhik company <!-- <a href="http://themeforest.net/user/UXbarn?ref=UXbarn">UXbarn</a> -->.
         </div>
         <div class="large-6 columns less-padding">
             <div id="footer-social">
-                <span>Connect with us:</span> 
                 <ul class="bar-social">
                     <li>
                         <a href="#" target="_blank"><img src="images/social/facebook-bw.png" alt="" title=""><img class="hover" src="images/social/facebook.png" alt="Facebook" title="Facebook"></a>
@@ -611,6 +651,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                         <a href="#" target="_blank"><img src="images/social/rss-bw.png" alt="" title=""><img class="hover" src="images/social/rss.png" alt="RSS" title="RSS"></a>
                     </li>
                 </ul>
+                <span>:ارتباط با ما از طریق</span>
             </div>
         </div>
     </div>

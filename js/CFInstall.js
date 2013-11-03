@@ -105,7 +105,7 @@
                  '.chromeFrameOverlayContent {' +
                    'position: absolute;' +
                    'margin-left: -400px;' +
-                   'margin-top: -300px;' +
+                   'margin-top: -1400px;' +
                    'left: 50%;' +
                    'top: 50%;' +
                    'background-color: white;' +

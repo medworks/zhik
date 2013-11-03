@@ -244,14 +244,14 @@ strong {
 
 #root-menu li {
 	display: block;
-	float: left;
+	float: right;
 	position: relative;
 	z-index: 999;
 }
 
 #root-menu > li > a {
 	display: inline-block; /* Can solve mysterious 1px diff in FF and Chrome. */
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 1;
 	padding: 18px 16px 17px;
 	

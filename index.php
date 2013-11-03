@@ -64,32 +64,29 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <!-- Logo -->
     <div id="logo-wrapper">
         <div id="logo">
-            <a href="index.php"><img src="images/logo.png" alt="Archtek"></a>
-            <p>
-                We design and construct your satisfaction.
-            </p>
+            <a href="index.php"><img src="images/logo.png" alt="Zhik"></a>
         </div>
     </div>
     <!-- Menu -->
     <div id="menu-wrapper">
         <ul id="root-menu" class="sf-menu">
             <li>
-                <a href="index.php" class="active">Home</a>
+                <a href="#" class="active">صفحه اصلی</a>
                 <ul>
                     <li>
-                        <a href="index.php">Home Style 1</a>
+                        <a href="index.php">صفحه اصلی 1</a>
                     </li>
                     <li>
-                        <a href="index-2.php">Home Style 2</a>
+                        <a href="index-2.php">صفحه اصلی 2</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="about-us.php">About Us</a>
+                <a href="#">درباره ما</a>
             </li>
             <li>
-                <a href="portfolio-list.php">Portfolio</a>
-                <ul>
+                <a href="#">پروژه ها</a>
+                <!-- <ul>
                     <li>
                         <a href="portfolio-list.php">List Page</a>
                     </li>
@@ -104,11 +101,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                             </li>
                         </ul>
                     </li>
-                </ul>
+                </ul> -->
             </li>
             <li>
-                <a href="blog-list.php">Blog</a>
-                <ul>
+                <a href="#">اخبار</a>
+                <!-- <ul>
                     <li>
                         <a href="blog-list.php">List Page</a>
                     </li>
@@ -118,11 +115,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <li>
                         <a href="blog-single.php">Single Page</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
             <li>
-                <a href="#">Other Pages</a>
-                <ul>
+                <a href="#">مقالات</a>
+                <!-- <ul>
                     <li>
                         <a href="gallery-1.php">Gallery Style 1</a>
                     </li>
@@ -141,11 +138,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <li>
                         <a href="404.php">404 - Page Not Found</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
             <li>
-                <a href="#">Elements</a>
-                <ul class="flip">
+                <a href="#">تماس با ما</a>
+                <!-- <ul class="flip">
                     <li>
                         <a href="elements-layouts.php">Layouts</a>
                     </li>
@@ -179,11 +176,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     <li>
                         <a href="elements-dropcaps-highlights-dividers.php">Drop Caps, Highlights and Dividers</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
-            <li>
+            <!-- <li>
                 <a href="contact-us.php">Contact</a>
-            </li>
+            </li> -->
         </ul>
         
         <nav id="mobile-menu" class="top-bar">

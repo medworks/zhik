@@ -141,7 +141,7 @@ select {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
-    float: left; }
+    float: right; }
 
   .small-1 {
     position: relative;
@@ -263,7 +263,7 @@ select {
 
   .large-4 {
     position: relative;
-    width: 33.33333%; }
+    width: 255px; }
 
   .large-5 {
     position: relative;

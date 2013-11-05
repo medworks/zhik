@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="fa"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="fa"><!--<![endif]-->
+<!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="fa">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <html class="no-js" lang="fa">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="-v04lxRhdr83WUdcvx52bws3lGnycYZQE03LNstOteg" />
+    <meta name="description" content="<?php echo $seo->Site_Describtion;?>"/>
+    <meta name="keywords" content="<?php echo $seo->Site_KeyWords;?>"/>
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta http-equiv="Content-Language"  content="Fa">
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
     Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -77,15 +86,15 @@
     <div id="menu-wrapper">
         <ul id="root-menu" class="sf-menu">
             <li>
-                <a href="#" class="active">صفحه اصلی</a>
-                <ul>
+                <a href="./" class="active">صفحه اصلی</a>
+               <!--  <ul>
                     <li>
                         <a href="index.php">صفحه اصلی 1</a>
                     </li>
                     <li>
                         <a href="index-2.php">صفحه اصلی 2</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
             <li>
                 <a href="about-us.html">درباره ما</a>

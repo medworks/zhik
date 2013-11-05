@@ -733,8 +733,10 @@ span.sf-sub-indicator {
 }
 
 #breadcrumbs-wrapper span {
-	float: left;
-	margin-right: 12px;
+	float: right;
+	margin-left: 12px;
+	font-size: 17px;
+	margin-top: 5px;
 }
 
 /***** Portfolio *****/
@@ -2387,7 +2389,7 @@ form.custom .custom.dropdown li {
 .breadcrumbs {
     border:none;
     background:none;
-    float: left;
+    float: right;
     font-size: 12px;
     line-height: 1 !important;
     list-style: none !important;
@@ -2399,6 +2401,10 @@ form.custom .custom.dropdown li {
 
 .breadcrumbs li {
     margin-left: 0 !important;
+}
+
+.breadcrumbs li a{
+    font-size: 17px;
 }
 
 .breadcrumbs li.current a {

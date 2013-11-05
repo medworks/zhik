@@ -1,0 +1,29 @@
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.container{
+		width: 320px;
+		height: 480px;
+	}
+	.container .inner{
+		padding: 0 12px;
+	}
+	header .time,header .search,header .top-menu menu,header .ads,header .main-menu menu{
+		display: none;
+	}
+	header .top-menu select.top-menu-mob,
+	header .main-menu select.main-menu-mob{
+		display: block !important;
+	}
+	header .mid .logo{
+		float: none;
+		margin: 0;
+	}
+	header .mid .logo h2{
+		text-align: center;
+	}
+	header .mid .logo img{
+		width: 150px;
+		height: 94px;
+		margin: 0;
+	}
+
+}

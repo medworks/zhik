@@ -1,0 +1,72 @@
+body{
+	background: url('../images/bg.jpg') center;
+}
+
+div,table,input,a,p,form{
+	direction: rtl;
+}
+
+.ltr{
+	direction: ltr;
+}
+
+.enfont{
+    font-family: 'Helvetica Neue", Helvetica, Arial, sans-serif';
+    font-size: 17px;
+}
+
+a:active,
+a:visited,
+a:link{ 
+    border: none;
+    outline: none;
+}
+
+a,p,span{
+	font-family: 'bmitra';
+}
+
+a,
+a p{
+	color: #5c5c5c;
+	text-align: right;
+	text-decoration: none;
+	-webkit-transition: all ease-in-out 0.2s;
+	-moz-transition: all ease-in-out 0.2s;
+	-ms-transition: all ease-in-out 0.2s;
+	-o-transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.2s;
+}
+
+p,label,h1,h2,h3,h4{
+	text-align: right;
+	font-family: 'bmitra';
+}
+/*********************************404 page*****************************/
+.notfoundpage{
+	margin-top: 100px;
+}
+
+.not-found{
+	color: #555555;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'bmitra';
+}
+
+.not-found p{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.notfoundpage .mid{
+	margin-top: 50px;
+}
+
+.notfoundpage .mid .logo h2{
+	text-align: center;
+}
+
+.notfoundpage .mid .logo a strong{
+	display: none;
+}

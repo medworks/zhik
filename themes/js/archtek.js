@@ -1,11 +1,3 @@
-/*
- * Archtek - Responsive Modern HTML Template
- * By UXbarn
- * Themeforest Profile: http://themeforest.net/user/UXbarn?ref=UXbarn
- * Demo URL: http://themes.uxbarn.com/redirect.php?theme=archtek_html
- * Created: May 19, 2013
- */
-
 jQuery(document).ready(function($) {
     /* #DEMO
      ================================================== */

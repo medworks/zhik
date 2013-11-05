@@ -86,7 +86,7 @@
     <div id="menu-wrapper">
         <ul id="root-menu" class="sf-menu">
             <li>
-                <a href="./" class="active">صفحه اصلی</a>
+                <a href="./">صفحه اصلی</a>
                <!--  <ul>
                     <li>
                         <a href="index.php">صفحه اصلی 1</a>

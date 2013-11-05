@@ -736,5 +736,20 @@ jQuery(document).ready(function($) {
         
         return list;
     }
+
+    // Active Main Menu
+
+    var url= window.location.href;
+    $('#menu-wrapper > ul > li > a').each(function(){
+        if(this.href.trim() == url){
+            $(this).addClass("active");
+            return false;
+        }else if(url.match(/page/i)){
+            var href= window.location.href.substr(url.indexOf("/"));
+            href= href.split('-');
+            href= href[0].split('/');           
+            $('.main-menu a[href*="'+href[3]+'"]').parent().addClass('active');
+        }
+    });
     
 });

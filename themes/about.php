@@ -35,7 +35,7 @@ $html=<<<cd
                     <p>
                         Sed tortor arcu, egestas eu molestie in, lacinia luctus justo. Suspendisse semper, justo eget hendrerit viverra, mauris ligula gravida lorem, vitae mollis nisi nisl sed velit. Phasellus tempus mi id mauris accumsan dapibus. Vestibulum luctus porta nisi, a blandit quam volutpat at. Praesent in sapien arcu, ut malesuada dui. Morbi sed felis eget lectus semper tincidunt eget at nisl.
                     </p>
-                    <a href="#" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;Download PDF Sheet</a>
+                    <a href="#" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;دانلود با فرمت PDF</a>
                 </div>
                 <div class="large-6 columns no-padding">
                     <div class="image-slider-wrapper">

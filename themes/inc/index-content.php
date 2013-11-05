@@ -1,6 +1,17 @@
 <?php
-    include_once("inc/header.php");
-?>
+    include_once("config.php");
+    include_once("classes/functions.php");
+    include_once("classes/seo.php");
+    $seo = Seo::GetSeo(); 
+
+    if (GetPageName($_GET['item'],$_GET['act'])){
+        echo include_once GetPageName($_GET['item'],$_GET['act']);
+    }else{
+        include_once("./classes/database.php");
+        include_once("./lib/persiandate.php");
+        $db = database::GetDatabase();  
+
+$html=<<<cd
 <!-- Home Slider Container -->
 <div id="home-slider-container">
 
@@ -312,6 +323,7 @@
     </div>
 </div>
 <!-- End id="content-container" -->
-<?php
-    include_once('inc/footer.php');
+cd;
+    echo $html;
+    }
 ?>

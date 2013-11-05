@@ -23,7 +23,7 @@
     </script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Titillium+Web:400,600" rel="stylesheet" type="text/css">
-    <link href="./themes/css/reset.css" rel="stylesheet">
+    <link href="themes/css/reset.css" rel="stylesheet">
     <link href="themes/css/foundation.css" rel="stylesheet">
     <link href="themes/css/font-awesome.min.css" rel="stylesheet">
     <link href="themes/css/isotope.css" rel="stylesheet">
@@ -88,7 +88,7 @@
                 </ul>
             </li>
             <li>
-                <a href="themes/about.php">درباره ما</a>
+                <a href="about-us.html">درباره ما</a>
             </li>
             <li>
                 <a href="#">پروژه ها</a>

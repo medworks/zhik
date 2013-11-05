@@ -1,3 +1,3 @@
 <?php
-	include_once('themes/index.php');
+	include_once('themes/main.php');
 ?>

@@ -602,34 +602,34 @@
             <div id="footer-social">
                 <ul class="bar-social">
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/facebook-bw.png" alt="" title=""><img class="hover" src="images/social/facebook.png" alt="Facebook" title="Facebook"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/facebook-bw.png" alt="" title=""><img class="hover" src="themes/images/social/facebook.png" alt="Facebook" title="Facebook"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/twitter-bw.png" alt="" title=""><img class="hover" src="images/social/twitter.png" alt="Twitter" title="Twitter"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/twitter-bw.png" alt="" title=""><img class="hover" src="themes/images/social/twitter.png" alt="Twitter" title="Twitter"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/googleplus-bw.png" alt="" title=""><img class="hover" src="images/social/googleplus.png" alt="Google+" title="Google+"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/googleplus-bw.png" alt="" title=""><img class="hover" src="themes/images/social/googleplus.png" alt="Google+" title="Google+"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/linkedin-bw.png" alt="" title=""><img class="hover" src="images/social/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/linkedin-bw.png" alt="" title=""><img class="hover" src="themes/images/social/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/flickr-bw.png" alt="" title=""><img class="hover" src="images/social/flickr.png" alt="Flickr" title="Flickr"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/flickr-bw.png" alt="" title=""><img class="hover" src="themes/images/social/flickr.png" alt="Flickr" title="Flickr"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/vimeo-bw.png" alt="" title=""><img class="hover" src="images/social/vimeo.png" alt="Vimeo" title="Vimeo"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/vimeo-bw.png" alt="" title=""><img class="hover" src="themes/images/social/vimeo.png" alt="Vimeo" title="Vimeo"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/youtube-bw.png" alt="" title=""><img class="hover" src="images/social/youtube.png" alt="YouTube" title="YouTube"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/youtube-bw.png" alt="" title=""><img class="hover" src="themes/images/social/youtube.png" alt="YouTube" title="YouTube"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/forrst-bw.png" alt="" title=""><img class="hover" src="images/social/forrst.png" alt="Forrst" title="Forrst"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/forrst-bw.png" alt="" title=""><img class="hover" src="themes/images/social/forrst.png" alt="Forrst" title="Forrst"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/dribbble-bw.png" alt="" title=""><img class="hover" src="images/social/dribbble.png" alt="Dribbble" title="Dribbble"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/dribbble-bw.png" alt="" title=""><img class="hover" src="themes/images/social/dribbble.png" alt="Dribbble" title="Dribbble"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/rss-bw.png" alt="" title=""><img class="hover" src="images/social/rss.png" alt="RSS" title="RSS"></a>
+                        <a href="#" target="_blank"><img src="themes/images/social/rss-bw.png" alt="" title=""><img class="hover" src="themes/images/social/rss.png" alt="RSS" title="RSS"></a>
                     </li>
                 </ul>
                 <span>:ارتباط با ما از طریق</span>

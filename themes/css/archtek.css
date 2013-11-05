@@ -37,6 +37,10 @@ body {
 	direction: ltr;
 }
 
+.rtl{
+	direction: rtl;
+}
+
 h1,h2,h3,h4,h5,h6,a,p,strong,input,span{
 	direction: rtl;
 	font-family: 'bmitra' !important;
@@ -634,7 +638,7 @@ span.sf-sub-indicator {
 }
 
 #content-container h4 {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 22px;
 	margin-bottom: 12px;
 }
@@ -1306,7 +1310,7 @@ span.sf-sub-indicator {
 
 .author-comments a {
 	color: #6d6d6d !important;
-	margin-left: 6px;
+	margin-right: 6px;
 	text-decoration: none;
 }
 

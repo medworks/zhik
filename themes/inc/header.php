@@ -119,7 +119,7 @@
                 </ul> -->
             </li>
             <li>
-                <a href="#">اخبار</a>
+                <a href="news.html">اخبار</a>
                 <!-- <ul>
                     <li>
                         <a href="blog-list.php">List Page</a>

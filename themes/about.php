@@ -130,7 +130,6 @@ $html=<<<cd
                 </div>
             </div>
         </div>
-        <!-- End id="content-container" -->
 cd;
     return $html;
 ?>

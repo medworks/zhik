@@ -654,6 +654,7 @@ span.sf-sub-indicator {
 #content-container li {
 	line-height: 1.5;
 	margin-left: 18px;
+	text-align: right;
 }
 
 #content-container li:last-child {

@@ -1339,7 +1339,7 @@ form.custom {
     width: auto;
     display: none;
     margin: 0;
-    left: -1px;
+    right: -1px;
     top: auto;
     -webkit-box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);

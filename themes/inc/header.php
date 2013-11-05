@@ -100,7 +100,7 @@
                 <a href="about-us.html">درباره ما</a>
             </li>
             <li>
-                <a href="#">پروژه ها</a>
+                <a href="works.html">پروژه ها</a>
                 <!-- <ul>
                     <li>
                         <a href="portfolio-list.php">List Page</a>

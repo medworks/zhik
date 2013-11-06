@@ -98,11 +98,11 @@
             </li>
             <li>
                 <a href="works.html">پروژه ها</a>
-                <!-- <ul>
+                <ul>
                     <li>
-                        <a href="portfolio-list.php">List Page</a>
+                        <a href="work-fullpage1.html">پروژه برج پزشکی ژیک</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="portfolio-single.php">Single Page</a>
                         <ul>
                             <li>
@@ -112,14 +112,14 @@
                                 <a href="portfolio-single-video.php">Video Format</a>
                             </li>
                         </ul>
-                    </li>
-                </ul> -->
+                    </li> -->
+                </ul>
             </li>
             <li>
                 <a href="news.html">اخبار</a>
                 <ul>
                     <li>
-                        <a href="news-fullpage1.html">خبر تکی</a>
+                        <a href="news-fullpage1.html">برج پزشکی ژیک</a>
                     </li>
                     <!-- <li>
                         <a href="blog-list-left-sidebar.php">List Page (Left Sidebar)</a>

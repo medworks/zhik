@@ -904,6 +904,7 @@ span.sf-sub-indicator {
 
 #portfolio-item-meta a {
 	color: #1B83BE;
+	font-size: 17px;
 }
 
 #portfolio-item-meta p {
@@ -924,7 +925,7 @@ span.sf-sub-indicator {
 #portfolio-item-meta strong {
     display: inline-block;
     margin-bottom: 5px;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #portfolio-item-categories {

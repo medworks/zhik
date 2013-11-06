@@ -2226,12 +2226,12 @@ hr.divider.dashed {
 }
 
 .posts-widget .post-thumbnail {
-	float: left;
+	float: right;
 	width: 40px;
 }
 
 .posts-widget .post-title {
-	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .posts-widget .date {

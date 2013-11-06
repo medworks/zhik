@@ -3,13 +3,23 @@
     include_once("classes/functions.php");
     include_once("classes/seo.php");
     $seo = Seo::GetSeo(); 
-
     if (GetPageName($_GET['item'],$_GET['act'])){
         echo include_once GetPageName($_GET['item'],$_GET['act']);
     }else{
         include_once("./classes/database.php");
         include_once("./lib/persiandate.php");
-        $db = database::GetDatabase();  
+        $db = Database::GetDatabase();  
+		$articles = $db->SelectAll("articles","*",null,"ndate DESC","0","3");
+		$articles[0]["body"] =(mb_strlen($articles[0]["body"])>400)?
+                mb_substr(html_entity_decode(strip_tags($articles[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 400,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($articles[0]["body"]), ENT_QUOTES, "UTF-8");
+		$articles[1]["body"] =(mb_strlen($articles[1]["body"])>50)?
+                mb_substr(html_entity_decode(strip_tags($articles[1]["body"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($articles[1]["body"]), ENT_QUOTES, "UTF-8");
+       
+        $articles[2]["body"] =(mb_strlen($articles[2]["body"])>50)?
+                mb_substr(html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8");
 
 $html=<<<cd
 <!-- Home Slider Container -->
@@ -70,13 +80,12 @@ $html=<<<cd
         <div class="large-6 columns for-nested">
             <div class="row">
                 <div class="large-6 columns height-510 no-padding">
-                    <img src="themes/images/demo/feature1.jpg" alt="" class="stretch-image">
+                    <img src="{$articles[0][image]}" alt="{$articles[0][subject]}" class="stretch-image" style="width:255px;height:510px;">
                 </div>
                 <div class="large-6 columns height-510 bottom-line">
-                    <h2 class="smaller">نمایش بهینه سایت.</h2>
-                    <h3 class="light uppercase larger">نمایش بهینه سایت بروی تمام ابزارها.</h3>
+                    <h2 class="smaller">{$articles[0]["subject"]}</h2>                    
                     <p>
-                        امروزه صفحه نمایش ها از 320 پیکسل شروع شده و به 2560 پیکسل و حتی بزرگتر ختم میشود. بنابراین طرح های سنتی و قدیمی با عرض ثابت جوابگو نیست و طراحی های جدید نیاز به استفاده از روش انطباقی (Responsive) دارد.
+                      {$articles[0]["body"]}
                     </p>
                     <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
@@ -85,24 +94,24 @@ $html=<<<cd
         <div class="large-6 columns for-nested">
             <div class="row">
                 <div class="large-6 columns height-255 no-padding">
-                    <img src="themes/images/demo/feature2.jpg" alt="" class="stretch-image">
+                    <img src="{$articles[1][image]}" alt="{$articles[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="large-6 columns height-255 bottom-line">
-                    <h2 class="smaller">نمایش رسپانسیو سایت.</h2>
+                    <h2 class="smaller">{$articles[1]["subject"]}</h2>
                     <p>
-                        امروزه صفحه نمایش ها از 320 پیکسل شروع شده و به 2560 پیکسل و حتی بزرگتر ختم میشود. بنابراین طرح های سنتی و.....
+                         {$articles[1]["body"]}
                     </p>
                     <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
             <div class="row">
                 <div class="large-6 columns height-255 no-padding">
-                    <img src="themes/images/demo/feature3.jpg" alt="" class="stretch-image">
+                    <img src="{$articles[2][image]}" alt="{$articles[2][subject]}" class="stretch-image" style="width:255px;height:255px;" >
                 </div>
                 <div class="large-6 columns height-255 bottom-line">
-                    <h2 class="smaller">رتبه سایت.</h2>
+                    <h2 class="smaller">{$articles[2]["subject"]}</h2>
                     <p>
-                        ممکن است که وب سایت یا وبلاگ شخصی داشته باشید که این روزها اکثر افراد دارند. در راه اندازی سایت، مراحل متعددی مانند طراحی، محتوا و بهینه ...
+                        {$articles[2]["body"]}
                     </p>
                     <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>

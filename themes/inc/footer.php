@@ -131,6 +131,6 @@
     <script src="themes/js/jquery.validationEngine-en.js"></script>
     <script src="themes/js/jquery.validationEngine.js"></script>
     <script src="themes/js/jquery.scrollUp.min.js"></script>
-    <script src="themes/js/archtek.js?v=1"></script>
+    <script src="themes/js/scripts.js?v=1"></script>
 </body>
 </html>

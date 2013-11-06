@@ -35,7 +35,7 @@
     <link href="themes/css/isotope.css" rel="stylesheet">
     <link href="themes/css/jquery.fancybox-1.3.4.css" rel="stylesheet">
     <link href="themes/css/validationEngine.jquery.css" rel="stylesheet">
-    <link href="themes/css/archtek-init.css" rel="stylesheet">
+    <link href="themes/css/style-init.css" rel="stylesheet">
     <!--[if IE 8]>
         <link href="themes/css/foundation-ie8.css" rel="stylesheet">
         <link href="themes/css/archtek-ie8.css" rel="stylesheet">
@@ -117,17 +117,17 @@
             </li>
             <li>
                 <a href="news.html">اخبار</a>
-                <!-- <ul>
+                <ul>
                     <li>
-                        <a href="blog-list.php">List Page</a>
+                        <a href="news-fullpage1.html">خبر تکی</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="blog-list-left-sidebar.php">List Page (Left Sidebar)</a>
                     </li>
                     <li>
                         <a href="blog-single.php">Single Page</a>
-                    </li>
-                </ul> -->
+                    </li> -->
+                </ul>
             </li>
             <li>
                 <a href="#">مقالات</a>

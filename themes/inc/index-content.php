@@ -20,7 +20,11 @@
         $articles[2]["body"] =(mb_strlen($articles[2]["body"])>50)?
                 mb_substr(html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8");
-		$works = $db->SelectAll("works","*",null,"fdate DESC","0","6");		
+		$works = $db->SelectAll("works","*",null,"fdate DESC","0","6");
+        $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");		
+		$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
+		$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
+		$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
 
 $html=<<<cd
 <!-- Home Slider Container -->
@@ -284,18 +288,18 @@ $html=<<<cd
             <div class="right-border row">
                 <div class="large-12 columns height-255">
                     <div class="blog-meta">
-                        <span class="date">1392/08/12</span>
+                        <span class="date">{$news[0]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="blog-title"><a href="blog-single.php">برج پزشکی ژیک</a></h4>
+                    <h4 class="blog-title"><a href="blog-single.php">{$news[0]["subject"]}</a></h4>
                     <p class="excerpt">
-                        برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر 11500 متر مربع در 14 طبقه مشتمل بر 70 واحد پزشکی با متراژهای مختلف افتتاح گردید.
+                        {$news[0]["body"]}
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
-                    <img src="themes/images/demo/blog-sec1.jpg" alt="" class="stretch-image">
+                    <img src="{$news[0][image]}" alt="{$news[0][subject]}" class="stretch-image" style="width:510px;height:255px;">
                 </div>
             </div>
         </div>
@@ -303,15 +307,15 @@ $html=<<<cd
             <div class="right-border row">
                 <div class="large-12 columns height-255">
                     <div class="blog-meta">
-                        <span class="date">1392/08/12</span>
+                        <span class="date">{$news[1]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="sub-blog-title"><a href="blog-single.php">برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر...</a></h4>
+                    <h4 class="sub-blog-title"><a href="blog-single.php">{$news[1]["subject"]}</a></h4>
                 </div>
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
-                    <img src="themes/images/demo/blog-sec2.jpg" alt="" class="stretch-image">
+                    <img src="{$news[1][image]}" alt="{$news[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
             </div>
         </div>
@@ -319,15 +323,15 @@ $html=<<<cd
             <div class="row">
                 <div class="large-12 columns height-255">
                     <div class="blog-meta">
-                        <span class="date">1392/08/12</span>
+                        <span class="date">{$news[2]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="sub-blog-title"><a href="blog-single.php">برج پزشکی ژیک در زمینی به مساحت 1008 متر مربع با زیر بنایی بالغ بر...</a></h4>
+                    <h4 class="sub-blog-title"><a href="blog-single.php">{$news[2]["subject"]}</a></h4>
                 </div>
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
-                    <img src="themes/images/demo/blog-sec3.jpg" alt="" class="stretch-image">
+                    <img src="{$news[2][image]}" alt="{$news[2][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
             </div>
         </div>

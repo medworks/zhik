@@ -102,7 +102,7 @@ select {
     position: relative;
     padding-left: 0;
     padding-right: 0;
-    float: left; }
+    float: right; }
   .row .row {
     width: auto;
     margin-left: -0.9375em;

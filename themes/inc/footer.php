@@ -108,7 +108,8 @@
             </div>
         </div>
         <div class="large-6 columns less-padding">
-            Zhik © Copyright 2013, All rights reserved by Zhik company.
+            Zhik © Copyright 2013, All rights reserved by Zhik company.<br /><br />
+            Designed by <a href="http://www.mediateq.ir">Mediateq</a>
         </div>
     </div>
 </div> 
@@ -116,7 +117,6 @@
     <script src="themes/js/jquery-1.9.1.min.js"></script>
     <script src="themes/js/jquery-ui-1.10.2.custom.min.js"></script>
     <script src="themes/js/foundation.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;v=3.5"></script>
     <script src="themes/js/jquery.backstretch.min.js"></script>
     <script src="themes/js/superfish.js"></script>
     <script src="themes/js/supersubs.js"></script>

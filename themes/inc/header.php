@@ -7,7 +7,6 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta name="google-site-verification" content="-v04lxRhdr83WUdcvx52bws3lGnycYZQE03LNstOteg" />
     <meta name="description" content="<?php echo $seo->Site_Describtion;?>"/>
     <meta name="keywords" content="<?php echo $seo->Site_KeyWords;?>"/>
     <meta name="robots" content="INDEX,FOLLOW">
@@ -31,7 +30,6 @@
     //]]>
     </script> -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Titillium+Web:400,600" rel="stylesheet" type="text/css">
     <link href="themes/css/reset.css" rel="stylesheet">
     <link href="themes/css/foundation.css" rel="stylesheet">
     <link href="themes/css/font-awesome.min.css" rel="stylesheet">
@@ -46,8 +44,8 @@
 
     <script src="themes/js/custom.modernizr.js"></script>
 
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="apple-touch-icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
 
     <!-- <script type="text/javascript">
         /* <![CDATA[ */
@@ -156,7 +154,7 @@
                 </ul> -->
             </li>
             <li>
-                <a href="#">گالری تصاویر</a>
+                <a href="gallery.html">گالری تصاویر</a>
             </li>
             <li>
                 <a href="#">تماس با ما</a>

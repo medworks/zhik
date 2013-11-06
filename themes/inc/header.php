@@ -130,12 +130,12 @@
                 </ul>
             </li>
             <li>
-                <a href="#">مقالات</a>
-                <!-- <ul>
+                <a href="articles.html">مقالات</a>
+                <ul>
                     <li>
-                        <a href="gallery-1.php">Gallery Style 1</a>
+                        <a href="article-fullpage1.html">برج پزشکی ژیک</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="gallery-2.php">Gallery Style 2</a>
                     </li>
                     <li>
@@ -149,8 +149,8 @@
                     </li>
                     <li>
                         <a href="404.php">404 - Page Not Found</a>
-                    </li>
-                </ul> -->
+                    </li> -->
+                </ul>
             </li>
             <li>
                 <a href="gallery.html">گالری تصاویر</a>

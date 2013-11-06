@@ -118,11 +118,11 @@ $html=<<<cd
                                 </div>
                             </div>
                         </form>
-                        <div id="success" class="success box">
-                            Thank you. We have received your message and will contact you back shortly.
+                        <div id="success" class="success box rtl">
+                            متشکریم. نامه شما به دست ما رسید و در اسرع وقت به آن پاسخ خواهیم داد.
                         </div>
-                        <div id="error" class="error box">
-                            Something went wrong. Please contact us via email or phone. We truly apologize for the inconvenience.
+                        <div id="error" class="error box rtl">
+                            خطا. لطفا از طریق ایمیل و یا تلفن با ما تماس بگیرید. ما برای این مشکل پوزش می طلبیم.
                         </div>
                     </div>
                 </div>

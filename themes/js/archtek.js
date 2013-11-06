@@ -599,12 +599,12 @@ jQuery(document).ready(function($) {
                     
                     $submitButton = $(this).find('input[type="submit"]');
                     $submitButton.removeClass().addClass('medium gray button disabled');
-                    $submitButton.attr('value', 'Submitting...');
+                    $submitButton.attr('value', 'ارسال پیام...');
                     $submitButton.attr('disabled', 'disabled');
                     
                     $.ajax({
                         type : 'POST',
-                        url : 'php/sendmail.php',
+                        url : 'themes/sendmail.php',
                         data : contactForm.serialize(),
                         success : function(result) {
     
@@ -625,7 +625,7 @@ jQuery(document).ready(function($) {
                                     opacity : '1'
                                 }, 1000);
     
-                                alert('Error Message: ' + result);
+                                // alert('Error Message: ' + result);
                             }
     
                         },

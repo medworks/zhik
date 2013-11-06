@@ -20,6 +20,7 @@
         $articles[2]["body"] =(mb_strlen($articles[2]["body"])>50)?
                 mb_substr(html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8");
+		$works = $db->SelectAll("works","*",null,"fdate DESC","0","6");		
 
 $html=<<<cd
 <!-- Home Slider Container -->
@@ -144,7 +145,8 @@ $html=<<<cd
                             </li>
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb1.jpg" alt="" class="stretch-image">
+					
+                    <img src="{$works[0][image]}" alt="{$works[0][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="furniture interior portfolio-item">
                     <div class="portfolio-item-hover">
@@ -158,7 +160,7 @@ $html=<<<cd
                             </li>
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb2.jpg" alt="" class="stretch-image">
+                    <img src="{$works[1][image]}" alt="{$works[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
 
                 <div class="room interior portfolio-item">
@@ -173,7 +175,7 @@ $html=<<<cd
                             </li>
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb3.jpg" alt="" class="stretch-image">
+                   <img src="{$works[2][image]}" alt="{$works[2][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="interior mockup room portfolio-item">
                     <div class="portfolio-item-hover">
@@ -190,7 +192,7 @@ $html=<<<cd
                             </li> -->
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb4.jpg" alt="" class="stretch-image">
+                    <img src="{$works[3][image]}" alt="{$works[3][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="interior mockup furniture portfolio-item">
                     <div class="portfolio-item-hover">
@@ -207,7 +209,7 @@ $html=<<<cd
                             </li> -->
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb5.jpg" alt="" class="stretch-image">
+                    <img src="{$works[4][image]}" alt="{$works[4][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="kitchen interior portfolio-item">
                     <div class="portfolio-item-hover">
@@ -221,7 +223,7 @@ $html=<<<cd
                             </li>
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb6.jpg" alt="" class="stretch-image">
+                    <img src="{$works[5][image]}" alt="{$works[5][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 
             </div>

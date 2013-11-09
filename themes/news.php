@@ -67,7 +67,7 @@ $html.=<<<cd
                         <p class="excerpt">
                             {$post["body"]}
                         </p>
-                        <a href="#" class="small flat radius button">ادامه خبر</a>
+                        <a href="news-fullpage{$post[id]}.html" class="small flat radius button">ادامه خبر</a>
                     </div>
                     <div class="large-12 columns no-padding">
                         <img src="{$post[image]}" alt="{$post[subject]}" style="width:765px;height:255px;">

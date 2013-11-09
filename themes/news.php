@@ -1,5 +1,5 @@
 <?php
-include_once("./classes/database.php");
+  include_once("./classes/database.php");
   include_once("./lib/persiandate.php");
   $db = Database::GetDatabase();
   $pageNo = ($_GET["pid"]) ? $_GET["pid"] : 1;
@@ -25,7 +25,7 @@ include_once("./classes/database.php");
                         <a>اخبار</a>
                     </li>
                     <li>
-                        <a href="./">ص�?حه اصلی</a>
+                        <a href="./">صفحه اصلی</a>
                     </li>
                 </ul>
             </div>

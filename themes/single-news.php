@@ -1,5 +1,16 @@
 <?php
-
+    include_once("./config.php");
+	include_once("./lib/persiandate.php");
+	include_once("./classes/database.php");	
+	include_once("./classes/seo.php");	
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
+ 	$news = $db->Select('news',NULL,"id={$_GET[wid]}"," ndate DESC");
+	$ndate = ToJalali($news["ndate"]," l d F  Y ");
+	$news["userid"] = GetUserName($news["userid"]);
+	$body = $news['body'];
+	$seo->Site_Title = $news["subject"];
+	$seo->Site_Describtion = strip_tags(mb_substr($news["body"],0,150,"UTF-8"));
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -13,7 +24,7 @@ $html=<<<cd
                 <span>مسیر شما:</span>
                 <ul class="breadcrumbs">
                     <li class="current">
-                        <a>برج پزشکی ژیک</a>
+                        <a>{$news["subject"]}</a>
                     </li>
                     <li>
                         <a href="news.html">اخبار</a>
@@ -28,7 +39,7 @@ $html=<<<cd
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>برج پزشکی ژیک</h1>
+                <h1>{$news["subject"]}</h1>
             </div>
         </div>
         <!-- Blog List -->
@@ -40,7 +51,7 @@ $html=<<<cd
                             <span class="date">1392/08/15</span>
                             <ul class="author-comments">
                                 <li>
-                                    <a href="#">مجتبی امجدی</a><i class="icon-user"></i>
+                                    <a href="#">{$news["userid"]}</a><i class="icon-user"></i>
                                 </li>
                                 <!-- <li>
                                     <a href="#">5 Comments</a><i class="icon-comments-alt"></i>
@@ -48,16 +59,19 @@ $html=<<<cd
                             </ul>
                         </div>
                         <hr>
-                        <h2 class="blog-title"><a href="blog-single.php">برج پزشکی ژیک</a></h2>
+                        <h2 class="blog-title"><a href="blog-single.php">{$news["subject"]}</a></h2>
                         <p class="excerpt">
-                            توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب...  توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیحات خبر اوب... توضیح
+                            {$news["body"]}
                         </p>
                     </div>
                     <div class="large-12 columns no-padding">
-                        <img src="themes/images/demo/blog/blog-item2.jpg" alt="">
+                        <img src="{$news[image]}" alt="{$news[subject]}" style="width:765px;height:255px;">
                     </div>
                 </div>
             </div>
+cd;
+
+$html.=<<<cd
             <div id="sidebar-wrapper" class="large-3 columns for-nested">
                 <div class="widget-item row">
                     <div class="large-12 columns">
@@ -74,37 +88,31 @@ $html=<<<cd
                         <div class="posts-widget">
                             <h4>آخرین اخبار</h4>
                             <ul>
+cd;
+$news = $db->SelectAll("news","*",null,"ndate DESC");
+for($i = 0;$i<7;$i++)
+{
+  if (!isset($news[$i][ndate])) break;
+	$ndate = ToJalali($news[$i]["ndate"]," l d F  Y");
+$html.=<<<cd
+                        
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb7.jpg" alt=""></a>
+                                        <a href="blog-single.php"><img src="{$news[$i][image]}" alt="{$news[$i][subject]}" style="width:50px;height:25px;"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">Sed ut perspicia unde omnis iste natus</a>
-                                        <span class="date">May 30, 2013</span>
+                                        <a href="blog-single.php">{$news[$i][subject]}</a>
+                                        <span class="date">{$ndate}</span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="post-title">
-                                        <a href="blog-single.php">Lorem ipsum dolor ..</a>
-                                        <span class="date">May 15, 2013</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="post-title">
-                                        <a href="blog-single.php">Ut enim ad minim veniam consec ..</a>
-                                        <span class="date">May 9, 2013</span>
-                                    </div>
-                                </li>
+                                </li>                            
+cd;
+}
+$html.=<<<cd
                             </ul>
                         </div>
                     </div>
                 </div>
+<!--				
                 <div class="widget-item row">
                     <div class="large-12 columns">
                         <div class="category-widget">
@@ -129,7 +137,7 @@ $html=<<<cd
                         </div>
                     </div>
                 </div>
-                
+    -->            
            <!-- <div class="widget-item row">
                     <div class="large-12 columns">
                         <div class="flickr-widget">

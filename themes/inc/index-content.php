@@ -150,7 +150,7 @@ $html=<<<cd
 
                 <div class="kitchen mockup portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[0][id]}.html'>{$works[0][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>
@@ -159,13 +159,12 @@ $html=<<<cd
                                 <a href="#">مشخصات</a>
                             </li>
                         </ul>
-                    </div>
-					
+                    </div>					
                     <img src="{$works[0][image]}" alt="{$works[0][subject]}" class="stretch-image" style="width:255px;height:255px;">
                 </div>
                 <div class="furniture interior portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[1][id]}.html'>ب{$works[1][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>
@@ -180,7 +179,7 @@ $html=<<<cd
 
                 <div class="room interior portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[2][id]}.html'>{$works[2][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>
@@ -194,7 +193,7 @@ $html=<<<cd
                 </div>
                 <div class="interior mockup room portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[3][id]}.html'>{$works[3][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>
@@ -211,7 +210,7 @@ $html=<<<cd
                 </div>
                 <div class="interior mockup furniture portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[4][id]}.html'>{$works[4][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>
@@ -228,7 +227,7 @@ $html=<<<cd
                 </div>
                 <div class="kitchen interior portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                        <h3><a href='work-fullpage{$works[5][id]}.html'>{$works[5][subject]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">عکسها</a>

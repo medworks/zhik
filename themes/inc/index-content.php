@@ -1,8 +1,10 @@
 <?php
     include_once("config.php");
     include_once("classes/functions.php");
-    include_once("classes/seo.php");
-    $seo = Seo::GetSeo(); 
+    /* include_once("classes/seo.php");
+    $seo = Seo::GetSeo();  */
+	$WellCome_Title = GetSettingValue('WellCome_Title',0);
+	$WellCome_Body = GetSettingValue('WellCome_Body',0);
     if (GetPageName($_GET['item'],$_GET['act'])){
         echo include_once GetPageName($_GET['item'],$_GET['act']);
     }else{
@@ -73,13 +75,13 @@ $html=<<<cd
     <!-- Page Intro -->
     <div id="intro" class="row">
         <div class="large-12 columns">
-            <h1>به ژیک خوش آمدید.</h1>
+            <h1>{$WellCome_Title}</h1>
             <div id="intro-line">
                 <hr class="stick">
                 <hr>
             </div>
             <p>
-                پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... پیام ژیک... 
+                {$WellCome_Body}
             </p>
         </div>
     </div>

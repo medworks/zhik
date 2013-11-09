@@ -79,9 +79,7 @@ $linkFormat = 'news-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= '<center>' . $pageNos . '</center>';
-$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
-$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
-$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
+
 $html.=<<<cd
             </div>
             <div id="sidebar-wrapper" class="large-3 columns for-nested">
@@ -97,40 +95,33 @@ $html.=<<<cd
                 </div>
                 <div class="widget-item row">
                     <div class="large-12 columns">
-                        <div class="posts-widget">
+					<div class="posts-widget">
                             <h4>آخرین اخبار</h4>
                             <ul>
+cd;
+for($i = 0;$i<7;$i++)
+{
+  if (!isset($news[$i][ndate])) break;
+	$ndate = ToJalali($news[$i]["ndate"]," l d F  Y");
+$html.=<<<cd
+                        
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="{$news[0][image]}" alt="{$news[0][subject]}"></a>
+                                        <a href="blog-single.php"><img src="{$news[$i][image]}" alt="{$news[$i][subject]}" style="width:50px;height:25px;"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">{$news[0][subject]}</a>
-                                        <span class="date">{$news[0][ndate]}</span>
+                                        <a href="blog-single.php">{$news[$i][subject]}</a>
+                                        <span class="date">{$ndate}</span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="{$news[1][image]}" alt="{$news[1][subject]}"></a>
-                                    </div>
-                                    <div class="post-title">
-                                        <a href="blog-single.php">{$news[1][subject]}</a>
-                                        <span class="date">{$news[1][ndate]}</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="{$news[2][image]}" alt="{$news[2][subject]}"></a>
-                                    </div>
-                                    <div class="post-title">
-                                        <a href="blog-single.php">{$news[2][subject]}</a>
-                                        <span class="date">{$news[2][ndate]}</span>
-                                    </div>
-                                </li>
-                            </ul>
+                                </li>                            
+cd;
+}
+$html.=<<<cd
+                  </ul>
                         </div>
                     </div>
                 </div>
+<!--				
                 <div class="widget-item row">
                     <div class="large-12 columns">
                         <div class="category-widget">
@@ -154,7 +145,8 @@ $html.=<<<cd
                             </ul>
                         </div>
                     </div>
-                </div>                          
+                </div>
+-->				
             </div>
         </div>
     </div>

@@ -302,7 +302,7 @@ $html=<<<cd
                         <span class="date">{$news[0]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="blog-title"><a href="blog-single.php">{$news[0]["subject"]}</a></h4>
+                    <h4 class="blog-title"><a href="news-fullpage{$news[0][id]}.html">{$news[0]["subject"]}</a></h4>
                     <p class="excerpt">
                         {$news[0]["body"]}
                     </p>
@@ -310,7 +310,9 @@ $html=<<<cd
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
+				<a href="news-fullpage{$news[0][id]}.html" title="{$news[0][subject]}">
                     <img src="{$news[0][image]}" alt="{$news[0][subject]}" class="stretch-image" style="width:510px;height:255px;">
+				</a>	
                 </div>
             </div>
         </div>
@@ -321,7 +323,7 @@ $html=<<<cd
                         <span class="date">{$news[1]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="sub-blog-title"><a href="blog-single.php">{$news[1]["subject"]}</a></h4>
+                    <h4 class="sub-blog-title"><a href="news-fullpage{$news[1][id]}.html">{$news[1]["subject"]}</a></h4>
 					 <p class="excerpt">
                         {$news[1]["body"]}
                     </p>
@@ -329,7 +331,9 @@ $html=<<<cd
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
+				<a href="news-fullpage{$news[1][id]}.html" title="{$news[1][subject]}">
                     <img src="{$news[1][image]}" alt="{$news[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
+				</a>	
                 </div>
             </div>
         </div>
@@ -340,7 +344,7 @@ $html=<<<cd
                         <span class="date">{$news[2]["ndate"]}</span>
                     </div>
                     <hr>
-                    <h4 class="sub-blog-title"><a href="blog-single.php">{$news[2]["subject"]}</a></h4>
+                    <h4 class="sub-blog-title"><a href="news-fullpage{$news[2][id]}.html">{$news[2]["subject"]}</a></h4>
 					 <p class="excerpt">
                         {$news[2]["body"]}
                     </p>
@@ -348,7 +352,9 @@ $html=<<<cd
             </div>
             <div class="row">
                 <div class="large-12 columns no-padding height-255">
+				<a href="news-fullpage{$news[2][id]}.html" title="{$news[2][subject]}">
                     <img src="{$news[2][image]}" alt="{$news[2][subject]}" class="stretch-image" style="width:255px;height:255px;">
+				</a>	
                 </div>
             </div>
         </div>

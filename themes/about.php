@@ -1,5 +1,5 @@
 <?php
-
+$About_System = GetSettingValue('About_System',0);
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -30,10 +30,13 @@ $html=<<<cd
             <!-- Page Content -->
             <div class="row white-bg">
                 <div class="large-6 columns">
+				<!--
                     <h2 class="has-line">ژیک چه کاری انجام می دهد</h2>
+					
                     <h3 class="larger light">Praesent sollicitudin ligula a magna consectetur commodo. Integer id urna dui. Vestibulum ornare orci eget dolor laoreet placerat.</h3>
+				-->
                     <p>
-                        Sed tortor arcu, egestas eu molestie in, lacinia luctus justo. Suspendisse semper, justo eget hendrerit viverra, mauris ligula gravida lorem, vitae mollis nisi nisl sed velit. Phasellus tempus mi id mauris accumsan dapibus. Vestibulum luctus porta nisi, a blandit quam volutpat at. Praesent in sapien arcu, ut malesuada dui. Morbi sed felis eget lectus semper tincidunt eget at nisl.
+                       {$About_System}
                     </p>
                     <a href="#" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;دانلود با فرمت PDF</a>
                 </div>

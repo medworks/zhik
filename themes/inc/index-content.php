@@ -2,15 +2,15 @@
     include_once("config.php");
     include_once("classes/functions.php");
     /* include_once("classes/seo.php");
-    $seo = Seo::GetSeo();  */
-	$WellCome_Title = GetSettingValue('WellCome_Title',0);
-	$WellCome_Body = GetSettingValue('WellCome_Body',0);
+    $seo = Seo::GetSeo();  */	
     if (GetPageName($_GET['item'],$_GET['act'])){
         echo include_once GetPageName($_GET['item'],$_GET['act']);
     }else{
         include_once("./classes/database.php");
         include_once("./lib/persiandate.php");
-        $db = Database::GetDatabase();  
+        $db = Database::GetDatabase();
+		$WellCome_Title = GetSettingValue('WellCome_Title',0);
+	    $WellCome_Body = GetSettingValue('WellCome_Body',0);
 		$articles = $db->SelectAll("articles","*",null,"ndate DESC","0","3");
 		$articles[0]["body"] =(mb_strlen($articles[0]["body"])>400)?
                 mb_substr(html_entity_decode(strip_tags($articles[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 400,"UTF-8") . "..." :
@@ -27,6 +27,12 @@
         $news[0]["body"] =(mb_strlen($articles[0]["body"])>150)?
                 mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");		
+		$news[1]["body"] =(mb_strlen($articles[0]["body"])>60)?
+                mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");
+        $news[2]["body"] =(mb_strlen($articles[0]["body"])>60)?
+                mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");				
 		$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
 		$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
 		$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
@@ -316,6 +322,9 @@ $html=<<<cd
                     </div>
                     <hr>
                     <h4 class="sub-blog-title"><a href="blog-single.php">{$news[1]["subject"]}</a></h4>
+					 <p class="excerpt">
+                        {$news[1]["body"]}
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -332,6 +341,9 @@ $html=<<<cd
                     </div>
                     <hr>
                     <h4 class="sub-blog-title"><a href="blog-single.php">{$news[2]["subject"]}</a></h4>
+					 <p class="excerpt">
+                        {$news[2]["body"]}
+                    </p>
                 </div>
             </div>
             <div class="row">

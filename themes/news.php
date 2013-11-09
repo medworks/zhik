@@ -25,7 +25,7 @@ include_once("./classes/database.php");
                         <a>اخبار</a>
                     </li>
                     <li>
-                        <a href="./">صفحه اصلی</a>
+                        <a href="./">ص�?حه اصلی</a>
                     </li>
                 </ul>
             </div>
@@ -156,5 +156,6 @@ $html.=<<<cd
         </div>
     </div>
 cd;
+}
     return $html;
 ?>

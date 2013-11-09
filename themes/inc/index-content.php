@@ -27,12 +27,12 @@
         $news[0]["body"] =(mb_strlen($articles[0]["body"])>150)?
                 mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");		
-		$news[1]["body"] =(mb_strlen($articles[0]["body"])>60)?
-                mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");
-        $news[2]["body"] =(mb_strlen($articles[0]["body"])>60)?
-                mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");				
+		$news[1]["body"] =(mb_strlen($articles[1]["body"])>60)?
+                mb_substr(html_entity_decode(strip_tags($news[1]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($news[1]["body"]), ENT_QUOTES, "UTF-8");
+        $news[2]["body"] =(mb_strlen($articles[2]["body"])>60)?
+                mb_substr(html_entity_decode(strip_tags($news[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 60,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($news[2]["body"]), ENT_QUOTES, "UTF-8");				
 		$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
 		$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
 		$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");

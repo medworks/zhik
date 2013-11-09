@@ -7,8 +7,9 @@
   $from = ($pageNo - 1) * $maxItemsInPage;
   $count = $maxItemsInPage;
   
-  $news = $db->SelectAll("news","*",null,"ndate DESC",$from,$count);
+  $news = $db->SelectAll("news","*",null,"ndate DESC",$from,$count);  
   $itemsCount = $db->CountAll("news");
+     
   $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -78,7 +79,9 @@ $linkFormat = 'news-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= '<center>' . $pageNos . '</center>';
-
+$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
+$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
+$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
 $html.=<<<cd
             </div>
             <div id="sidebar-wrapper" class="large-3 columns for-nested">
@@ -99,29 +102,29 @@ $html.=<<<cd
                             <ul>
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb7.jpg" alt=""></a>
+                                        <a href="blog-single.php"><img src="{$news[0][image]}" alt="{$news[0][subject]}"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">Sed ut perspicia unde omnis iste natus</a>
-                                        <span class="date">May 30, 2013</span>
+                                        <a href="blog-single.php">{$news[0][subject]}</a>
+                                        <span class="date">{$news[0][ndate]}</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb4.jpg" alt=""></a>
+                                        <a href="blog-single.php"><img src="{$news[1][image]}" alt="{$news[1][subject]}"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">Lorem ipsum dolor ..</a>
-                                        <span class="date">May 15, 2013</span>
+                                        <a href="blog-single.php">{$news[1][subject]}</a>
+                                        <span class="date">{$news[1][ndate]}</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="themes/images/demo/portfolio/project-thumb1.jpg" alt=""></a>
+                                        <a href="blog-single.php"><img src="{$news[2][image]}" alt="{$news[2][subject]}"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">Ut enim ad minim veniam consec ..</a>
-                                        <span class="date">May 9, 2013</span>
+                                        <a href="blog-single.php">{$news[2][subject]}</a>
+                                        <span class="date">{$news[2][ndate]}</span>
                                     </div>
                                 </li>
                             </ul>

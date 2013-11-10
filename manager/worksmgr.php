@@ -50,9 +50,9 @@
 	}	
     if (!$overall_error && $_POST["mark"]=="saveworks")
 	{						   				
-		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`");
+		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`","`catid`");
 		$_POST["detail"] = addslashes($_POST["detail"]);
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'");	
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'");	
 		if (!$db->InsertQuery('works',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -76,7 +76,8 @@
 						 "`body`"=>"'{$_POST[detail]}'",
 						 "`link`"=>"'{$_POST[link]}'",
 						 "`sdate`"=>"'{$sdatetime}'",
-						 "`fdate`"=>"'{$fdatetime}'");		
+						 "`fdate`"=>"'{$fdatetime}'",
+						 "`catid`"=>"'{$_POST[cbcat]}'");		
         $db->UpdateQuery("works",$values,array("id='{$_GET[wid]}'"));		
 		header('location:?item=worksmgr&act=mgr');
 		//$_GET["item"] = "worksmgr";
@@ -102,7 +103,8 @@
 					 "body"=>$_POST['detail'],
 					 "link"=>$_POST['link'],
 					 "sdate"=>$_POST['sdate'],
-					 "fdate"=>$_POST['fdate']);
+					 "fdate"=>$_POST['fdate'],
+					  "cat"=>$_POST['cbcat']);
 	}
 	if ($_GET['act']=="new")
 	{
@@ -368,6 +370,7 @@ if ($_GET['act']=="mgr")
 						$rowsClass[] = "datagridoddrow";
 				}
 				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
+				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
 				$rows[$i]["addpic"] = "<a href='?item=worksmgr&act=pic&wid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["edit"] = "<a href='?item=worksmgr&act=edit&wid={$rows[$i]["id"]}' class='edit-field'" .
@@ -385,6 +388,7 @@ del;
             if (Count($rows) > 0)
             {                    
                     $gridcode .= DataGrid(array( 
+							"catid"=>"گروه",
 							"subject"=>"عنوان",
 							"image"=>"تصویر",
 							"body"=>"توضیحات",

@@ -128,4 +128,79 @@ cd;
 	echo $pics.$html;
 	 
 }
+if ($_GET["cmd"]=="workpics")
+{
+	$pics = "";	
+    $dir = "../workspics";
+	$handle=opendir($dir);
+    while ($file = readdir($handle))
+    {        
+         if (!preg_match("/^[.]/",$file,$out, PREG_OFFSET_CAPTURE))
+         {             
+			 if(is_file("{$dir}/".$file))
+			 {                              
+					  $dirname = "{$dir}/".basename($file);
+					  $filename = basename($file);
+					  $exe = substr($filename, strrpos($filename, '.') + 1);
+					  $name = substr($filename, 0, strrpos($filename, '.'));
+					  $allowedExts = array('jpg','jpeg','png','bmp','gif');
+
+					if(in_array($exe, $allowedExts)){
+                      $pics.=<<<cd
+					    <li>
+							<div class="pic">
+							 
+								<a class="select" title="انتخاب عکس {$name}">								
+									<img src="{$dirname}" alt="{$name}" />
+									<div class="overlay"></div>
+								</a>
+							</div>
+							<input type="checkbox" name="picslist[]" value="{$name}" />
+							<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
+						</li>	   
+cd;
+					}
+			  }
+        }
+    }
+	closedir($handle);
+	
+$html.=<<<cd
+  <form  method="post" action="">
+   {$pics}
+   <div class="badboy"></div>
+   <div class="badboy"></div>
+   <div>
+	 <input type="submit" name="send" value="ثبت عکس ها" />
+	 <input type="hidden" name="mark" value="addmorepic" />
+   </div>
+  </form>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.cat-tabs-wrap2 a.select').click(function(){
+	                var srcimg= $(this).children('img').attr('src');
+	                $('img#previmage').attr('src',srcimg);
+	                
+	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+	                $('#namepreview').html(filename);
+
+	               var size= getImgSize(srcimg);
+	               $('#sizepreview').html(size);
+
+	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+	               $('#typepreview').html(ext);
+
+	               $('#select').click(function(){
+	                    var value= srcimg;
+	                    $('#selectpic').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+	echo $html;
+	 
+}
 ?>

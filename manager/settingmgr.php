@@ -27,6 +27,8 @@
 		SetSettingValue("Site_Title",$_POST["title"]);
 		SetSettingValue("Site_KeyWords",$_POST["keywords"]);
 		SetSettingValue("Site_Describtion",$_POST["describe"]);
+		SetSettingValue("WellCome_Title",$_POST["wtitle"]);
+		SetSettingValue("WellCome_Body",$_POST["wbody"]);		
 		header('location:?item=settingmgr&act=do');	
 		//$_GET['item'] = "settingmgr";
 		//$_GET['act'] = "seo";
@@ -128,6 +130,8 @@ ht;
 		$Site_Title = GetSettingValue('Site_Title',0);
 		$Site_KeyWords = GetSettingValue('Site_KeyWords',0);
 		$Site_Describtion = GetSettingValue('Site_Describtion',0);
+		$WellCome_Title = GetSettingValue('WellCome_Title',0);
+		$WellCome_Body = GetSettingValue('WellCome_Body',0);
 		$html=<<<ht
 		<div class="title">
 	      <ul>
@@ -149,7 +153,16 @@ ht;
 					<label for="subject">توضیحات سایت </label>
 				</p>    
 				<input type="text" name="describe" class="subject" id="describe" value='{$Site_Describtion}'/>
+				
 				<p>
+					<label for="subject">تیتر خوش آمد گویی</label>
+				</p>    
+				<input type="text" name="wtitle" class="subject" id="title" value='{$WellCome_Title}'/>
+				<p>
+					<label for="subject">شرح خوشامد گویی</label>
+				</p>    
+				<input type="text" name="wbody" class="subject" id="title" value='{$WellCome_Body}'/>
+		   <p>		
 			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
 			 <input type='hidden' name='mark' value='editseo' />
 		     <input type="reset" value="پاک کردن" class="reset" /> 	 	 

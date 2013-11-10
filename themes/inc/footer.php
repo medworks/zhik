@@ -71,6 +71,8 @@
 						if($articles[$i]['subject']!=null){
 								$ndate = ToJalali($articles[$i]["ndate"]," l d F  Y-H:m");
 							echo "<p>
+							        <a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>
+									<img src='{$articles[$i]["image"]}'alt='{$articles[$i]["subject"]}' style='width:50px;height:50px;'></a>
 									<h3 class='article'><a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>{$articles[$i]["subject"]}</a></h3>
 									<span class='date article'>{$ndate}</span>
 								</p>";

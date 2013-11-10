@@ -1,5 +1,6 @@
 <?php
-
+$db = database::GetDatabase();
+$gallery= $db->SelectAll('gallery',NULL,NULL," id DESC");
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -35,37 +36,16 @@ $html=<<<cd
             <div class="large-12 columns no-padding">
                 
                 <div class="gallery2-wrapper">
-
+cd;
+	for($i=0 ; $i<count($gallery) ; $i++)
+	{
+$html.=<<<cd
                     <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb1.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb1.jpg" alt=""></a>
+                        <a href="{$gallery[$i][image]}" class="image-box" rel="gallery1">
+						<img src="{$gallery[$i][image]}" alt="{$gallery[$i][subject]}"></a>
                     </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb2.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb2.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb3.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb3.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb4.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb4.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb5.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb5.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb6.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb6.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb7.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb7.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb8.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb8.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb9.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb9.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="themes/images/demo/portfolio/project-thumb10.jpg" class="image-box" rel="gallery1"><img src="themes/images/demo/portfolio/project-thumb10.jpg" alt=""></a>
-                    </div>
+cd;
+$html.=<<<cd
                 </div>
             </div>
         </div>

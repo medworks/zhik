@@ -179,6 +179,19 @@ $html=<<<cd
          <span>*</span>
        </p>    
        <input type="text" name="subject" class="validate[required] subject" id="subject" value='{$row[subject]}'/>
+	   <p>
+			 <label for="pic">عکس</label>
+			 <span>*</span>
+		   </p>
+		   <p>
+		   		<input type="text" name="selectpic" class="selectpic" id="selectpic" value='{$row[image]}' />
+		   		<input type="text" class="validate[required] showadd" id="showadd" value='{$row[image]}' />
+		   		<a class="filesbrowserbtn" id="filesbrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
+		   		<a class="selectbuttton" id="selectbuttton" title="انتخاب">انتخاب</a>
+		   </p>
+		   <div class="badboy"></div>
+		   <div id="filesbrowser"></div>		   
+		   <div class="badboy"></div>
   	   <p>
          <label for="detail">توضیحات </label>
          <span>*</span>

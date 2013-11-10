@@ -12,7 +12,7 @@
 	$catname = GetCategoryName($work["catid"]);
 	$catg = $db->Select('category',NULL,"id={$work[catid]}");
 	$secname = GetSectionName($catg["secid"]);
-	$related = $db->SelectAll('works',"*","catid={$work[catid]}","0","4");
+	$related = $db->SelectAll('works',"*","catid={$work[catid]} AND id<>{$_GET[wid]}",null,"0","4");
 	$seo->Site_Title = $work["subject"];
 	$seo->Site_Describtion = strip_tags(mb_substr($work["body"],0,150,"UTF-8"));
 	

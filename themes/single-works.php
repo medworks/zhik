@@ -5,11 +5,15 @@
 	include_once("./classes/seo.php");	
 	$db = Database::GetDatabase();
 	$seo = Seo::GetSeo();
- 	$works = $db->Select('works',NULL,"id={$_GET[wid]}");
-	$sdate = ToJalali($works["sdate"]," l d F  Y ");
-	$fdate = ToJalali($works["fdate"]," l d F  Y ");		
-	$seo->Site_Title = $works["subject"];
-	$seo->Site_Describtion = strip_tags(mb_substr($works["body"],0,150,"UTF-8"));
+ 	$work = $db->Select('works',NULL,"id={$_GET[wid]}");
+	$works = $db->SelectAll("workpics","*","wid={$_GET[wid]}");
+	$sdate = ToJalali($work["sdate"]," l d F  Y ");
+	$fdate = ToJalali($work["fdate"]," l d F  Y ");		
+	$catname = GetCategoryName($work["catid"]);
+	$catg = $db->Select('category',NULL,"id={$work[catid]}");
+	$secname = GetSectionName($catg["secid"]);
+	$seo->Site_Title = $work["subject"];
+	$seo->Site_Describtion = strip_tags(mb_substr($work["body"],0,150,"UTF-8"));
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -23,7 +27,7 @@ $html=<<<cd
                 <span>مسیر شما:</span>
                 <ul class="breadcrumbs">
                     <li class="current">
-                        <a>{$works["subject"]}</a>
+                        <a>{$work["subject"]}</a>
                     </li>
                     <li>
                         <a href="works.html">پروژه ها</a>
@@ -37,22 +41,25 @@ $html=<<<cd
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>{$works["subject"]}</h1>
+                <h1>{$work["subject"]}</h1>
             </div>
         </div>
         <!-- Portfolio Info -->
         <div class="row">
             <div class="large-12 columns no-padding">
                 <div id="portfolio-item-images">
+cd;
+foreach($works as $key=>$val)
+{
+$post = $db->Select('works',NULL,"id={$val[wid]}");
+$html.=<<<cd
                     <div>
-                        <a href="images/demo/portfolio/portfolio-single1.jpg" class="image-box" title="Natural Touch" rel="portfolio-image-group"><img src="themes/images/demo/portfolio/portfolio-single1.jpg" alt=""></a>
+                        <a href="{$val[image]}" class="image-box" title="{$post[subject]}" rel="portfolio-image-group">
+						<img src="{$val[image]}" alt="{$post[subject]}"></a>
                     </div>
-                    <div>
-                        <a href="images/demo/portfolio/portfolio-single2.jpg" class="image-box" title="Beautiful Upscale Kitchen" rel="portfolio-image-group"><img src="themes/images/demo/portfolio/portfolio-single2.jpg" alt=""></a>
-                    </div>
-                    <div>
-                        <a href="images/demo/portfolio/portfolio-single3.jpg" class="image-box" title="Vintage Style" rel="portfolio-image-group"><img src="themes/images/demo/portfolio/portfolio-single3.jpg" alt=""></a>
-                    </div>
+cd;
+}
+$html.=<<<cd
                 </div>
                 <div id="portfolio-item-images-controller">
                     <a href="#" id="portfolio-item-images-prev"><i class="icon-angle-left"></i></a>
@@ -70,7 +77,13 @@ $html=<<<cd
                         </p>
                     </li>
                     <li>
-                        <strong>مشتری</strong><i class="icon-user"></i>
+                        <strong>پلان</strong><i class=""></i>
+                        <p>
+                            Smart Living Co., Ltd.
+                        </p>
+                    </li>
+					<li>
+                        <strong>جدول قیمت</strong><i class=""></i>
                         <p>
                             Smart Living Co., Ltd.
                         </p>
@@ -79,10 +92,10 @@ $html=<<<cd
                         <strong>گروه</strong><i class="icon-tags"></i>
                         <ul id="portfolio-item-categories">
                             <li>
-                                <a href="#">گروه</a>
+                                <a href="#">{$catname}</a>
                             </li>
                             <li>
-                                <a href="#">سرگروه</a>
+                                <a href="#">{$secname}</a>
                             </li>                           
                         </ul>
                     </li>
@@ -96,7 +109,7 @@ $html=<<<cd
             </div>
             <div class="large-9 columns">
                 <p>
-                   {$works["body"]}
+                   {$work["body"]}
                 </p>
             </div>
         </div>

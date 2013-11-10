@@ -45,6 +45,7 @@ $html.=<<<cd
 						<img src="{$gallery[$i][image]}" alt="{$gallery[$i][subject]}"></a>
                     </div>
 cd;
+}
 $html.=<<<cd
                 </div>
             </div>

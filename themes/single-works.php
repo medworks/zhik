@@ -132,10 +132,10 @@ $html.=<<<cd
                         <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
                         <ul>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$val[id]}.html">مشخصات</a>
                             </li>
                             <li>
-                                <a href="#">عکس ها</a>
+                                <a href="work-fullpage{$val[id]}.html">عکس ها</a>
                             </li>
                         </ul>
                     </div>

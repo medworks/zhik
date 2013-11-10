@@ -30,10 +30,7 @@ $html=<<<cd
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>پروژه های <strong>ژیک</strong></h1>
-                <!-- <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
-                </p> -->
+                <h1>پروژه های <strong>ژیک</strong></h1>               
             </div>
         </div>
         <!-- Portfolio -->

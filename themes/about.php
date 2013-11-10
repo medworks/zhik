@@ -1,4 +1,6 @@
 <?php
+include_once("./classes/database.php");
+$db = Database::GetDatabase(); 
 $About_System = GetSettingValue('About_System',0);
 $html=<<<cd
     <div id="header-image-container">
@@ -29,31 +31,25 @@ $html=<<<cd
             </div>
             <!-- Page Content -->
             <div class="row white-bg">
-                <div class="large-6 columns">
-				<!--
-                    <h2 class="has-line">ژیک چه کاری انجام می دهد</h2>
-					
-                    <h3 class="larger light">Praesent sollicitudin ligula a magna consectetur commodo. Integer id urna dui. Vestibulum ornare orci eget dolor laoreet placerat.</h3>
-				-->
+                <div class="large-6 columns">				
                     <p>
                        {$About_System}
-                    </p>
-					<!--
-						<a href="?item=pdf" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;دانلود با فرمت PDF</a>
-					-->
+                    </p>					
                 </div>
                 <div class="large-6 columns no-padding">
                     <div class="image-slider-wrapper">
                         <div class="image-slider">
+cd;
+$works = $db->SelectAll("works","*",null,"ORDER BY ID DESC");
+foreach($works as $key=>$val)	
+{
+$html.=<<<cd
                             <div class="image-slider-item height-510">
-                                <img src="themes/images/demo/about/about2.jpg" alt="" class="stretch-image">
+                                <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
                             </div>
-                            <div class="image-slider-item height-510">
-                                <img src="themes/images/demo/about/about3.jpg" alt="" class="stretch-image">
-                            </div>
-                            <div class="image-slider-item height-510">
-                                <img src="themes/images/demo/about/about1.jpg" alt="" class="stretch-image">
-                            </div>
+cd;
+}
+$html.=<<<cd
                         </div>
                         <div class="image-slider-controller">
                             <a href="#" class="image-slider-prev"><i class="icon-angle-left"></i></a>
@@ -67,42 +63,22 @@ $html=<<<cd
                 <div class="large-12 columns">
                     <h2 class="has-line">کارهای ژیک</h2>
                     <div class="row">
+cd;
+$i=0;
+foreach($works as $key=>$val)	
+{
+$i++;
+if ($i = 4) break;
+$html.=<<<cd
                         <div class="large-3 columns less-padding align-center">
                             <p>
-                                <img src="themes/images/demo/about/about4.jpg" alt="">
+                                <img src="{$val[image]}" alt="{$val[subject]}">
                             </p>
-                            <h3 class="light">One Step Ahead</h3>
-                            <p>
-                                Vestibulum elementum, purus a tempus fringilla, tortor est
-                            </p>
+                            <h3 class="light">{$val[subject]}</h3> 
                         </div>
-                        <div class="large-3 columns less-padding align-center">
-                            <p>
-                                <img src="themes/images/demo/about/about5.jpg" alt="">
-                            </p>
-                            <h3 class="light">Leader For Living</h3>
-                            <p>
-                                Vestibulum elementum, purus a tempus fringilla, tortor est
-                            </p>
-                        </div>
-                        <div class="large-3 columns less-padding align-center">
-                            <p>
-                                <img src="themes/images/demo/about/about6.jpg" alt="">
-                            </p>
-                            <h3 class="light">Your Satisfaction First</h3>
-                            <p>
-                                Vestibulum elementum, purus a tempus fringilla, tortor est
-                            </p>
-                        </div>
-                        <div class="large-3 columns less-padding align-center">
-                            <p>
-                                <img src="themes/images/demo/about/about7.jpg" alt="">
-                            </p>
-                            <h3 class="light">Never Fall Back</h3>
-                            <p>
-                                Vestibulum elementum, purus a tempus fringilla, tortor est
-                            </p>
-                        </div>
+cd;
+}
+$html.=<<<cd
                     </div>
                 </div>
             </div>

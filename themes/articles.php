@@ -63,11 +63,11 @@ $html.=<<<cd
                             </ul>
                         </div>
                         <hr>
-                        <h2 class="blog-title"><a href="news-fullpage{$post[id]}.html">{$post["subject"]}</a></h2>
+                        <h2 class="blog-title"><a href="article-fullpage{$post[id]}.html">{$post["subject"]}</a></h2>
                         <p class="excerpt">
                             {$post["body"]}
                         </p>
-                        <a href="news-fullpage{$post[id]}.html" class="small flat radius button">ادامه خبر</a>
+                        <a href="article-fullpage{$post[id]}.html" class="small flat radius button">ادامه خبر</a>
                     </div>
                     <div class="large-12 columns no-padding">
                         <img src="{$post[image]}" alt="{$post[subject]}" style="width:765px;height:255px;">
@@ -75,7 +75,7 @@ $html.=<<<cd
                 </div> 
 cd;
 }
-$linkFormat = 'news-page'.$pid='%PN%'.'.html';
+$linkFormat = 'article-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= '<center>' . $pageNos . '</center>';
@@ -96,10 +96,10 @@ $html.=<<<cd
                 <div class="widget-item row">
                     <div class="large-12 columns">
 					<div class="posts-widget">
-                            <h4>آخرین اخبار</h4>
+                            <h4>آخرین مقالات</h4>
                             <ul>
 cd;
-$posts = $db->SelectAll("news","*",null,"ndate DESC");
+$posts = $db->SelectAll("articles","*",null,"ndate DESC");
 for($i = 0;$i<7;$i++)
 {
   if (!isset($posts[$i][id])) break;
@@ -108,11 +108,11 @@ $html.=<<<cd
                         
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="news-fullpage{$posts[$i][id]}.html">
+                                        <a href="article-fullpage{$posts[$i][id]}.html">
 										<img src="{$posts[$i][image]}" alt="{$posts[$i][subject]}" style="width:50px;height:50px;"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="news-fullpage{$posts[$i][id]}.html">{$posts[$i][subject]}</a>
+                                        <a href="article-fullpage{$posts[$i][id]}.html">{$posts[$i][subject]}</a>
                                         <span class="date">{$ndate}</span>
                                     </div>
                                 </li>                            

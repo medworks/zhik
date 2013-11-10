@@ -40,12 +40,12 @@ $html=<<<cd
                     <div class="image-slider-wrapper">
                         <div class="image-slider">
 cd;
-$works = $db->SelectAll("works","*",null,"ORDER BY ID DESC");
+$works = $db->SelectAll("works","*",null,"ID DESC");
 foreach($works as $key=>$val)	
 {
 $html.=<<<cd
                             <div class="image-slider-item height-510">
-                                <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
+                                <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image" style="width:510px;height:510px;">
                             </div>
 cd;
 }
@@ -68,11 +68,11 @@ $i=0;
 foreach($works as $key=>$val)	
 {
 $i++;
-if ($i = 4) break;
+if ($i == 5) break;
 $html.=<<<cd
                         <div class="large-3 columns less-padding align-center">
                             <p>
-                                <img src="{$val[image]}" alt="{$val[subject]}">
+                                <img src="{$val[image]}" alt="{$val[subject]}" style="width:215px;height:215px;">
                             </p>
                             <h3 class="light">{$val[subject]}</h3> 
                         </div>

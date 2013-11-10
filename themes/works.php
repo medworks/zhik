@@ -56,15 +56,19 @@ cd;
 $html.=<<<cd
              <option value=".{$val}">{$catname}</option>
 cd;
-}
+ }
 $html.=<<<cd
                                 </select>
                             </form>
                         <p></p>
                     </div>   
-                    <div class="kitchen mockup portfolio-item">
+cd;
+foreach($works as $key=>$val)
+{
+$html.=<<<cd
+                    <div class="{$val[catid]} mockup portfolio-item">
                         <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
+                            <h3><a href="portfolio-single.php">{$val["subject"]}</a></h3>
                             <ul>
                                 <li>
                                     <a href="#">عکسها</a>
@@ -74,134 +78,11 @@ $html.=<<<cd
                                 </li>
                             </ul>
                         </div>
-                        <img src="themes/images/demo/portfolio/project-thumb1.jpg" alt="" class="stretch-image">
+                        <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
                     </div>
-                    <div class="furniture interior portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb2.jpg" alt="" class="stretch-image">
-                    </div>   
-                    <div class="room interior portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">برج پزشکی ژیک</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb3.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="interior mockup room portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">Open-Style &amp; Modern Living Room</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb4.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="interior mockup furniture portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">Comfortable Brown Sofa</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb5.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="kitchen interior portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">Clean Wooden Kitchen</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb6.jpg" alt="" class="stretch-image">
-                    </div>   
-                    <div class="furniture interior portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">The Yellow Couch</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb7.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="interior portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">Pleasant Sitting Room</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb8.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="room portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">Glassy White Room</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb9.jpg" alt="" class="stretch-image">
-                    </div>
-                    <div class="room mockup portfolio-item">
-                        <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">The Private Bedroom</a></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">عکسها</a>
-                                </li>
-                                <li>
-                                    <a href="#">مشخصات</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="themes/images/demo/portfolio/project-thumb10.jpg" alt="" class="stretch-image">
-                    </div>                   
+cd;
+}
+$html.=<<<cd
                 </div>
             </div>
         </div>

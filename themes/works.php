@@ -71,10 +71,10 @@ $html.=<<<cd
                             <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
                             <ul>
                                 <li>
-                                    <a href="#">عکسها</a>
+                                    <a href="work-fullpage{$val[id]}.html">عکسها</a>
                                 </li>
                                 <li>
-                                    <a href="#">مشخصات</a>
+                                    <a href="work-fullpage{$val[id]}.html">مشخصات</a>
                                 </li>
                             </ul>
                         </div>
@@ -85,54 +85,7 @@ cd;
 $html.=<<<cd
                 </div>
             </div>
-        </div>
-        <!-- <div class="row top-margin">
-            <div class="large-12 columns bottom-line">
-                <h2 class="smaller no-margin">Feedbacks From Our Customers</h2>
-            </div>
-        </div> -->
-        <!-- Testimonial Slider -->
-        <!-- <div class="row no-bg">
-            <div class="large-12 columns height-255 no-padding">   
-                <div class="testimonial-wrapper">
-                    <div class="testimonial-inner">
-                        <div class="testimonial-list">
-                            <div>
-                                <blockquote>
-                                    <p>
-                                        Nunc feugiat mi a tellus at consequat. Proinquam. Etiam ultrices. Suspendisse in justo sit etiam magna luctus suscipit.
-                                    </p>
-                                    <cite> Richard Jones, Arch Era Magazine </cite>
-                                </blockquote>
-                                <img src="themes/images/demo/test1.jpg" alt="">
-                            </div>
-                            <div>
-                                <blockquote>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit!
-                                    </p>
-                                    <cite> Balmer Family, New York </cite>
-                                </blockquote>
-                                <img src="themes/images/demo/test3.jpg" alt="">
-                            </div>
-                            <div>
-                                <blockquote>
-                                    <p class="smaller">
-                                        Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.
-                                    </p>
-                                    <cite> Steve Woodman, Agency </cite>
-                                </blockquote>
-                                <img src="themes/images/demo/test2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial-angle"></div>
-                        <div class="testimonial-corner"></div>
-                        <div class="testimonial-corner-mirror"></div>
-                    </div>
-                    <div class="testimonial-bullets"></div>
-                </div>                  
-            </div>
-        </div> -->
+        </div>        
     </div>
 cd;
     return $html;

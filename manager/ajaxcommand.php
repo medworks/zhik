@@ -155,7 +155,7 @@ if ($_GET["cmd"]=="workpics")
 									<div class="overlay"></div>
 								</a>
 							</div>
-							<input type="checkbox" name="picslist[]" value="{$name}" />
+							<input type="checkbox" name="picslist[]" value="{$name}.{$exe}" />
 							<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
 						</li>	   
 cd;

@@ -68,7 +68,7 @@ foreach($works as $key=>$val)
 $html.=<<<cd
                     <div class="{$val[catid]} mockup portfolio-item">
                         <div class="portfolio-item-hover">
-                            <h3><a href="portfolio-single.php">{$val["subject"]}</a></h3>
+                            <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
                             <ul>
                                 <li>
                                     <a href="#">عکسها</a>

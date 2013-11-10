@@ -63,7 +63,7 @@ $html.=<<<cd
                             </ul>
                         </div>
                         <hr>
-                        <h2 class="blog-title"><a href="blog-single.php">{$post["subject"]}</a></h2>
+                        <h2 class="blog-title"><a href="news-fullpage{$post[id]}.html">{$post["subject"]}</a></h2>
                         <p class="excerpt">
                             {$post["body"]}
                         </p>
@@ -99,18 +99,20 @@ $html.=<<<cd
                             <h4>آخرین اخبار</h4>
                             <ul>
 cd;
+$posts = $db->SelectAll("news","*",null,"ndate DESC");
 for($i = 0;$i<7;$i++)
 {
-  if (!isset($news[$i][ndate])) break;
-	$ndate = ToJalali($news[$i]["ndate"]," l d F  Y");
+  if (!isset($posts[$i][id])) break;
+	$ndate = ToJalali($posts[$i]["ndate"]," l d F  Y");
 $html.=<<<cd
                         
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="{$news[$i][image]}" alt="{$news[$i][subject]}" style="width:50px;height:25px;"></a>
+                                        <a href="news-fullpage{$posts[$i][id]}.html">
+										<img src="{$posts[$i][image]}" alt="{$posts[$i][subject]}" style="width:50px;height:50px;"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">{$news[$i][subject]}</a>
+                                        <a href="news-fullpage{$posts[$i][id]}.html">{$posts[$i][subject]}</a>
                                         <span class="date">{$ndate}</span>
                                     </div>
                                 </li>                            

@@ -1,5 +1,15 @@
 <?php
-
+    include_once("./config.php");
+	include_once("./lib/persiandate.php");
+	include_once("./classes/database.php");	
+	include_once("./classes/seo.php");	
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
+ 	$works = $db->Select('works',NULL,"id={$_GET[wid]}");
+	$sdate = ToJalali($works["sdate"]," l d F  Y ");
+	$fdate = ToJalali($works["fdate"]," l d F  Y ");		
+	$seo->Site_Title = $works["subject"];
+	$seo->Site_Describtion = strip_tags(mb_substr($works["body"],0,150,"UTF-8"));
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -13,10 +23,10 @@ $html=<<<cd
                 <span>مسیر شما:</span>
                 <ul class="breadcrumbs">
                     <li class="current">
-                        <a>پروژه برج پزشکی ژیک</a>
+                        <a>{$works["subject"]}</a>
                     </li>
                     <li>
-                        <a href="news.html">پروژه ها</a>
+                        <a href="works.html">پروژه ها</a>
                     </li>
                     <li>
                         <a href="./">صفحه اصلی</a>
@@ -27,7 +37,7 @@ $html=<<<cd
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>برج پزشکی ژیک</h1>
+                <h1>{$works["subject"]}</h1>
             </div>
         </div>
         <!-- Portfolio Info -->
@@ -56,7 +66,7 @@ $html=<<<cd
                     <li>
                         <strong>تاریخ</strong><i class="icon-calendar"></i>
                         <p>
-                            March 15, 2013
+                            {$fdate}
                         </p>
                     </li>
                     <li>
@@ -86,7 +96,7 @@ $html=<<<cd
             </div>
             <div class="large-9 columns">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                   {$works["body"]}
                 </p>
             </div>
         </div>

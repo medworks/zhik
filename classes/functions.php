@@ -59,7 +59,7 @@
               if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/uploadmgr.php";
 			break;
 			case 'worksmgr':
-                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/worksmgr.php";
+                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit" or $act=="pic") return "../manager/worksmgr.php";
 			break;
 			case 'articlesmgr':
                 if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/articlesmgr.php";

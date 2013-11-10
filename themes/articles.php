@@ -23,7 +23,7 @@
                 <span>مسیر شما:</span>
                 <ul class="breadcrumbs">
                     <li class="current">
-                        <a>اخبار</a>
+                        <a>مقالات</a>
                     </li>
                     <li>
                         <a href="./">صفحه اصلی</a>
@@ -35,14 +35,14 @@
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>اخبار <strong>ژیک</strong></h1>
+                <h1>مقالات<strong>ژیک</strong></h1>
             </div>
         </div>
 		<!-- Blog List -->
         <div class="grey-bg row">
             <div class="large-9 columns for-nested">
 cd;
-foreach($news as $key => $post)
+foreach($articles as $key => $post)
 {
 	$ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
   	$post["userid"] = GetUserName($post["userid"]);	
@@ -67,7 +67,7 @@ $html.=<<<cd
                         <p class="excerpt">
                             {$post["body"]}
                         </p>
-                        <a href="article-fullpage{$post[id]}.html" class="small flat radius button">ادامه خبر</a>
+                        <a href="article-fullpage{$post[id]}.html" class="small flat radius button">ادامه مقاله</a>
                     </div>
                     <div class="large-12 columns no-padding">
                         <img src="{$post[image]}" alt="{$post[subject]}" style="width:765px;height:255px;">

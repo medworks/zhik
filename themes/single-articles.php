@@ -27,7 +27,7 @@ $html=<<<cd
                         <a>{$articles["subject"]}</a>
                     </li>
                     <li>
-                        <a href="news.html">اخبار</a>
+                        <a href="articles.html">مقالات</a>
                     </li>
                     <li>
                         <a href="./">صفحه اصلی</a>

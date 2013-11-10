@@ -142,12 +142,12 @@ if ($_GET['act']=="do")
 		<div class="sub-menu" id="mainnav">
 			<ul>
 			  <li>		  
-				<a href="?item=worksmgr&act=new">درج کار جدید
+				<a href="?item=worksmgr&act=new">درج پروژه جدید
 					<span class="add-works"></span>
 				</a>
 			  </li>			  
 			  <li>
-				<a href="?item=worksmgr&act=mgr" id="news" name="news">حذف / ویرایش کارها
+				<a href="?item=worksmgr&act=mgr" id="news" name="news">حذف / ویرایش پروژه ها
 					<span class="edit-works"></span>
 				</a>
 			  </li>

@@ -1009,7 +1009,7 @@ header #mini-nav span.newSignup{
 /*  this section related to right nav div */
 .admin_right_panel{
  float : right;
- width :150px;
+ width :155px;
  margin-top : 11px;
  }
 
@@ -1017,7 +1017,7 @@ header #mini-nav span.newSignup{
 .admin_container{
   float : right;
   min-height: 600px;
-  width : 782px;
+  width : 780px;
   top: 15px;
   background: #fff;
   border: 1px solid #e6e6e6;

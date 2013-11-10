@@ -12,8 +12,10 @@
 	$catname = GetCategoryName($work["catid"]);
 	$catg = $db->Select('category',NULL,"id={$work[catid]}");
 	$secname = GetSectionName($catg["secid"]);
+	$related = $db->SelectAll('works',"*","catid={$work[catid]}","0","4");
 	$seo->Site_Title = $work["subject"];
 	$seo->Site_Describtion = strip_tags(mb_substr($work["body"],0,150,"UTF-8"));
+	
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -113,17 +115,21 @@ $html.=<<<cd
                 </p>
             </div>
         </div>
-        <!-- Related Items -->
+		<!-- Related Items -->
         <div class="row top-margin">
             <div class="large-12 columns bottom-line">
-                <h3 class="no-margin">Related Projects</h3>
+                <h3 class="no-margin">پروژه های مرتبط</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="large-12 columns for-nested portfolio-wrapper">
+		<div class="row">
+            <div class="large-12 columns for-nested portfolio-wrapper">		
+cd;
+foreach($related as $key=>$val)
+{
+$html.=<<<cd
                 <div class="portfolio-item">
                     <div class="portfolio-item-hover">
-                        <h3><a href="#">برج پزشکی ژیک</a></h3>
+                        <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
                         <ul>
                             <li>
                                 <a href="#">مشخصات</a>
@@ -133,50 +139,11 @@ $html.=<<<cd
                             </li>
                         </ul>
                     </div>
-                    <img src="themes/images/demo/portfolio/project-thumb3.jpg" alt="" class="stretch-image">
+                    <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href="#">برج پزشکی ژیک</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">مشخصات</a>
-                            </li>
-                            <li>
-                                <a href="#">عکس ها</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="themes/images/demo/portfolio/project-thumb4.jpg" alt="" class="stretch-image">
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href="#">برج پزشکی ژیک</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">مشخصات</a>
-                            </li>
-                            <li>
-                                <a href="#">عکس ها</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="themes/images/demo/portfolio/project-thumb5.jpg" alt="" class="stretch-image">
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href="#">برج پزشکی ژیک</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">مشخصات</a>
-                            </li>
-                            <li>
-                                <a href="#">عکس ها</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="themes/images/demo/portfolio/project-thumb9.jpg" alt="" class="stretch-image">
-                </div>
+cd;
+}
+$html.=<<<cd
 
             </div>
         </div>

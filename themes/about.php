@@ -38,7 +38,9 @@ $html=<<<cd
                     <p>
                        {$About_System}
                     </p>
-                    <a href="#" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;دانلود با فرمت PDF</a>
+					<!--
+						<a href="?item=pdf" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;دانلود با فرمت PDF</a>
+					-->
                 </div>
                 <div class="large-6 columns no-padding">
                     <div class="image-slider-wrapper">
@@ -60,35 +62,7 @@ $html=<<<cd
                     </div>
                 </div>
             </div>
-            <div class="row top-margin">
-                <div class="large-12 columns for-nested">
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <h2 class="has-line">چرا ژیک؟</h2>
-                            <p>
-                                Donec augue turpis, tempor id pulvinar eget, cursus eget ante. Proin sit amet nibh sem. Sed tortor arcu, egestas eu molestie in, lacinia luctus justo. Suspendisse semper, justo eget hendrerit viverra, mauris ligula gravida lorem, vitae mollis nisi nisl sed velit.
-                            </p>
-                            <h3 class="light">Tortor est ultricies</h3>
-                            <blockquote class="right">
-                                <p>
-                                    Morbi sed felis eget lectus semper tincidunt egetut malesuada dui
-                                </p>
-                            </blockquote>
-                            <p>
-                                Phasellus tempus mi id mauris accumsan dapibus. Vestibulum luctus porta nisi, a blandit quam volutpat at. Praesent in sapien arcu, ut malesuada dui. Morbi sed felis eget lectus semper tincidunt eget at nisl. Integer eget eros ligula. Curabitur a leo tellus, quis elementum turpis. Curabitur est nibh, ullamcorper eu viverra ultricies, aliquet nec lectus. Vestibulum elementum, purus a tempus fringilla, tortor est ultricies nibh, id feugiat nunc lectus in massa. Vivamus iaculis purus at tortor lacinia pharetra.
-                            </p>
-                            <h3 class="light">Praesent in sapien</h3>
-                            <p>
-                                Integer eget eros ligula. Curabitur a leo tellus, quis elementum turpis. Curabitur est nibh, ullamcorper eu viverra ultricies, aliquet nec lectus. Vestibulum elementum, purus a tempus fringilla, tortor est ultricies nibh, id feugiat nunc lectus in massa. Vivamus iaculis purus at tortor lacinia pharetra.
-                            </p>
-                            <h3 class="light">Donec augue turpis, tempor id pulvinar eget</h3>
-                            <p>
-                                Fusce ac vestibulum quam. Etiam accumsan ligula ut justo gravida eget accumsan arcu rhoncus. Etiam urna justo, viverra non laoreet gravida, rhoncus in arcu. Proin eget enim quam. Donec tempor urna id purus dignissim et euismod mi mattis. Praesent tincidunt ornare urna at euismod.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			     
             <div class="row top-margin">
                 <div class="large-12 columns">
                     <h2 class="has-line">کارهای ژیک</h2>
@@ -134,5 +108,6 @@ $html=<<<cd
             </div>
         </div>
 cd;
+
     return $html;
 ?>

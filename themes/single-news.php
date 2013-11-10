@@ -59,7 +59,7 @@ $html=<<<cd
                             </ul>
                         </div>
                         <hr>
-                        <h2 class="blog-title"><a href="blog-single.php">{$news["subject"]}</a></h2>
+                        <h2 class="blog-title"><a href="news-fullpage{$news[id]}.html">{$news["subject"]}</a></h2>
                         <p class="excerpt">
                             {$news["body"]}
                         </p>
@@ -92,16 +92,17 @@ cd;
 $news = $db->SelectAll("news","*",null,"ndate DESC");
 for($i = 0;$i<7;$i++)
 {
-  if (!isset($news[$i][ndate])) break;
+  if (!isset($news[$i][id])) break;
 	$ndate = ToJalali($news[$i]["ndate"]," l d F  Y");
 $html.=<<<cd
                         
                                 <li>
                                     <div class="post-thumbnail">
-                                        <a href="blog-single.php"><img src="{$news[$i][image]}" alt="{$news[$i][subject]}" style="width:50px;height:25px;"></a>
+                                        <a href="news-fullpage{$news[$i][id]}.html">
+										<img src="{$news[$i][image]}" alt="{$news[$i][subject]}" style="width:50px;height:50px;"></a>
                                     </div>
                                     <div class="post-title">
-                                        <a href="blog-single.php">{$news[$i][subject]}</a>
+                                        <a href="news-fullpage{$news[$i][id]}.html">{$news[$i][subject]}</a>
                                         <span class="date">{$ndate}</span>
                                     </div>
                                 </li>                            

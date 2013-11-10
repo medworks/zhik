@@ -45,22 +45,6 @@
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
-
-    <!-- <script type="text/javascript">
-        /* <![CDATA[ */
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-34324154-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-        (function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
-        /* ]]> */
-    </script> -->
 </head>
 <body>
     <script type="text/javascript" src="themes/js/CFInstall.js"></script>
@@ -98,11 +82,11 @@
             </li>
             <li>
                 <a href="works.html">پروژه ها</a>
-                <ul>
+                <!-- <ul>
                     <li>
                         <a href="work-fullpage1.html">پروژه برج پزشکی ژیک</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="portfolio-single.php">Single Page</a>
                         <ul>
                             <li>
@@ -112,30 +96,30 @@
                                 <a href="portfolio-single-video.php">Video Format</a>
                             </li>
                         </ul>
-                    </li> -->
-                </ul>
+                    </li>
+                </ul> -->
             </li>
             <li>
                 <a href="news.html">اخبار</a>
-                <ul>
+                <!-- <ul>
                     <li>
                         <a href="news-fullpage1.html">برج پزشکی ژیک</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="blog-list-left-sidebar.php">List Page (Left Sidebar)</a>
                     </li>
                     <li>
                         <a href="blog-single.php">Single Page</a>
-                    </li> -->
-                </ul>
+                    </li>
+                </ul> -->
             </li>
             <li>
                 <a href="articles.html">مقالات</a>
-                <ul>
+                <!-- <ul>
                     <li>
                         <a href="article-fullpage1.html">برج پزشکی ژیک</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="gallery-2.php">Gallery Style 2</a>
                     </li>
                     <li>
@@ -149,8 +133,8 @@
                     </li>
                     <li>
                         <a href="404.php">404 - Page Not Found</a>
-                    </li> -->
-                </ul>
+                    </li>
+                </ul> -->
             </li>
             <li>
                 <a href="gallery.html">گالری تصاویر</a>

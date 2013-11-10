@@ -26,7 +26,7 @@
 	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);
 	   $fdatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));
 				  
-	    if(empty($_POST["selectpic"]))
+	    if(empty($_POST["selectpic"])&& $_POST["mark"]!="addmorepic")
 		{ 
 			//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
 			header('location:?item=worksmgr&act=new&msg=4');
@@ -38,7 +38,7 @@
 		}
 		else
 		{			
-			if (empty($_POST['detail']))
+			if (empty($_POST['detail'])&& $_POST["mark"]!="addmorepic")
 			{
 			   //header('location:?item=worksmgr&act=new&msg=5');
 				$_GET["item"] = "worksmgr";
@@ -63,16 +63,10 @@
 			//$_GET["msg"] = 2;
 		} 	
 		else 
-		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو�?قیت انجام شد");
-			header('location:?item=worksmgr&act=new&msg=1');					
-			//exit();
-			//$_GET["item"] = "worksmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
-			
-		}  				 
-	}
+		{  													
+			header('location:?item=worksmgr&act=new&msg=1');
+	    }	  				 
+	 }
 	else
 	if (!$overall_error && $_POST["mark"]=="editworks")
 	{		
@@ -88,7 +82,19 @@
 		//$_GET["item"] = "worksmgr";
 		//$_GET["act"] = "mgr";			
 	}
-
+	if (!$overall_error && $_POST["mark"]=="addmorepic")
+	{						   				
+		$fields = array("`wid`","`image`");
+		if(!empty($_POST['picslist'])) 
+		{
+		  foreach($_POST['picslist'] as $key=>$val) 		  
+		  {		    
+			$values = array("'{$_GET[wid]}'","'./workspics/{$val}'");
+			$db->InsertQuery('workpics',$fields,$values);		
+		  }	
+		 }		 
+		header('location:?item=worksmgr&act=pic&msg=1');		 
+	 }
 	if ($overall_error)
 	{
 		$row = array("subject"=>$_POST['subject'],
@@ -137,7 +143,7 @@ if ($_GET['act']=="do")
 				<a href="?item=worksmgr&act=new">درج کار جدید
 					<span class="add-works"></span>
 				</a>
-			  </li>
+			  </li>			  
 			  <li>
 				<a href="?item=worksmgr&act=mgr" id="news" name="news">حذف / ویرایش کارها
 					<span class="edit-works"></span>
@@ -151,10 +157,30 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 	$msgs = GetMessage($_GET['msg']);
+	$sections = $db->SelectAll("section","*",null,"id ASC");
+	if ($_GET['act']=="edit") 
+	{   
+		$category = $db->SelectAll("category","*",null,"id ASC");
+		$secid = $db ->Select("category","secid","ID = '{$row[catid]}'");
+		$secid = $secid[0];
+		$cbsection = DbSelectOptionTag("cbsec",$sections,"secname","{$secid}",null,"select validate[required]");
+		$cbcategory = DbSelectOptionTag("cbcat",$category,"catname","{$row[catid]}",null,"select validate[required]");
+		
+	}
+	else
+	{
+	  $cbsection = DbSelectOptionTag("cbsec",$sections,"secname",null,null,"select validate[required]");
+	  $cbcategory = null;
+	} 
 	$html=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){		
-			$("#frmworksmgr").validationEngine();			
+			$("#frmworksmgr").validationEngine();
+			$("#cbsec").change(function(){
+				$.get('ajaxcommand.php?sec='+$(this).val(), function(data) {
+						$('#catgory').html(data);
+				});
+			});			
 		});	   
 	</script>	     
 	  <div class="title">
@@ -169,12 +195,21 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		  <div class="mes" id="message">{$msgs}</div>
 		   <p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
 		   <p>
+         <label for="cbsection">سر گروه </label>
+         <span>*</span>
+       </p>    
+	   {$cbsection}   
+	   <div id="catgory">
+		   {$cbcategory}
+	   </div>
+       <div class="badboy"></div>
+		   <p>
 			 <label for="subject">عنوان </label>
 			 <span>*</span>
 		   </p>  	 
 		   <input type="text" name="subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
 		   <p>
-			 <label for="pic">عکس </label>
+			 <label for="pic">عکس پیش فرض</label>
 			 <span>*</span>
 		   </p>
 		   <p>
@@ -184,7 +219,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   		<a class="selectbuttton" id="selectbuttton" title="انتخاب">انتخاب</a>
 		   </p>
 		   <div class="badboy"></div>
-		   <div id="filesbrowser"></div>
+		   <div id="filesbrowser"></div>		   
 		   <div class="badboy"></div>
 		   <p>
 			 <label for="detail">توضیحات </label>
@@ -238,6 +273,42 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 	  </div> 
 cd;
   }
+else
+if ($_GET['act']=="pic")
+{
+$msgs = GetMessage($_GET['msg']);
+$html=<<<cd
+<script type='text/javascript'>
+	$(document).ready(function(){		  	 		
+		$("#tab1").click(function(){
+		$.get('ajaxcommand.php?cmd=workpics', function(data) {
+						$('#catab1 ul').html(data);
+				});			
+			return false;
+		});		
+		$("#tab1").click();
+	});
+</script>	
+<div class="mes" id="message">{$msgs}</div>   
+	<div class="picmanager">		
+		<div class="files right">
+			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
+				<div class="cat-tabs-header">
+					<ul>						
+						<li id="tab1"><a href="#catab1">پوشه کارها</a></li>						
+					</ul>
+				</div>				
+				<div class="cat-tabs-wrap" id="catab1">
+					<ul>
+					
+					</ul>
+					<div class="badboy"></div>
+				</div>				
+		</div>
+		<div class="badboy"></div>
+	</div>
+cd;
+}
 else
 if ($_GET['act']=="mgr")
 {
@@ -297,6 +368,8 @@ if ($_GET['act']=="mgr")
 						$rowsClass[] = "datagridoddrow";
 				}
 				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
+				$rows[$i]["addpic"] = "<a href='?item=worksmgr&act=pic&wid={$rows[$i]["id"]}' class='edit-field'" .
+						"style='text-decoration:none;'></a>";								
 				$rows[$i]["edit"] = "<a href='?item=worksmgr&act=edit&wid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["delete"]=<<< del
@@ -316,7 +389,8 @@ del;
 							"image"=>"تصویر",
 							"body"=>"توضیحات",
 							"sdate"=>"تاریخ شروع",
-							"fdate"=>"تاریخ پایان",							
+							"fdate"=>"تاریخ پایان",
+							"addpic"=>"عکس بیشتر",
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=worksmgr&act=mgr");

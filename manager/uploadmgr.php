@@ -40,10 +40,9 @@
 		 $filename =strtolower(basename($_FILES['pic']['name']));
 		 $ext = substr($filename, strrpos($filename, '.') + 1);	   		 		
 		 $newfilename = $_FILES['pic']['name'];
-		 $newname = OS_ROOT."/tmp/".$_FILES['pic']['name'];
+		 $newname = OS_ROOT."/tmp/".$_FILES['pic']['name'];		 
 		 if (!(move_uploaded_file($_FILES['pic']['tmp_name'],$newname)))
-		 {       
-			   
+		 {       			   
 		 }		 
 		 foreach($pic_fldr_bit_addr as $key=>$val)
 		 {

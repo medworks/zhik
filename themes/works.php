@@ -1,5 +1,11 @@
 <?php
-
+  include_once("./classes/database.php");
+  include_once("./lib/persiandate.php");
+  $db = Database::GetDatabase();   
+  $works = $db->SelectAll("works","*",null,"fdate DESC");
+  foreach($works as $key=>$val) $cats[] = $val["catid"];    
+   $uniqcats = array_unique($cats);
+  
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
@@ -39,15 +45,19 @@ $html=<<<cd
                         <p>
                             لطفا یکی از گروه های زیر را انتخاب نمایید تا موارد انتخابی نمایش داده شود
                         </p>
-                        <p>
-                            </p><form id="portfolio-filter-wrapper" class="custom">
+                        <p></p>
+						  <form id="portfolio-filter-wrapper" class="custom">
                                 <select id="portfolio-filter" class="medium">
                                     <option selected="selected" value="*">همه گروه ها</option>
-                                    <option value=".furniture">مبلمان</option>
-                                    <option value=".interior">داخلی</option>
-                                    <option value=".kitchen">آشپزخانه</option>
-                                    <option value=".mockup">نمونه ها</option>
-                                    <option value=".room">اتاق</option>
+cd;
+ foreach($uniqcats as $key=>$val)
+ {
+	$catname = GetCategoryName($val);
+$html.=<<<cd
+             <option value=".{$val}">{$catname}</option>
+cd;
+}
+$html.=<<<cd
                                 </select>
                             </form>
                         <p></p>

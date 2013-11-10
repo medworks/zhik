@@ -1245,6 +1245,36 @@ span.sf-sub-indicator {
 	margin: 0 auto;
 }
 
+.footer-object{
+	margin-bottom: 20px;
+	direction: rtl;
+	text-align: right;
+}
+
+.footer-object a:hover{
+	opacity: 0.5;
+}
+
+.footer-object a img{
+	width: 54px;
+	height: 54px;
+	background: #fff;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	-ms-border-radius: 1px;
+	-o-border-radius: 1px;
+	border-radius: 1px;
+	-webkit-box-shadow: 0 0 2px #B5B5B5;
+	-moz-box-shadow: 0 0 2px #B5B5B5;
+	-ms-box-shadow: 0 0 2px #B5B5B5;
+	-o-box-shadow: 0 0 2px #B5B5B5;
+	box-shadow: 0 0 2px #B5B5B5;
+	padding: 2px;
+}
+
+.footer-object h3{
+	display: inline-block;
+}
 /***** Footer Social Icons *****/
 #footer-social {
 	text-align: right;

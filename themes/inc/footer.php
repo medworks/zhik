@@ -20,33 +20,23 @@
             </div>
             <div class="large-4 columns less-padding">
                 <h5>اخبار</h5>
+                <ul>
+                   
 				<?php									  					
-							for($i=0 ; $i<5 ; $i++){
-								if($news[$i]['subject']!=null){
-			  						$ndate = ToJalali($news[$i]["ndate"]," l d F ");
-									echo "<p>
-											<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
-											<img src='{$news[$i]["image"]}'alt='{$news[$i]["subject"]}' style='width:50px;height:50px;'></a>
-											<h3><a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>{$news[$i]["subject"]}</a></h3>
-											<span class='date'>{$ndate}</span>
-										</p>";
-							}}
-						?>                
-                <!-- <ul>
-                    <li>
-                        Phone: +123.456.789
-                    </li>
-                    <li>
-                        Mobile: +123.999.899
-                    </li>
-                    <li>
-                        Email: <a href="#"><span class="__cf_email__" data-cfemail="583b37362c393b2c18392a3b302c3d33763b3735">[email&nbsp;protected]</span><script type="text/javascript">
-/* <![CDATA[ */
-(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
-/* ]]> */
-</script></a>
-                    </li>
-                </ul> -->
+					for($i=0 ; $i<5 ; $i++){
+						if($news[$i]['subject']!=null){
+	  						$ndate = ToJalali($news[$i]["ndate"]," l d F ");
+							echo "<li class='footer-object'>
+									<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
+									   <img src='{$news[$i]["image"]}'alt='{$news[$i]["subject"]}'>
+                                    </a>
+									<h3><a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>{$news[$i]["subject"]}</a></h3>
+									<span class='date'>{$ndate}</span>
+								 </li>";
+					}}
+				?>
+                </ul>
+
             </div>
             <div class="large-4 columns less-padding">
                 <h5>پروژه ها</h5>

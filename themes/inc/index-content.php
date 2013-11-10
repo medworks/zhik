@@ -108,7 +108,7 @@ $html=<<<cd
                     <p>
                       {$articles[0]["body"]}
                     </p>
-                    <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
+                    <a href="article-fullpage{$articles[0][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@ $html=<<<cd
                     <p>
                          {$articles[1]["body"]}
                     </p>
-                    <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
+                    <a href="article-fullpage{$articles[1][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
             <div class="row">
@@ -142,7 +142,7 @@ $html=<<<cd
                     <p>
                         {$articles[2]["body"]}
                     </p>
-                    <a href="#" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
+                    <a href="article-fullpage{$articles[2][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[0][id]}.html">مشخصات</a>
                             </li>
                         </ul>
                     </div>					
@@ -183,7 +183,7 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[1][id]}.html">مشخصات</a>
                             </li>
                         </ul>
                     </div>
@@ -198,7 +198,7 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[2][id]}.html">مشخصات</a>
                             </li>
                         </ul>
                     </div>
@@ -212,7 +212,7 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[3][id]}.html">مشخصات</a>
                             </li>
                             <!-- <li>
                                 <a href="#">Room</a>
@@ -229,7 +229,7 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[4][id]}.html">مشخصات</a>
                             </li>
                             <!-- <li>
                                 <a href="#">Mock-up</a>
@@ -246,64 +246,20 @@ $html=<<<cd
                                 <a href="#">عکسها</a>
                             </li>
                             <li>
-                                <a href="#">مشخصات</a>
+                                <a href="work-fullpage{$works[5][id]}.html">مشخصات</a>
                             </li>
                         </ul>
                     </div>
                     <img src="{$works[5][image]}" alt="{$works[5][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-                
-            </div>
-                
+                </div>                
+            </div>                
         </div>
-    </div>
-    <!-- Testimonial Slider -->
-    <!-- <div class="row top-margin no-bg">
-        <div class="large-12 columns no-padding"> 
-            <div class="testimonial-wrapper">
-                <div class="testimonial-inner">
-                    <div class="testimonial-list">
-                        <div>
-                            <blockquote>
-                                <p>
-                                    Nunc feugiat mi a tellus at consequat. Proinquam. Etiam ultrices. Suspendisse in justo sit etiam magna luctus suscipit.
-                                </p>
-                                <cite> Richard Jones, Arch Era Magazine </cite>
-                            </blockquote>
-                            <img src="images/demo/test1.jpg" alt="">
-                        </div>
-                        <div>
-                            <blockquote>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit!
-                                </p>
-                                <cite> Balmer Family, New York </cite>
-                            </blockquote>
-                            <img src="images/demo/test3.jpg" alt="">
-                        </div>
-                        <div>
-                            <blockquote>
-                                <p class="smaller">
-                                    Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.
-                                </p>
-                                <cite> Steve Woodman, Agency </cite>
-                            </blockquote>
-                            <img src="images/demo/test2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="testimonial-angle"></div>
-                    <div class="testimonial-corner"></div>
-                    <div class="testimonial-corner-mirror"></div>
-                </div>
-                <div class="testimonial-bullets"></div>
-            </div>  
-        </div>
-    </div> -->
+    </div>  
     <!-- Blog -->
     <div class="row top-margin">
         <div class="large-12 columns bottom-line">
             <h3 class="no-margin">آخرین اخبار...</h3>
-            <a href="blog-list.php" class="bottom-right angle flat button">نمایش اخبار<span class="angle"><i class="icon-angle-left"></i></span></a>
+            <a href="news.html" class="bottom-right angle flat button">نمایش اخبار<span class="angle"><i class="icon-angle-left"></i></span></a>
         </div>
     </div>
     <div class="row">

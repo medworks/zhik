@@ -24,6 +24,11 @@
 	   list($year,$month,$day) = explode("-", trim($_POST["ndate"]));		
 	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);		
 	   $ndatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));		
+	    if(empty($_POST["selectpic"]))
+	   { 		
+			header('location:?item=articlesmgr&act=new&msg=4');		
+			$overall_error = true;			
+		}
 						
 		if (empty($_POST['detail']))
 		{
@@ -34,9 +39,9 @@
 	}	
 	if (!$overall_error && $_POST["mark"]=="savenews")
 	{	    
-		$fields = array("`subject`","`body`","`ndate`","`userid`","`resource`","`catid`","`keywords`");
+		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`resource`","`catid`","`keywords`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[subject]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'","'{$_POST[keywords]}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'","'{$_POST[keywords]}'");
 		if (!$db->InsertQuery('articles',$fields,$values)) 
 		{
 			header('location:?item=articlesmgr&act=new&msg=2');
@@ -51,6 +56,7 @@
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
 		$values = array("`subject`"=>"'{$_POST[subject]}'",
+		                "`image`"=>"'{$_POST[selectpic]}'",
 						"`body`"=>"'{$_POST[detail]}'",
 						"`ndate`"=>"'{$ndatetime}'",
 						"`userid`"=>"'{$userid}'",
@@ -65,6 +71,7 @@
 	if ($overall_error)
 	{
 		$row = array("subject"=>$_POST['subject'],
+		             "image"=>$_POST['image'],
 					 "body"=>$_POST['detail'],
 					 "ndate"=>$_POST['ndate'],
 					 "userid"=>$userid,

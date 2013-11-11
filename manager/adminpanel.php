@@ -119,9 +119,9 @@
           <li >            
             <a href="?item=uploadmgr&act=do" id="users" name="users" class="upload"><p>مدیریت آپلود</p></a>
           </li>		  
-          <li>
+          <!-- <li>
             <a href="?item=thememgr&act=do" class="template"><p>مدیریت قالب</p></a>
-          </li>
+          </li> -->
   		    <li>
             <a href="?item=settingmgr&act=do" class="setting"><p>تنظیمات</p></a>
           </li>

@@ -19,16 +19,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-    <!-- <script type="text/javascript">
-    //<![CDATA[
-    window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"UA-34324154-1","ga_bs":"2"}};
-    //]]>
-    </script>
-    <script type="text/javascript">
-    //<![CDATA[
-    try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=2980380653/"},atok:"5126430ea0d4dc56c780be1507b53c46",petok:"7d8b81485ba067043daaca40f112e1e8-1383400502-1800",zone:"uxbarn.com",rocket:"0",apps:{"ga_key":{"ua":"UA-34324154-1","ga_bs":"2"}}}];var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=616370820/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
-    //]]>
-    </script> -->
     <link href="themes/css/reset.css" rel="stylesheet">
     <link href="themes/css/foundation.css" rel="stylesheet">
     <link href="themes/css/font-awesome.min.css" rel="stylesheet">

@@ -26,6 +26,8 @@
                 html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8");
 //------------------------------- work part -------------------------
 		$works = $db->SelectAll("works","*",null,"fdate DESC","0","6");
+		$lastworkbody = mb_substr(html_entity_decode(strip_tags($works[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 200,"UTF-8") . "..." ;
+		
 //------------------------------- news part -------------------------	
         $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");
         $news[0]["body"] =(mb_strlen($articles[0]["body"])>150)?
@@ -92,11 +94,13 @@ $html.=<<<cd
             <div class="portfolio-wrapper">
 
                 <div class="fixed-box portfolio-item bottom-line">
-                    <h2 class="smaller">پروژه های ما.</h2>
+                    <h2 class="smaller">پروژه آخر</h2>
                     <p>
-                        توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... توضیحات کلی در مورد پروژه ها... 
+						<a href='work-fullpage{$works[0][id]}.html'>
+							{$lastworkbody}
+					    </a>
                     </p>
-                    <a href="portfolio-list.php" class="bottom-right angle flat button">نمایش همه پروژه ها<span class="angle"><i class="icon-angle-left"></i></span></a>
+                    <a href="works.html" class="bottom-right angle flat button">نمایش همه پروژه ها<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
 
                 <div class="kitchen mockup portfolio-item">

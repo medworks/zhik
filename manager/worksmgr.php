@@ -260,7 +260,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   <p>
-		   		<input type="text" name="selectplan" class="selectpic" id="selectpplan" value='{$row[image]}' />
+		   		<input type="text" name="selectplan" class="selectpic" id="selectplan" value='{$row[image]}' />
 		   		<input type="text" class="validate[required] showadd" id="showplanadd" value='{$row[image]}' />
 		   		<a class="filebrowserbtn" id="planbrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
 		   		<a class="selectbuttton" id="selectplanbuttton" title="انتخاب">انتخاب</a>
@@ -269,15 +269,18 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   <div id="planbrowser"></div>		   
 		   <div class="badboy"></div>
 		   <p>
-			 <label for='price'>فایل جدول قیمت</label>
+			 <label for="pic">فایل جدول قیمت</label>
 			 <span>*</span>
 		   </p>
-		   <div class='upload-file'>
-				<input type='file' name='price' class='validate[required] pic ltr' id='price' value='{$row[price]}'/>  
-				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
-				<span class='action'>انتخاب فایل</span>
-		   </div>
-			<div class="badboy"></div>
+		   <p>
+		   		<input type="text" name="selectprice" class="selectpic" id="selectprice" value='{$row[image]}' />
+		   		<input type="text" class="validate[required] showadd" id="showpriceadd" value='{$row[image]}' />
+		   		<a class="filebrowserbtn" id="pricebrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
+		   		<a class="selectbuttton" id="selectpricebuttton" title="انتخاب">انتخاب</a>
+		   </p>
+		   <div class="badboy"></div>
+		   <div id="pricebrowser"></div>
+		   <div class="badboy"></div>
 		   <p>
 			<label for="sdate">تاریخ شروع </label>
 			<span>*</span><br /><br />

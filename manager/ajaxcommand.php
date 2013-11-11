@@ -99,6 +99,37 @@ cd;
         }
     }
 	closedir($handle);
+if ($_GET["item"]=="planfiles")
+{
+$html.=<<<cd
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.cat-tabs-wrap a.select').click(function(){
+	                var srcimg= $(this).children('img').attr('src');
+	                $('img#planprevimage').attr('src',srcimg);
+	                
+	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+	                $('#plannamepreview').html(filename);
+
+	               var size= getImgSize(srcimg);
+	               $('#plansizepreview').html(size);
+
+	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+	               $('#plantypepreview').html(ext);
+
+	               $('#selectpl').click(function(){
+	                    var value= srcimg;
+	                    $('#selectplan').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showplanadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+}
+else
+{
 $html.=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){
@@ -114,24 +145,7 @@ $html.=<<<cd
 
 	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
 	               $('#typepreview').html(ext);
-cd;
-if ($_GET["item"]=="planfiles")
-{
-$html.=<<<cd
-	               $('#selectpl').click(function(){
-	                    var value= srcimg;
-	                    $('#selectplan').val(value);
-	                    value= value.split('/').reverse()[0];
-	                    $('#showplanadd').val(value);
-	               });
-	            });
-		});
-	</script>
-cd;
-}
-else
-{
-$html.=<<<cd
+
 	               $('#select').click(function(){
 	                    var value= srcimg;
 	                    $('#selectpic').val(value);

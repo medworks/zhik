@@ -9,8 +9,10 @@
         include_once("./classes/database.php");
         include_once("./lib/persiandate.php");
         $db = Database::GetDatabase();
+//------------------------------- wellcome part -------------------------
 		$WellCome_Title = GetSettingValue('WellCome_Title',0);
 	    $WellCome_Body = GetSettingValue('WellCome_Body',0);
+//------------------------------- articles part -------------------------
 		$articles = $db->SelectAll("articles","*",null,"ndate DESC","0","3");
 		$articles[0]["body"] =(mb_strlen($articles[0]["body"])>400)?
                 mb_substr(html_entity_decode(strip_tags($articles[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 400,"UTF-8") . "..." :
@@ -22,7 +24,9 @@
         $articles[2]["body"] =(mb_strlen($articles[2]["body"])>50)?
                 mb_substr(html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($articles[2]["body"]), ENT_QUOTES, "UTF-8");
+//------------------------------- work part -------------------------
 		$works = $db->SelectAll("works","*",null,"fdate DESC","0","6");
+//------------------------------- news part -------------------------	
         $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");
         $news[0]["body"] =(mb_strlen($articles[0]["body"])>150)?
                 mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
@@ -36,39 +40,29 @@
 		$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
 		$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
 		$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
+//------------------------------- header slides part -------------------------
+		$slides = $db->SelectAll("slides","*");		
 
 $html=<<<cd
 <!-- Home Slider Container -->
 <div id="home-slider-container">
-
     <div id="home-slider">
+cd;
+foreach($slides as $key=>$val)
+{
+$html.=<<<cd
         <div class="home-slider-item">
-            <img src="themes/images/demo/slider/slide1.jpg" alt="Slide 1">
+            <img src="{$val[image]}" alt="{$val[subject]}">
             <div class="slider-caption">
-                <h2>برج پزشکی ژیک.</h2>
+                <h2>{$val["subject"]}</h2>
                 <p>
-                    برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
+                    {$val["body"]}
                 </p>
             </div>
         </div>
-        <div class="home-slider-item">
-            <img src="themes/images/demo/slider/slide3.jpg" alt="Slide 2">
-            <div class="slider-caption">
-                <h2>برج پزشکی ژیک.</h2>
-                <p>
-                    برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
-                </p>
-            </div>
-        </div>
-        <div class="home-slider-item">
-            <img src="themes/images/demo/slider/slide3-new2.jpg" alt="Slide 3">
-            <div class="slider-caption">
-                <h2>برج پزشکی ژیک.</h2>
-                <p>
-                    برج پزشکی ژیک در موقعیتی ممتاز در همجواری بیمارستان مهر می باشد.
-                </p>
-            </div>
-        </div>
+cd;
+}
+$html.=<<<cd
     </div>
     <div id="slider-controller" class="content-width">
         <a href="#" id="slider-prev"><i class="icon-angle-left"></i></a>

@@ -31,8 +31,8 @@
   } 	
  if (!$overall_error && $_POST["mark"]=="saveslides")
  {						   				
-	$fields = array("`image`","`subject`","`body`","`pos`");	
-	$values = array("'{$_POST[selectpic]}'","'{$_POST[subject]}'","'{$_POST[body]}'","'{$_POST[cbpos]}'");
+	$fields = array("`image`","`subject`","`body`");	
+	$values = array("'{$_POST[selectpic]}'","'{$_POST[subject]}'","'{$_POST[body]}'");
 	if (!$db->InsertQuery('slides',$fields,$values)) 
 	{
 		//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -57,8 +57,7 @@
  {			    
 	$values = array("`image`"=>"'{$_POST[selectpic]}'",
 	       		    "`subject`"=>"'{$_POST[subject]}'",
-					"`body`"=>"'{$_POST[body]}'",
-					"`pos`"=>"'{$_POST[cbpos]}'");
+					"`body`"=>"'{$_POST[body]}'");
 	$db->UpdateQuery("slides",$values,array("id='{$_GET['sid']}'"));
 	header('location:?item=slidesmgr&act=mgr');
 	//$_GET["item"] = "slidesmgr";
@@ -130,7 +129,7 @@ $list = array("1"=>"اسلاید بزرگ",
               "2"=>"اسلاید کوچک",
 			  "3"=>"همه موارد");
 $itemselect = ($row['pos'])? $row['pos'] :"1";
-$combobox = SelectOptionTag("cbpos",$list,$itemselect,null,'select2');
+//$combobox = SelectOptionTag("cbpos",$list,$itemselect,null,'select2');
 $html=<<<cd
 		<script type='text/javascript'>
 			$(document).ready(function(){		
@@ -171,10 +170,12 @@ $html=<<<cd
 				<span>*</span>
 			</p>
 			<input type="text" name="body" class="validate[required] subject" id="body" value="{$row[body]}" /> 
+		<!--
 			<p>
 				<label for="cbpos">نمایش عکس در </label>
 			</p>
 			{$combobox}
+		-->	
 			{$editorinsert}
 				<input type="reset" value="پاک کردن" class='reset' /> 				
 			</p>
@@ -222,12 +223,14 @@ if ($_GET['act']=="mgr")
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");               
                 $rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";
+				/*
 				switch($rows[$i]["pos"])
 				{
 				 case 1: $rows[$i]["pos"] = "اسلاید بزرگ"; break;
 				 case 2: $rows[$i]["pos"] = "اسلاید کوچک"; break;
 				 case 3: $rows[$i]["pos"] = "همه موارد"; break;
 				}
+				*/
 				if ($i % 2==0)
 				 {
 						$rowsClass[] = "datagridevenrow";
@@ -254,7 +257,7 @@ del;
 							"image"=>"عکس",
 							"subject"=>"عنوان",
 							"body"=>"توضیحات",
-							"pos"=>"موقعیت نمایش",							
+						//	"pos"=>"موقعیت نمایش",							
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=slidesmgr&act=mgr");

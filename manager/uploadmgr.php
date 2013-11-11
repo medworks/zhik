@@ -14,15 +14,17 @@
  $db = Database::GetDatabase();
  $overall_error = false;
  // in this variable save string bit of pics folders
- $pic_fldr_bit_addr = array("newspics"=>0,
+ $pic_fldr_bit_addr = array("articlepics"=>0,
+							"newspics"=>0,
                             "workspics"=>0,
   						    "userspics"=>0,
 							"slidespics"=>0,
 							"gallerypics"=>0);
- $pic_fldrs = array("newspics","workspics","userspics","slidespics","gallerypics");
- $fa_pic_fldrs = array("اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر");
+ $pic_fldrs = array("articlepics","newspics","workspics","userspics","slidespics","gallerypics");
+ $fa_pic_fldrs = array("مقالات","اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر");
   for($i=0;$i<count($_POST['picsaddr']);$i++)
   {
+	if ($_POST['picsaddr'][$i]=="articlepics") {$pic_fldr_bit_addr["articlepics"]= 1;}
 	if ($_POST['picsaddr'][$i]=="newspics") {$pic_fldr_bit_addr["newspics"]= 1;}
 	if ($_POST['picsaddr'][$i]=="workspics") {$pic_fldr_bit_addr["workspics"]= 1;}
 	if ($_POST['picsaddr'][$i]=="userspics") {$pic_fldr_bit_addr["userspics"]= 1;}
@@ -38,10 +40,9 @@
 		 $filename =strtolower(basename($_FILES['pic']['name']));
 		 $ext = substr($filename, strrpos($filename, '.') + 1);	   		 		
 		 $newfilename = $_FILES['pic']['name'];
-		 $newname = OS_ROOT."/tmp/".$_FILES['pic']['name'];
+		 $newname = OS_ROOT."/tmp/".$_FILES['pic']['name'];		 
 		 if (!(move_uploaded_file($_FILES['pic']['tmp_name'],$newname)))
-		 {       
-			   
+		 {       			   
 		 }		 
 		 foreach($pic_fldr_bit_addr as $key=>$val)
 		 {
@@ -170,7 +171,8 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
-$chechbox = array("newspics"=>"پوشه اخبار",
+$chechbox = array("articlepics"=>"پوشه مقالات",
+                  "newspics"=>"پوشه اخبار",
                   "workspics"=>"پوشه فعالیت ها",
                   "userspics"=>"پوشه کاربران",
 				  "slidespics"=>"پوشه اسلاید ها",

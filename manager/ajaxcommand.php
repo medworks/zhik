@@ -80,7 +80,7 @@ if ($_GET["cmd"]=="file")
 					  $filename = basename($file);
 					  $exe = substr($filename, strrpos($filename, '.') + 1);
 					  $name = substr($filename, 0, strrpos($filename, '.'));
-					  $allowedExts = array('jpg','jpeg','png','bmp','gif');
+					  $allowedExts = array('jpg','jpeg','png','bmp','gif','pdf');
 
 					if(in_array($exe, $allowedExts)){
                       $pics.=<<<cd

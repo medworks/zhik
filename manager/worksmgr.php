@@ -228,6 +228,24 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   </p>
 		   <textarea cols="50" rows="10" name="detail" class="detail" id="detail">{$row[body]}</textarea>
 		   <p>
+			 <label for='pic'>فایل پلان</label>
+			 <span>*</span>
+		   </p>
+		   <div class='upload-file'>
+				<input type='file' name='plan' class='validate[required] pic ltr' id='plan' />  
+				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
+				<span class='action'>انتخاب فایل</span>
+			</div>
+		   <p>
+			 <label for='pic'>فایل جدول قیمت</label>
+			 <span>*</span>
+		   </p>
+		   <div class='upload-file'>
+				<input type='file' name='price' class='validate[required] pic ltr' id='price' />  
+				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
+				<span class='action'>انتخاب فایل</span>
+			</div>
+		   <p>
 			 <label for="link">آدرس کار </label>
 		   </p>  	 
 		   <input type="text" name="link" class="ltr subject" id="link" value="{$row[link]}" />

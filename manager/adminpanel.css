@@ -1528,3 +1528,42 @@ p.note{
   padding-right: 10px;
   line-height: 2;
 }
+
+.add-pics{
+  width: 750px !important;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.add-pics .cat-tabs-header{
+  border-top: 1px solid #EAEAEA;
+}
+
+.add-pics .cat-tabs-header li a{
+  font-size: 18px;
+}
+
+.add-pics .cat-tabs-wrap li{
+  text-align: right;
+}
+
+.add-pics .cat-tabs-wrap .submit{
+  margin-bottom: 10px !important;
+  margin-top: 50px !important;
+}
+
+.add-pics .cat-tabs-wrap li h2{
+  display: inline-block;
+  font-size: 12px;
+}
+
+.add-pics .cat-tabs-wrap li .pic a{
+  background: 0 none !important;
+  border: 0 none !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.add-pics .cat-tabs-wrap li .pic .overlay{
+  display: none;
+}

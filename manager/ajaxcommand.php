@@ -169,9 +169,8 @@ $html.=<<<cd
   <form  method="post" action="">
    {$pics}
    <div class="badboy"></div>
-   <div class="badboy"></div>
    <div>
-	 <input type="submit" name="send" value="ثبت عکس ها" />
+	 <input type="submit" name="send" class="submit" value="ثبت عکس ها" />
 	 <input type="hidden" name="mark" value="addmorepic" />
    </div>
   </form>

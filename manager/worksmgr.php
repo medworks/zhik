@@ -371,7 +371,7 @@ if ($_GET['act']=="mgr")
 				}
 				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
 				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
-				$rows[$i]["addpic"] = "<a href='?item=worksmgr&act=pic&wid={$rows[$i]["id"]}' class='edit-field'" .
+				$rows[$i]["addpic"] = "<a href='?item=worksmgr&act=pic&wid={$rows[$i]["id"]}' class='add-pic'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["edit"] = "<a href='?item=worksmgr&act=edit&wid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
@@ -394,7 +394,7 @@ del;
 							"body"=>"توضیحات",
 							"sdate"=>"تاریخ شروع",
 							"fdate"=>"تاریخ پایان",
-							"addpic"=>"عکس بیشتر",
+							"addpic"=>"عکس",
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=worksmgr&act=mgr");

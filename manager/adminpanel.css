@@ -1292,6 +1292,12 @@ select.select2{
   border-radius: 3px;
 }
 
+.admin_container a.add-pic{
+  background: url('./images/icons/picture-add.png') no-repeat center;
+  display: block;
+  height: 16px;
+}
+
 .admin_container a.edit-field{
   background: url('./images/icons/edit.gif') no-repeat center;
   display: block;

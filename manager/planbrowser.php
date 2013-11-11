@@ -47,13 +47,13 @@ $html=<<<cd
 	$(document).ready(function(){		  	 
 		$("#tab10").click(function(){	
 			$.get('ajaxcommand.php?cmd=file&item=planfiles', function(data) {
-						$('#catab1 ul').html(data);
+						$('#catab10 ul').html(data);
 				});			
 			return false;
 		});		
 		$("#tab11").click(function(){
 		$.get('ajaxcommand.php?cmd=file&item=pricefiles', function(data) {
-						$('#catab2 ul').html(data);
+						$('#catab11 ul').html(data);
 				});			
 			return false;
 		});
@@ -78,17 +78,17 @@ $html=<<<cd
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
 				<div class="cat-tabs-header">
 					<ul>
-						<li id="tab10"><a href="#catab1">پوشه پلان ها</a></li>
-						<li id="tab11"><a href="#catab2">پوشه قیمت ها</a></li>	
+						<li id="tab10"><a href="#catab10">پوشه پلان ها</a></li>
+						<li id="tab11"><a href="#catab11">پوشه قیمت ها</a></li>	
 					</ul>
 				</div>
-				<div class="cat-tabs-wrap" id="catab1">
+				<div class="cat-tabs-wrap" id="catab10">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab2">
+				<div class="cat-tabs-wrap" id="catab11">
 					<ul>
 					
 					</ul>

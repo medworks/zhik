@@ -311,7 +311,7 @@ $html=<<<cd
 </script>	
 <div class="mes" id="message">{$msgs}</div>   
 	<div class="picmanager">		
-		<div class="files right">
+		<div class="files right add-pics">
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
 				<div class="cat-tabs-header">
 					<ul>						
@@ -324,9 +324,10 @@ $html=<<<cd
 					</ul>
 					<div class="badboy"></div>
 				</div>				
-		</div>
+			</div>
 		<div class="badboy"></div>
 	</div>
+</div>
 cd;
 }
 else

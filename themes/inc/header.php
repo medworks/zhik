@@ -1,3 +1,10 @@
+<?php
+    include_once("config.php");
+    include_once("classes/functions.php");
+    include_once("classes/database.php");
+    include_once("classes/seo.php");
+    $seo = Seo::GetSeo();   
+?>
 <!DOCTYPE html>
 <!--[if IE 8]>
     <html class="no-js lt-ie9" lang="fa">
@@ -15,7 +22,7 @@
     Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <title>Zhik</title>
+    <title><?php echo $seo->Site_Title;?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 

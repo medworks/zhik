@@ -110,7 +110,7 @@
 	}
 	if (!$overall_error && $_POST["mark"]=="addmorepic")
 	{			
-        $pics = $db->SelectAll("workpics","*","wid = '{$_GET[id]}'");	
+        $pics = $db->SelectAll("workpics","*","wid = '{$_GET[wid]}'");	
 		$img = array();
 		$reqimg = array();
 		$dif = array();
@@ -122,7 +122,7 @@
 			  foreach($_POST['picslist'] as $key=>$val)
 			  {		    
 				$values = array("'{$_GET[wid]}'","'./workspics/{$val}'");
-			//	$db->InsertQuery('workpics',$fields,$values);		
+				$db->InsertQuery('workpics',$fields,$values);		
 			  }	
 			 }
 		}
@@ -133,8 +133,7 @@
 			$dif = array_diff($img, $reqimg);
 			foreach($dif as $key=>$val)
 			{
-				$db->Delete("workpics"," image","{$val}");
-				echo $db->cmd,"<br/>";
+				$db->Delete("workpics"," image","{$val}");				
 			}
 			$dif = array_diff($reqimg, $img);
 			$fields = array("`wid`","`image`");
@@ -144,7 +143,7 @@
 				$db->InsertQuery('workpics',$fields,$values);
 			}
 		}
-		//header('location:?item=worksmgr&act=pic&msg=1');		 
+		header('location:?item=worksmgr&act=mgr');		 
 	 }
 	if ($overall_error)
 	{

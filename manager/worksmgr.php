@@ -49,30 +49,7 @@
 		}
 	}	
     if (!$overall_error && $_POST["mark"]=="saveworks")
-	{	
-		   if((!empty($_FILES["plan"])) && ($_FILES['plan']['error'] == 0))
-		   {
-				 $planfile =strtolower(basename($_FILES['plan']['name']));
-				 $ext = substr($planfile, strrpos($planfile, '.') + 1);	   		 		
-				 $newfilename = $_FILES['plan']['name'];
-				 $newname = OS_ROOT."/plans/".$_FILES['plan']['name'];				 
-				 if (!(move_uploaded_file($_FILES['plan']['tmp_name'],$newname)))
-				 {       		
-                   header('location:?item=worksmgr&act=new&msg=4');
-				 }		 				 
-			}
-		   if((!empty($_FILES["price"])) && ($_FILES['price']['error'] == 0))
-		   {
-				 $pricefile =strtolower(basename($_FILES['price']['name']));
-				 $ext = substr($pricefile, strrpos($pricefile, '.') + 1);
-				 $newfilename = $_FILES['price']['name'];
-				 $newname = OS_ROOT."/pricetables/".$_FILES['price']['name'];
-				 if (!(move_uploaded_file($_FILES['price']['tmp_name'],$newname)))
-				 {
-				   header('location:?item=worksmgr&act=new&msg=4');
-				 }		 				 
-			}
-			
+	{			   
 		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`","`catid`","`plan`","`pricetable`");
 		$_POST["detail"] = addslashes($_POST["detail"]);
 		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'","'{$planfile}'","'{$pricefile}'");

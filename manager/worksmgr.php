@@ -236,6 +236,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
 				<span class='action'>انتخاب فایل</span>
 			</div>
+			<div class="badboy"></div>
 		   <p>
 			 <label for='pic'>فایل جدول قیمت</label>
 			 <span>*</span>
@@ -244,11 +245,8 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 				<input type='file' name='price' class='validate[required] pic ltr' id='price' />  
 				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
 				<span class='action'>انتخاب فایل</span>
-			</div>
-		   <p>
-			 <label for="link">آدرس کار </label>
-		   </p>  	 
-		   <input type="text" name="link" class="ltr subject" id="link" value="{$row[link]}" />
+		   </div>
+			<div class="badboy"></div>
 		   <p>
 			<label for="sdate">تاریخ شروع </label>
 			<span>*</span><br /><br />

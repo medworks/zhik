@@ -231,10 +231,10 @@ if ($_GET["cmd"]=="workpics")
 								</a>
 							</div>
 cd;
-if(in_array($name.".".$exe, $files))
+if(in_array($filename, $files))
 {
 $pics.=<<<cd
-			<input type="checkbox" name="picslist[]" value="{$name}.{$exe}" checked/>
+			<input type="checkbox" name="picslist[]" value="{$filename}" checked/>
 			<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
 						</li>
 cd;

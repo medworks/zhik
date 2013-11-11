@@ -118,7 +118,7 @@ cd;
 if ($_GET["item"]=="planfiles")
 {
 $html.=<<<cd
-	               $('#select').click(function(){
+	               $('#selectpl').click(function(){
 	                    var value= srcimg;
 	                    $('#selectplan').val(value);
 	                    value= value.split('/').reverse()[0];

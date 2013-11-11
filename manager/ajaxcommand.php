@@ -131,7 +131,20 @@ cd;
 if ($_GET["cmd"]=="workpics")
 {
 	$pics = "";	
+	$files = array();
     $dir = "../workspics";
+	$checkboxs = $db->SelectAll("workpics","*","wid = '{$_GET[id]}'");
+	//echo $db->cmd;
+	//echo "test is test for test";
+	if (!empty($checkboxs))
+	{
+	//echo "<br/>not empty<br/>";
+		foreach($checkboxs as $key=>$val) 
+		{		    
+			$files[] = mb_substr($val["image"],12,mb_strlen($val["image"]),"UTF-8");	
+		//	var_dump($files);
+		}	
+	}	
 	$handle=opendir($dir);
     while ($file = readdir($handle))
     {        
@@ -155,10 +168,23 @@ if ($_GET["cmd"]=="workpics")
 									<div class="overlay"></div>
 								</a>
 							</div>
-							<input type="checkbox" name="picslist[]" value="{$name}.{$exe}" />
+cd;
+if(in_array($name.".".$exe, $files))
+{
+$pics.=<<<cd
+			<input type="checkbox" name="picslist[]" value="{$name}.{$exe}" checked/>
+			<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
+						</li>
+cd;
+}
+else
+{
+$pics.=<<<cd
+            <input type="checkbox" name="picslist[]" value="{$name}.{$exe}"/>
 							<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
 						</li>	   
 cd;
+}
 					}
 			  }
         }

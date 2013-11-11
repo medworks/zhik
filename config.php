@@ -25,8 +25,8 @@
   define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']);
 */
   
-  define ('SITE_ROOT', '/zhik.pro');
-  define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']."/zhik.pro");
+  define ('SITE_ROOT', '/zhik');
+  define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']."/zhik");
   
   
 ?>

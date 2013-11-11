@@ -26,9 +26,6 @@ $html=<<<cd
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
                 <h1>گالری تصاویر<strong>ژیک</strong></h1>
-                <!-- <p>
-                    Etiam pellentesque mollis ultrices. Nam dictum auctor nunc, at ultricies lorem tempor id. Nulla tellus dolor, aliquam ac consectetur at, euismod sed sapien. 
-                </p> -->
             </div>
         </div>
         <!-- Gallery Items -->
@@ -46,6 +43,7 @@ $html.=<<<cd
                     </div>
 cd;
 }
+
 $html.=<<<cd
                 </div>
             </div>

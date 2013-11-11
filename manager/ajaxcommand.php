@@ -129,6 +129,36 @@ $html.=<<<cd
 cd;
 }
 else
+if ($_GET["item"]=="pricefiles")
+{
+$html.=<<<cd
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.cat-tabs-wrap a.select').click(function(){
+	                var srcimg= $(this).children('img').attr('src');
+	                $('img#priceprevimage').attr('src',srcimg);
+	                
+	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+	                $('#pricenamepreview').html(filename);
+
+	               var size= getImgSize(srcimg);
+	               $('#pricesizepreview').html(size);
+
+	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+	               $('#pricetypepreview').html(ext);
+
+	               $('#selectpr').click(function(){
+	                    var value= srcimg;
+	                    $('#selectprice').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showpriceadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+}
+else
 {
 $html.=<<<cd
 	<script type='text/javascript'>

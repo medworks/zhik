@@ -85,64 +85,8 @@ $html.=<<<cd
             </p>
         </div>
     </div>
-    <!-- Features -->
-    <div class="row">
-        <div class="large-6 columns for-nested">
-            <div class="row">
-                <div class="large-6 columns height-510 no-padding">
-				<a href="article-fullpage{$articles[0][id]}.html" title="{$articles[0][subject]}">
-                    <img src="{$articles[0][image]}" alt="{$articles[0][subject]}" class="stretch-image" style="width:255px;height:510px;">
-				</a>	
-                </div>
-                <div class="large-6 columns height-510 bottom-line">
-				<a href="article-fullpage{$articles[0][id]}.html" title="{$articles[0][subject]}">
-                    <h2 class="smaller">{$articles[0]["subject"]}</h2>
-				</a>	
-					
-                    <p>
-                      {$articles[0]["body"]}
-                    </p>
-                    <a href="article-fullpage{$articles[0][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="large-6 columns for-nested">
-            <div class="row">
-                <div class="large-6 columns height-255 no-padding">				
-				<a href="article-fullpage{$articles[1][id]}.html" title="{$articles[1][subject]}">
-                    <img src="{$articles[1][image]}" alt="{$articles[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
-				</a>	
-                </div>
-                <div class="large-6 columns height-255 bottom-line">
-				<a href="article-fullpage{$articles[1][id]}.html" title="{$articles[1][subject]}">
-                    <h2 class="smaller">{$articles[1]["subject"]}</h2>
-				</a>	
-                    <p>
-                         {$articles[1]["body"]}
-                    </p>
-                    <a href="article-fullpage{$articles[1][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="large-6 columns height-255 no-padding">
-				<a href="article-fullpage{$articles[2][id]}.html" title="{$articles[2][subject]}">
-                    <img src="{$articles[2][image]}" alt="{$articles[2][subject]}" class="stretch-image" style="width:255px;height:255px;" >
-				</a>	
-                </div>
-                <div class="large-6 columns height-255 bottom-line">
-				<a href="article-fullpage{$articles[2][id]}.html" title="{$articles[2][subject]}">
-                    <h2 class="smaller">{$articles[2]["subject"]}</h2>
-				</a>	
-                    <p>
-                        {$articles[2]["body"]}
-                    </p>
-                    <a href="article-fullpage{$articles[2][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Portfolio -->
-    <div class="row top-margin">
+    <div class="row">
         <div class="large-12 columns no-padding">
 
             <div class="portfolio-wrapper">
@@ -317,6 +261,62 @@ $html.=<<<cd
 				<a href="news-fullpage{$news[2][id]}.html" title="{$news[2][subject]}">
                     <img src="{$news[2][image]}" alt="{$news[2][subject]}" class="stretch-image" style="width:255px;height:255px;">
 				</a>	
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features -->
+    <div class="row top-margin">
+        <div class="large-6 columns for-nested">
+            <div class="row">
+                <div class="large-6 columns height-510 no-padding">
+                <a href="article-fullpage{$articles[0][id]}.html" title="{$articles[0][subject]}">
+                    <img src="{$articles[0][image]}" alt="{$articles[0][subject]}" class="stretch-image" style="width:255px;height:510px;">
+                </a>    
+                </div>
+                <div class="large-6 columns height-510 bottom-line">
+                <a href="article-fullpage{$articles[0][id]}.html" title="{$articles[0][subject]}">
+                    <h2 class="smaller">{$articles[0]["subject"]}</h2>
+                </a>    
+                    
+                    <p>
+                      {$articles[0]["body"]}
+                    </p>
+                    <a href="article-fullpage{$articles[0][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="large-6 columns for-nested">
+            <div class="row">
+                <div class="large-6 columns height-255 no-padding">             
+                <a href="article-fullpage{$articles[1][id]}.html" title="{$articles[1][subject]}">
+                    <img src="{$articles[1][image]}" alt="{$articles[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
+                </a>    
+                </div>
+                <div class="large-6 columns height-255 bottom-line">
+                <a href="article-fullpage{$articles[1][id]}.html" title="{$articles[1][subject]}">
+                    <h2 class="smaller">{$articles[1]["subject"]}</h2>
+                </a>    
+                    <p>
+                         {$articles[1]["body"]}
+                    </p>
+                    <a href="article-fullpage{$articles[1][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-6 columns height-255 no-padding">
+                <a href="article-fullpage{$articles[2][id]}.html" title="{$articles[2][subject]}">
+                    <img src="{$articles[2][image]}" alt="{$articles[2][subject]}" class="stretch-image" style="width:255px;height:255px;" >
+                </a>    
+                </div>
+                <div class="large-6 columns height-255 bottom-line">
+                <a href="article-fullpage{$articles[2][id]}.html" title="{$articles[2][subject]}">
+                    <h2 class="smaller">{$articles[2]["subject"]}</h2>
+                </a>    
+                    <p>
+                        {$articles[2]["body"]}
+                    </p>
+                    <a href="article-fullpage{$articles[2][id]}.html" class="bottom-right angle flat button">بیشتر بدانید<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
             </div>
         </div>

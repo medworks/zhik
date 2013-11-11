@@ -1186,7 +1186,7 @@ span.sf-sub-indicator {
 /***** Footer *****/
 #footer-content-container {
 	/*background: #202020;*/
-	background: #383838;
+	background: #333;
 	color: #aaa;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 14px;
@@ -1244,18 +1244,58 @@ span.sf-sub-indicator {
 #footer-bar-inner-wrapper {
 	margin: 0 auto;
 }
+/**/
+#footer-content-container .title{
+	padding: 10px 0;
+	border-bottom: 1px solid #222;
+}
 
-.footer-object{
-	margin-bottom: 20px;
-	direction: rtl;
+#footer-content-container #footer-content a{
+	text-decoration: none;
+	color: #ccc;
+}
+
+#footer-content-container #footer-content a:hover{
+	color: #FFF;
+}
+
+#footer-content-container #footer-content ul{
+	border-bottom: 1px solid #444;
+	border-top: 1px solid #444;
+}
+
+#footer-content-container #footer-content ul li{
+	padding: 10px 0 20px 0;
+	border-bottom: 1px solid #232323;
+	border-top: 1px solid #444;
+	overflow: hidden;
+}
+
+#footer-content-container #footer-content ul li:first-child{
+	border-top: 0 none;
+}
+
+#footer-content-container #footer-content ul li  h3{
 	text-align: right;
 }
 
-.footer-object a:hover{
+#footer-content-container #footer-content ul li .pic{
+	float: right;
+}
+
+#footer-content-container #footer-content ul li .pic a{
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-ms-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+
+#footer-content-container #footer-content ul li .pic a:hover{
 	opacity: 0.5;
 }
 
-.footer-object a img{
+#footer-content-container #footer-content ul li .pic img{
 	width: 54px;
 	height: 54px;
 	background: #fff;
@@ -1272,8 +1312,17 @@ span.sf-sub-indicator {
 	padding: 2px;
 }
 
-.footer-object h3{
-	display: inline-block;
+#footer-content-container #footer-content ul li h3{
+	font-size: 19px;
+	margin-right: 65px;
+}
+#footer-content-container #footer-content ul li span{
+	font-family: 'bmitra';
+	font-size: 15px;
+	text-align: right;
+	margin-right: 65px;
+	display: block;
+	margin-top: 5px;
 }
 /***** Footer Social Icons *****/
 #footer-social {

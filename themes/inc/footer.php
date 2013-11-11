@@ -6,7 +6,7 @@
 	$news = $db->SelectAll('news',NULL,NULL," ndate DESC");
 	$works = $db->SelectAll('works',NULL,NULL," fdate DESC");
 	$articles = $db->SelectAll('articles',NULL,NULL," ndate DESC");
-	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8")."  ...";
+	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 500,"UTF-8")."  ...";
 ?>
 <!-- Footer Content -->
 <div id="footer-content-container">
@@ -15,21 +15,25 @@
             <div class="large-4 columns less-padding" style="text-align:right;">
                 <img id="footer-logo" src="themes/images/logo.png" alt="">
                 <p>
-                    <?php echo $About_System ?>
+                    <a href="about-us.html" title="درباره ما"><?php echo $About_System ?></a>
                 </p>
             </div>
             <div class="large-4 columns less-padding">
-                <h5>اخبار</h5>
+                <div class="title">
+                    <h5>آخرین اخبار</h5>
+                </div>
                 <ul>
                    
 				<?php									  					
-					for($i=0 ; $i<5 ; $i++){
+					for($i=0 ; $i<3 ; $i++){
 						if($news[$i]['subject']!=null){
 	  						$ndate = ToJalali($news[$i]["ndate"]," l d F ");
-							echo "<li class='footer-object'>
-									<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
-									   <img src='{$news[$i]["image"]}'alt='{$news[$i]["subject"]}'>
-                                    </a>
+							echo "<li>
+                                    <div class='pic'>
+    									<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
+    									   <img src='{$news[$i]["image"]}'alt='{$news[$i]["subject"]}'>
+                                        </a>
+                                    </div>
 									<h3><a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>{$news[$i]["subject"]}</a></h3>
 									<span class='date'>{$ndate}</span>
 								 </li>";
@@ -39,35 +43,49 @@
 
             </div>
             <div class="large-4 columns less-padding">
-                <h5>پروژه ها</h5>
-				<?Php
-                for($i=0 ; $i<5 ; $i++){
-					if($works[$i]['subject']!=null){						
-						$fdate = ToJalali($works[$i]["fworksdate"]," l d F  Y"); 
-						echo "<p>
-								<a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>
-								<img src='{$works[$i]["image"]}'alt='{$works[$i]["subject"]}' style='width:50px;height:50px;'></a>
-								<h3><a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>{$works[$i]["subject"]}</a></h3>								
-								<span class='date'>{$fdate}</span>
-							</p>";
-				}
-				}
-				?>
+                <div class="title">
+                    <h5>آخرین پروژه ها</h5>
+                </div>
+                <ul>
+    				<?Php
+                        for($i=0 ; $i<3 ; $i++){
+        					if($works[$i]['subject']!=null){						
+        						$fdate = ToJalali($works[$i]["fworksdate"]," l d F  Y"); 
+        						echo "<li>
+                                        <div class='pic'>
+        								    <a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>
+        								        <img src='{$works[$i]["image"]}'alt='{$works[$i]["subject"]}' style='width:50px;height:50px;'>
+                                            </a>
+                                        </div>
+        								<h3><a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>{$works[$i]["subject"]}</a></h3>								
+        								<span class='date'>{$fdate}</span>
+        							</li>";
+        				    }
+        				}
+    				?>
+                </ul>
             </div>
             <div class="large-4 columns less-padding">
-                <h5>مقالات</h5>
-                <?php												
-					for($i=0 ; $i<5 ; $i++){
-						if($articles[$i]['subject']!=null){
-								$ndate = ToJalali($articles[$i]["ndate"]," l d F  Y-H:m");
-							echo "<p>
-							        <a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>
-									<img src='{$articles[$i]["image"]}'alt='{$articles[$i]["subject"]}' style='width:50px;height:50px;'></a>
-									<h3 class='article'><a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>{$articles[$i]["subject"]}</a></h3>
-									<span class='date article'>{$ndate}</span>
-								</p>";
-					}}
-				?>
+                <div class="title">
+                    <h5>آخرین مقالات</h5>
+                </div>
+                <ul>
+                    <?php												
+    					for($i=0 ; $i<3 ; $i++){
+    						if($articles[$i]['subject']!=null){
+    								$ndate = ToJalali($articles[$i]["ndate"]," l d F Y");
+    							echo "<li>
+                                        <div class='pic'>
+        							        <a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>
+        									   <img src='{$articles[$i]["image"]}'alt='{$articles[$i]["subject"]}' style='width:50px;height:50px;'>
+                                            </a>
+                                        </div>
+    									<h3 class='article'><a href='article-fullpage{$articles[$i][id]}.html' title='{$articles[$i]["subject"]}'>{$articles[$i]["subject"]}</a></h3>
+    									<span class='date article'>{$ndate}</span>
+    								</li>";
+    					}}
+    				?>
+                </ul>
             </div>
         </div>
     </div>

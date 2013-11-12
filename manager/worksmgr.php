@@ -350,7 +350,7 @@ $html=<<<cd
 						<li id="tab1" class="active"><a href="#catab1">پوشه کارها</a></li>						
 					</ul>
 				</div>				
-				<div class="cat-tabs-wrap" id="catab1">
+				<div class="cat-tabs-wrap-pic" id="catab1">
 					<ul>
 					
 					</ul>

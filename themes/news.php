@@ -97,8 +97,8 @@ $html.=<<<cd
                             </form>
 							<script type='text/javascript'>
 							$(document).ready(function(){
-								$("#submit").click(function(){
-								
+								$("#frmsearch").submit(function(){
+								alert("bhjhih");
 									$.ajax({
 										type: "POST",
 										url: "manager/ajaxcommand.php?item=search&cat=news",

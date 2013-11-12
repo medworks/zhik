@@ -5,7 +5,7 @@
 	$db = Database::GetDatabase();
 
 if ($_GET["item"]=="search")
-{ 
+{  echo "test"; 
       $table = $_GET["cat"];
       $field = "subject";
 	  $rownum = 0;

@@ -81,7 +81,7 @@ $html.=<<<cd
                     <li>
                         <strong>پلان</strong><i class=" icon-pencil"></i>
                         <p>
-                            <a href="#">
+                            <a href="{$work[plan]}" target="_blank">
                                 دانلود پلان
                             </a>
                         </p>
@@ -89,7 +89,7 @@ $html.=<<<cd
 					<li>
                         <strong>جدول قیمت</strong><i class="icon-money"></i>
                         <p>
-                            <a href="#">
+                            <a href="{$work[pricetable]}" target="_blank">
                                 دانلود قیمتها
                             </a>
                         </p>
@@ -104,13 +104,7 @@ $html.=<<<cd
                                 <a href="#">{$secname}</a>
                             </li>                           
                         </ul>
-                    </li>
-                    <!-- <li>
-                        <strong>وب سایت</strong><i class="icon-globe"></i>
-                        <p>
-                            <a href="#">www.smart-living.com</a>
-                        </p>
-                    </li> -->
+                    </li>                    
                 </ul>
             </div>
             <div class="large-9 columns">

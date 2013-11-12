@@ -109,38 +109,38 @@ $html=<<<cd
 						<li id="tab6"><a href="#catab6">پوشه مقالات</a></li>
 					</ul>
 				</div>
-				<div class="cat-tabs-wrap" id="catab1">
+				<div class="cat-tabs-wrap-pic" id="catab1">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab2">
+				<div class="cat-tabs-wrap-pic" id="catab2">
 					<ul>
 					
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab3">
+				<div class="cat-tabs-wrap-pic" id="catab3">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab4">
+				<div class="cat-tabs-wrap-pic" id="catab4">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab5">
+				<div class="cat-tabs-wrap-pic" id="catab5">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
 				<div class="badboy"></div>
-				<div class="cat-tabs-wrap" id="catab6">
+				<div class="cat-tabs-wrap-pic" id="catab6">
 					<ul>
 						
 					</ul>

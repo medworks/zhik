@@ -82,13 +82,13 @@ $html=<<<cd
 						<li id="tab13"><a href="#catab13">پوشه قیمت ها</a></li>	
 					</ul>
 				</div>
-				<div class="cat-tabs-wrap" id="catab12">
+				<div class="cat-tabs-wrap-price" id="catab12">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab13">
+				<div class="cat-tabs-wrap-price" id="catab13">
 					<ul>
 					
 					</ul>

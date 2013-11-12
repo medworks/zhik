@@ -1,4 +1,4 @@
-<?php	
+-plan<?php	
 	include_once("../config.php");	
     include_once("../classes/database.php");
 	include_once("../classes/session.php");	
@@ -82,13 +82,13 @@ $html=<<<cd
 						<li id="tab11"><a href="#catab11">پوشه قیمت ها</a></li>	
 					</ul>
 				</div>
-				<div class="cat-tabs-wrap" id="catab10">
+				<div class="cat-tabs-wrap-plan" id="catab10">
 					<ul>
 						
 					</ul>
 					<div class="badboy"></div>
 				</div>
-				<div class="cat-tabs-wrap" id="catab11">
+				<div class="cat-tabs-wrap-plan" id="catab11">
 					<ul>
 					
 					</ul>

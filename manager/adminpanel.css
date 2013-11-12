@@ -442,7 +442,9 @@ label{
 }
 
 /* Tabbed Categories */
-.cat-tabs-wrap{
+.cat-tabs-wrap-pic,
+.cat-tabs-wrap-plan,
+.cat-tabs-wrap-price{
   padding:20px;
 }
 
@@ -477,28 +479,36 @@ label{
   box-shadow:0 -1px 2px #d4d4d4;
 }
 
-.cat-tabs-wrap li{
+.cat-tabs-wrap-pic li,
+.cat-tabs-wrap-plan li,
+.cat-tabs-wrap-price li{
   overflow:hidden;
   padding: 5px 0;
   width:118px;
   float:right;
 }
 
-.cat-tabs-wrap li.picture{
+.cat-tabs-wrap-pic li.picture,
+.cat-tabs-wrap-plan li.picture,
+.cat-tabs-wrap-price li.picture{
   overflow:hidden;
   padding: 5px 18px;
   width: 58px;
   float:right;
 }
 
-.cat-tabs-wrap li.first-li{
+.cat-tabs-wrap-pic li.first-li,
+.cat-tabs-wrap-plan li.first-li,
+.cat-tabs-wrap-price li.first-li{
   padding:0;
   width:310px;
   float:right;
   margin-left: 25px;
 }
 
-.cat-tabs-wrap li.first-li p.post-meta{
+.cat-tabs-wrap-pic li.first-li p.post-meta,
+.cat-tabs-wrap-plan li.first-li p.post-meta,
+.cat-tabs-wrap-price li.first-li p.post-meta{
   margin:10px 0;
 }
 
@@ -533,14 +543,18 @@ label{
   margin-bottom: 10px;
 }
 /******************/
-.cat-tabs-wrap li.first-li-picture{
+.cat-tabs-wrap-pic li.first-li-picture,
+.cat-tabs-wrap-plan li.first-li-picture,
+.cat-tabs-wrap-price li.first-li-picture{
   padding:0;
   width:256px;
   float:right;
   margin-left: 25px;
 }
 
-.cat-tabs-wrap li.first-li-picture p.post-meta{
+.cat-tabs-wrap-pic li.first-li-picture p.post-meta,
+.cat-tabs-wrap-plan li.first-li-picture p.post-meta,
+.cat-tabs-wrap-price li.first-li-picture p.post-meta{
   margin:10px 0;
 }
 .tab li.first-li-picture .pic{
@@ -1547,27 +1561,37 @@ p.note{
   font-size: 18px;
 }
 
-.add-pics .cat-tabs-wrap li{
+.add-pics .cat-tabs-wrap-pic li,
+.add-pics .cat-tabs-wrap-plan li,
+.add-pics .cat-tabs-wrap-price li{
   text-align: right;
 }
 
-.add-pics .cat-tabs-wrap .submit{
+.add-pics .cat-tabs-wrap-pic .submit,
+.add-pics .cat-tabs-wrap-plan .submit,
+.add-pics .cat-tabs-wrap-price .submit{
   margin-bottom: 10px !important;
   margin-top: 50px !important;
 }
 
-.add-pics .cat-tabs-wrap li h2{
+.add-pics .cat-tabs-wrap-pic li h2,
+.add-pics .cat-tabs-wrap-plan li h2,
+.add-pics .cat-tabs-wrap-price li h2{
   display: inline-block;
   font-size: 12px;
 }
 
-.add-pics .cat-tabs-wrap li .pic a{
+.add-pics .cat-tabs-wrap-pic li .pic a,
+.add-pics .cat-tabs-wrap-plan li .pic a,
+.add-pics .cat-tabs-wrap-price li .pic a{
   background: 0 none !important;
   border: 0 none !important;
   padding: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.add-pics .cat-tabs-wrap li .pic .overlay{
+.add-pics .cat-tabs-wrap-pic li .pic .overlay,
+.add-pics .cat-tabs-wrap-plan li .pic .overlay,
+.add-pics .cat-tabs-wrap-price li .pic .overlay{
   display: none;
 }

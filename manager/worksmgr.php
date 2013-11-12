@@ -345,9 +345,9 @@ $html=<<<cd
 	<div class="picmanager">		
 		<div class="files right add-pics">
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
-				<div class="cat-tabs-header">
+				<div class="cat-tabs-header" id="cat-tabs-header">
 					<ul>						
-						<li id="tab1"><a href="#catab1">پوشه کارها</a></li>						
+						<li id="tab1" class="active"><a href="#catab1">پوشه کارها</a></li>						
 					</ul>
 				</div>				
 				<div class="cat-tabs-wrap" id="catab1">

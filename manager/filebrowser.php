@@ -99,7 +99,7 @@ $html=<<<cd
 		</div>
 		<div class="files right">
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
-				<div class="cat-tabs-header">
+				<div class="cat-tabs-header-pic" id="cat-tabs-header">
 					<ul>
 						<li id="tab1"><a href="#catab1">پوشه اخبار</a></li>
 						<li id="tab2"><a href="#catab2">پوشه کارها</a></li>

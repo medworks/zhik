@@ -76,7 +76,7 @@ $html=<<<cd
 		</div>
 		<div class="files right">
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
-				<div class="cat-tabs-header">
+				<div class="cat-tabs-header-price" id="cat-tabs-header">
 					<ul>
 						<li id="tab12"><a href="#catab12">پوشه پلان ها</a></li>
 						<li id="tab13"><a href="#catab13">پوشه قیمت ها</a></li>	

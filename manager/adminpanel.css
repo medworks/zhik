@@ -444,14 +444,14 @@ label{
   padding:20px;
 }
 
-.cat-tabs-header{
+#cat-tabs-header{
   background:#F7F7F7;
   height:35px;
   border-bottom: 3px solid #EAEAEA;
   padding:8px 10px 0;
 }
 
-.cat-tabs-header li{
+#cat-tabs-header li{
   float:right;
   margin-right:10px;
   line-height:30px;
@@ -466,7 +466,7 @@ label{
   font-size:12pt;
 }
 
-.cat-tabs-header li.active{
+#cat-tabs-header li.active{
   background:#FFF;
   -webkit-box-shadow:0 -1px 2px #d4d4d4;
   -moz-box-shadow:0 -1px 2px #d4d4d4;
@@ -504,7 +504,7 @@ label{
   padding: 0;
 }
 
-.tab .cat-tabs-header li a{
+.tab #cat-tabs-header li a{
   font-size: 15px;
 }
 

@@ -79,18 +79,11 @@ $html=<<<cd
 				<div class="cat-tabs-header-plan" id="cat-tabs-header">
 					<ul>
 						<li id="tab10"><a href="#catab10">پوشه پلان ها</a></li>
-						<li id="tab11"><a href="#catab11">پوشه قیمت ها</a></li>	
 					</ul>
 				</div>
 				<div class="cat-tabs-wrap-plan" id="catab10">
 					<ul>
 						
-					</ul>
-					<div class="badboy"></div>
-				</div>
-				<div class="cat-tabs-wrap-plan" id="catab11">
-					<ul>
-					
 					</ul>
 					<div class="badboy"></div>
 				</div>								

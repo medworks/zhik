@@ -58,7 +58,7 @@ $html=<<<cd
 			return false;
 		});
 		
-		$("#tab12").click();
+		$("#tab13").click();
 	});
 </script>	   
 	<div class="picmanager">
@@ -78,15 +78,8 @@ $html=<<<cd
 			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
 				<div class="cat-tabs-header-price" id="cat-tabs-header">
 					<ul>
-						<li id="tab12"><a href="#catab12">پوشه پلان ها</a></li>
 						<li id="tab13"><a href="#catab13">پوشه قیمت ها</a></li>	
 					</ul>
-				</div>
-				<div class="cat-tabs-wrap-price" id="catab12">
-					<ul>
-						
-					</ul>
-					<div class="badboy"></div>
 				</div>
 				<div class="cat-tabs-wrap-price" id="catab13">
 					<ul>

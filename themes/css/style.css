@@ -77,6 +77,10 @@ body {
 	direction: rtl;
 }
 
+.transparent{
+	background: transparent !important;
+}
+
 h1,h2,h3,h4,h5,h6,a,p,strong,input,span,label,textarea{
 	direction: rtl;
 	font-family: 'bmitra' !important;
@@ -782,7 +786,7 @@ span.sf-sub-indicator {
 
 /***** Portfolio *****/
 .portfolio-wrapper {
-	background: #EFEFEE !important;
+	background: #EFEFEE;
 	overflow: visible !important;
 	padding: 0 !important;
 }

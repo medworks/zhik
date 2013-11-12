@@ -88,112 +88,39 @@ $html.=<<<cd
         </div>
     </div>
     <!-- Portfolio -->
-    <div class="row">
+    <div class="row transparent">
         <div class="large-12 columns no-padding">
-
-            <div class="portfolio-wrapper">
-
+            <div class="portfolio-wrapper transparent">
                 <div class="fixed-box portfolio-item bottom-line">
                     <h2 class="smaller">پروژه آخر</h2>
                     <p>
-						<a href='work-fullpage{$works[0][id]}.html'>
-							{$lastworkbody}
-					    </a>
+                        <a href='work-fullpage{$works[0][id]}.html'>
+                            {$lastworkbody}
+                        </a>
                     </p>
                     <a href="works.html" class="bottom-right angle flat button">نمایش همه پروژه ها<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
-
-                <div class="kitchen mockup portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[0][id]}.html'>{$works[0][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[0][id]}.html">مشخصات</a>
-                            </li>
-                        </ul>
-                    </div>					
-                    <img src="{$works[0][image]}" alt="{$works[0][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-                <div class="furniture interior portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[1][id]}.html'>ب{$works[1][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[1][id]}.html">مشخصات</a>
-                            </li>
-                        </ul>
+cd;
+                for ($i=1 ; $i<7 ; $i++){
+                    if($works[$i]['subject']!=null){
+$html.=<<<cd
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-hover">
+                            <h3><a href='work-fullpage{$works[$i][id]}.html'>{$works[$i][subject]}</a></h3>
+                            <ul>
+                                <li>
+                                    <a href="#">عکسها</a>
+                                </li>
+                                <li>
+                                    <a href="work-fullpage{$works[$i][id]}.html">مشخصات</a>
+                                </li>
+                            </ul>
+                        </div>                  
+                        <img src="{$works[$i][image]}" alt="{$works[$i][subject]}" class="stretch-image" style="width:255px;height:255px;">
                     </div>
-                    <img src="{$works[1][image]}" alt="{$works[1][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-
-                <div class="room interior portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[2][id]}.html'>{$works[2][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[2][id]}.html">مشخصات</a>
-                            </li>
-                        </ul>
-                    </div>
-                   <img src="{$works[2][image]}" alt="{$works[2][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-                <div class="interior mockup room portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[3][id]}.html'>{$works[3][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[3][id]}.html">مشخصات</a>
-                            </li>
-                            <!-- <li>
-                                <a href="#">Room</a>
-                            </li> -->
-                        </ul>
-                    </div>
-                    <img src="{$works[3][image]}" alt="{$works[3][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-                <div class="interior mockup furniture portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[4][id]}.html'>{$works[4][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[4][id]}.html">مشخصات</a>
-                            </li>
-                            <!-- <li>
-                                <a href="#">Mock-up</a>
-                            </li> -->
-                        </ul>
-                    </div>
-                    <img src="{$works[4][image]}" alt="{$works[4][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>
-                <div class="kitchen interior portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href='work-fullpage{$works[5][id]}.html'>{$works[5][subject]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="#">عکسها</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$works[5][id]}.html">مشخصات</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="{$works[5][image]}" alt="{$works[5][subject]}" class="stretch-image" style="width:255px;height:255px;">
-                </div>                
+cd;
+                }}
+$html.=<<<cd
             </div>                
         </div>
     </div>  
@@ -269,7 +196,7 @@ $html.=<<<cd
             </div>
         </div>
     </div>
-    <!-- Features -->
+    <!-- Features 
     <div class="row top-margin">
         <div class="large-6 columns for-nested">
             <div class="row">
@@ -324,7 +251,7 @@ $html.=<<<cd
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 <!-- End id="content-container" -->
 cd;

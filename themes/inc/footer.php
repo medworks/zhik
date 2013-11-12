@@ -96,17 +96,23 @@
     <div id="footer-bar-inner-wrapper" class="content-width">
         <div class="large-6 columns less-padding">
             <div id="footer-social">
+                <?php
+                    $gplus = GetSettingValue('Gplus_Add',0);
+                    $facebook = GetSettingValue('FaceBook_Add',0);
+                    $twitter = GetSettingValue('Twitter_Add',0);
+                    $rss = GetSettingValue('Rss_Add',0);
+                ?>
                 <ul class="bar-social">
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/facebook-bw.png" alt="" title=""><img class="hover" src="themes/images/social/facebook.png" alt="Facebook" title="Facebook"></a>
+                        <a href="https://<?php echo $facebook; ?>" target="_blank" title="Facebook"><img src="themes/images/social/facebook-bw.png" alt="Facebook"><img class="hover" src="themes/images/social/facebook.png" alt="Facebook"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/twitter-bw.png" alt="" title=""><img class="hover" src="themes/images/social/twitter.png" alt="Twitter" title="Twitter"></a>
+                        <a href="https://<?php echo $twitter; ?>" target="_blank" title="Twitter"><img src="themes/images/social/twitter-bw.png" alt="Twitter"><img class="hover" src="themes/images/social/twitter.png" alt="Twitter"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/googleplus-bw.png" alt="" title=""><img class="hover" src="themes/images/social/googleplus.png" alt="Google+" title="Google+"></a>
+                        <a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Pluse"><img src="themes/images/social/googleplus-bw.png" alt="Google+"><img class="hover" src="themes/images/social/googleplus.png" alt="Google+"></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#" target="_blank"><img src="themes/images/social/linkedin-bw.png" alt="" title=""><img class="hover" src="themes/images/social/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
                     </li>
                     <li>
@@ -123,9 +129,9 @@
                     </li>
                     <li>
                         <a href="#" target="_blank"><img src="themes/images/social/dribbble-bw.png" alt="" title=""><img class="hover" src="themes/images/social/dribbble.png" alt="Dribbble" title="Dribbble"></a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#" target="_blank"><img src="themes/images/social/rss-bw.png" alt="" title=""><img class="hover" src="themes/images/social/rss.png" alt="RSS" title="RSS"></a>
+                        <a href="http://<?php echo $rss; ?>" target="_blank" title="RSS"><img src="themes/images/social/rss-bw.png" alt="RSS"><img class="hover" src="themes/images/social/rss.png" alt="RSS"></a>
                     </li>
                 </ul>
                 <span>:ارتباط با ما از طریق</span>

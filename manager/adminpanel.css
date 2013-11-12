@@ -285,7 +285,9 @@ label{
   direction: ltr;
 }
 
-#filesbrowser .files .pics .select{
+#filesbrowser .files .pics .select,
+#planbrowser .files .pics .select,
+#pricebrowser .files .pics .select{
   float: right;
   width: 150px;
   outline: 0 none;
@@ -1418,7 +1420,9 @@ input.search-form:hover{
   color: #000 !important;
 }
 /**********************************Files browser*********************************/
-#filesbrowser{
+#filesbrowser,
+#planbrowser,
+#pricebrowser{
   width: 748px;
   text-align: right;
   border: 1px solid #eee;

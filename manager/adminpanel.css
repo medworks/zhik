@@ -246,7 +246,9 @@ form .upload-file .action{
   width: 80px;
 }
 
-#filesbrowserbtn{
+#filesbrowserbtn,
+#planbrowserbtn,
+#pricebrowserbtn{
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
@@ -289,7 +291,7 @@ label{
 #planbrowser .files .pics .select,
 #pricebrowser .files .pics .select{
   float: right;
-  width: 150px;
+  width: 100px;
   outline: 0 none;
   border: transparent;
   border-top-color: transparent;

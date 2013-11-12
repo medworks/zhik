@@ -104,18 +104,18 @@ if ($_GET["item"]=="planfiles")
 $html.=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){
-			$('.cat-tabs-wrap a.select').click(function(){
+			$('.cat-tabs-wrap-plan a.select').click(function(){
 	                var srcimg= $(this).children('img').attr('src');
-	                $('img#planprevimage').attr('src',srcimg);
+	                $('#planbrowser img#planprevimage').attr('src',srcimg);
 	                
 	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
-	                $('#plannamepreview').html(filename);
+	                $('#planbrowser #plannamepreview').html(filename);
 
 	               var size= getImgSize(srcimg);
-	               $('#plansizepreview').html(size);
+	               $('#planbrowser #plansizepreview').html(size);
 
 	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
-	               $('#plantypepreview').html(ext);
+	               $('#planbrowser #plantypepreview').html(ext);
 
 	               $('#selectpl').click(function(){
 	                    var value= srcimg;
@@ -134,26 +134,26 @@ if ($_GET["item"]=="pricefiles")
 $html.=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){
-			$('.cat-tabs-wrap a.select').click(function(){
-	                var srcimg= $(this).children('img').attr('src');
-	                $('img#priceprevimage').attr('src',srcimg);
-	                
-	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
-	                $('#pricenamepreview').html(filename);
+			$('.cat-tabs-wrap-price a.select').click(function(){
+                var srcimg= $(this).children('img').attr('src');
+                $('#pricebrowser img#priceprevimage').attr('src',srcimg);
+                
+                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+                $('#pricebrowser #pricenamepreview').html(filename);
 
-	               var size= getImgSize(srcimg);
-	               $('#pricesizepreview').html(size);
+               var size= getImgSize(srcimg);
+               $('#pricebrowser #pricesizepreview').html(size);
 
-	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
-	               $('#pricetypepreview').html(ext);
+               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+               $('#pricebrowser #pricetypepreview').html(ext);
 
-	               $('#selectpr').click(function(){
-	                    var value= srcimg;
-	                    $('#selectprice').val(value);
-	                    value= value.split('/').reverse()[0];
-	                    $('#showpriceadd').val(value);
-	               });
-	            });
+               $('#selectpr').click(function(){
+                    var value= srcimg;
+                    $('#selectprice').val(value);
+                    value= value.split('/').reverse()[0];
+                    $('#showpriceadd').val(value);
+               });
+            });
 		});
 	</script>
 cd;
@@ -163,24 +163,24 @@ else
 $html.=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){
-			$('.cat-tabs-wrap a.select').click(function(){
+			$('.cat-tabs-wrap-pic a.select').click(function(){
 	                var srcimg= $(this).children('img').attr('src');
-	                $('img#previmage').attr('src',srcimg);
+	                $('#filesbrowser img#previmage').attr('src',srcimg);
 	                
 	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
-	                $('#namepreview').html(filename);
+	                $('#filesbrowser #namepreview').html(filename);
 
 	               var size= getImgSize(srcimg);
-	               $('#sizepreview').html(size);
+	               $('#filesbrowser #sizepreview').html(size);
 
 	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
-	               $('#typepreview').html(ext);
+	               $('#filesbrowser #typepreview').html(ext);
 
-	               $('#select').click(function(){
+	               $('#filesbrowser #select').click(function(){
 	                    var value= srcimg;
-	                    $('#selectpic').val(value);
+	                    $('#selectpic-pic').val(value);
 	                    value= value.split('/').reverse()[0];
-	                    $('#showadd').val(value);
+	                    $('#showadd-pic').val(value);
 	               });
 	            });
 		});

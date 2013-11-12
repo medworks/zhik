@@ -4,6 +4,38 @@
 	include_once("../classes/functions.php");		
 	$db = Database::GetDatabase();
 
+if ($_GET["item"]=="search")
+{ 
+      $table = $_GET["cat"];
+      $field = "subject";
+	  $rownum = 0;
+	  $rows = $db->SelectAll(
+				$table,
+				"*",
+				"{$field} LIKE '%{$_POST[searchtxt]}%'",
+				"id DESC",
+				$_GET["pageNo"]*10,
+				10);
+	  if (!$rows)
+	  {
+	    echo "<div class='notification_error rtl'>عبارت مورد نظر یافت نشد</div>";
+	  }
+	  else
+	  {
+		 $success = count($rows);
+		 foreach($rows as $key=>$val)
+		 {
+			 ++$rownum;
+			 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='news-fullpage{$val['id']}.html' class='srlink'>
+					 {$val['subject']}</a></p>";
+		}
+		$result=<<<rt
+		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
+		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
+		  {$row}
+rt;
+}
+	
 if ($_GET["news"]=="reg")
 {
 	$fields = array("`email`","`tel`","`name`");		

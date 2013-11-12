@@ -19,9 +19,11 @@
                             "workspics"=>0,
   						    "userspics"=>0,
 							"slidespics"=>0,
-							"gallerypics"=>0);
- $pic_fldrs = array("articlepics","newspics","workspics","userspics","slidespics","gallerypics");
- $fa_pic_fldrs = array("مقالات","اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر");
+							"gallerypics"=>0,
+							"planfiles"=>0,
+							"pricefiles"=>0);
+ $pic_fldrs = array("articlepics","newspics","workspics","userspics","slidespics","gallerypics","planfiles","pricefiles");
+ $fa_pic_fldrs = array("مقالات","اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر","پلان ها","قیمت ها");
   for($i=0;$i<count($_POST['picsaddr']);$i++)
   {
 	if ($_POST['picsaddr'][$i]=="articlepics") {$pic_fldr_bit_addr["articlepics"]= 1;}
@@ -29,7 +31,9 @@
 	if ($_POST['picsaddr'][$i]=="workspics") {$pic_fldr_bit_addr["workspics"]= 1;}
 	if ($_POST['picsaddr'][$i]=="userspics") {$pic_fldr_bit_addr["userspics"]= 1;}
 	if ($_POST['picsaddr'][$i]=="slidespics") {$pic_fldr_bit_addr["slidespics"]= 1;}	  
-	if ($_POST['picsaddr'][$i]=="gallerypics") {$pic_fldr_bit_addr["gallerypics"]= 1;}	  
+	if ($_POST['picsaddr'][$i]=="gallerypics") {$pic_fldr_bit_addr["gallerypics"]= 1;}
+	if ($_POST['picsaddr'][$i]=="planfiles") {$pic_fldr_bit_addr["planfiles"]= 1;}
+	if ($_POST['picsaddr'][$i]=="pricefiles") {$pic_fldr_bit_addr["pricefiles"]= 1;}
   }	  
   $str = "";
  foreach($pic_fldr_bit_addr as $key=>$val) {$str .= $val;}
@@ -176,7 +180,9 @@ $chechbox = array("articlepics"=>"پوشه مقالات",
                   "workspics"=>"پوشه فعالیت ها",
                   "userspics"=>"پوشه کاربران",
 				  "slidespics"=>"پوشه اسلاید ها",
-				  "gallerypics"=>"پوشه گالری تصاویر");
+				  "gallerypics"=>"پوشه گالری تصاویر",
+				  "planfiles"=>"پوشه پلان ها",
+				  "pricefiles"=>"پوشه قیمت ها");
 if ($_GET['act']=="edit")
 {
 	$checkboxes = CheckboxTag("picsaddr",$chechbox,$row['address']);

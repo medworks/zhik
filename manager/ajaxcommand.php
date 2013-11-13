@@ -178,9 +178,9 @@ $html.=<<<cd
 
 	               $('#filesbrowser #select').click(function(){
 	                    var value= srcimg;
-	                    $('#selectpic-pic').val(value);
+	                    $('#selectpic').val(value);
 	                    value= value.split('/').reverse()[0];
-	                    $('#showadd-pic').val(value);
+	                    $('#showadd').val(value);
 	               });
 	            });
 		});

@@ -162,14 +162,12 @@ $html=<<<cd
 		   <div class="badboy"></div>
 			<p>
 				<label for="subject">عنوان </label>
-				<span>*</span>
 			</p>
-			<input type="text" name="subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
+			<input type="text" name="subject" class="subject" id="subject" value="{$row[subject]}" />
 			<p>
 				<label for="subject">توضیحات </label>
-				<span>*</span>
 			</p>
-			<input type="text" name="body" class="validate[required] subject" id="body" value="{$row[body]}" /> 
+			<input type="text" name="body" class="subject" id="body" value="{$row[body]}" /> 
 		<!--
 			<p>
 				<label for="cbpos">نمایش عکس در </label>

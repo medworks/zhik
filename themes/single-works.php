@@ -7,8 +7,8 @@
 	$seo = Seo::GetSeo();
  	$work = $db->Select('works',NULL,"id={$_GET[wid]}");
 	$works = $db->SelectAll("workpics","*","wid={$_GET[wid]}");
-	$sdate = ToJalali($work["sdate"]," l d F  Y ");
-	$fdate = ToJalali($work["fdate"]," l d F  Y ");		
+	// $sdate = ToJalali($work["sdate"]," l d F  Y ");
+	// $fdate = ToJalali($work["fdate"]," l d F  Y ");		
 	$catname = GetCategoryName($work["catid"]);
 	$catg = $db->Select('category',NULL,"id={$work[catid]}");
 	$secname = GetSectionName($catg["secid"]);
@@ -72,17 +72,17 @@ $html.=<<<cd
         <div id="portfolio-item-info-wrapper" class="row">
             <div id="portfolio-item-info" class="large-3 columns no-padding">
                 <ul id="portfolio-item-meta">
-                    <li>
+                    <!-- <li>
                         <strong>تاریخ</strong><i class="icon-calendar"></i>
                         <p>
                             {$fdate}
                         </p>
-                    </li>
+                    </li> -->
                     <li>
                         <strong>پلان</strong><i class=" icon-pencil"></i>
                         <p>
                             <a href="{$work[plan]}" target="_blank">
-                                دانلود پلان
+                                پلان ها
                             </a>
                         </p>
                     </li>
@@ -90,7 +90,7 @@ $html.=<<<cd
                         <strong>جدول قیمت</strong><i class="icon-money"></i>
                         <p>
                             <a href="{$work[pricetable]}" target="_blank">
-                                دانلود قیمتها
+                                قیمت ها
                             </a>
                         </p>
                     </li>
@@ -98,10 +98,10 @@ $html.=<<<cd
                         <strong>گروه</strong><i class="icon-tags"></i>
                         <ul id="portfolio-item-categories">
                             <li>
-                                <a href="#">{$catname}</a>
+                                <a>{$catname}</a>
                             </li>
                             <li>
-                                <a href="#">{$secname}</a>
+                                <a>{$secname}</a>
                             </li>                           
                         </ul>
                     </li>                    
@@ -113,6 +113,9 @@ $html.=<<<cd
                 </p>
             </div>
         </div>
+cd;
+        if($related!=null){
+$html.=<<<cd
 		<!-- Related Items -->
         <div class="row top-margin">
             <div class="large-12 columns bottom-line">
@@ -122,23 +125,24 @@ $html.=<<<cd
 		<div class="row">
             <div class="large-12 columns for-nested portfolio-wrapper">		
 cd;
+        }
 foreach($related as $key=>$val)
 {
 $html.=<<<cd
-                <div class="portfolio-item">
-                    <div class="portfolio-item-hover">
-                        <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
-                        <ul>
-                            <li>
-                                <a href="work-fullpage{$val[id]}.html">مشخصات</a>
-                            </li>
-                            <li>
-                                <a href="work-fullpage{$val[id]}.html">عکس ها</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
-                </div>
+    <div class="portfolio-item">
+        <div class="portfolio-item-hover">
+            <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
+            <ul>
+                <li>
+                    <a href="work-fullpage{$val[id]}.html">مشخصات</a>
+                </li>
+                <li>
+                    <a href="work-fullpage{$val[id]}.html">عکس ها</a>
+                </li>
+            </ul>
+        </div>
+        <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
+    </div>
 cd;
 }
 $html.=<<<cd

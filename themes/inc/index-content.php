@@ -92,7 +92,7 @@ $html.=<<<cd
         <div class="large-12 columns no-padding">
             <div class="portfolio-wrapper transparent">
                 <div class="fixed-box portfolio-item bottom-line">
-                    <h2 class="smaller">پروژه آخر</h2>
+                    <h2 class="smaller">آخرین پروژه</h2>
                     <p>
                         <a href='work-fullpage{$works[0][id]}.html'>
                             {$lastworkbody}
@@ -101,7 +101,7 @@ $html.=<<<cd
                     <a href="works.html" class="bottom-right angle flat button">نمایش همه پروژه ها<span class="angle"><i class="icon-angle-left"></i></span></a>
                 </div>
 cd;
-                for ($i=1 ; $i<7 ; $i++){
+                for ($i=0 ; $i<6 ; $i++){
                     if($works[$i]['subject']!=null){
 $html.=<<<cd
                     <div class="portfolio-item">

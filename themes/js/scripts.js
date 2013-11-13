@@ -462,9 +462,13 @@ jQuery(document).ready(function($) {
     
     // Portfolio 
     var container = $('.portfolio-wrapper');
+    $.Isotope.prototype._positionAbs = function( x, y ) {
+          return { right: x, top: y };
+        };
     $(container).imagesLoaded(function() {
         $(container).isotope({
             itemSelector : '.portfolio-item',
+            transformsEnabled: false,
             masonry: {
                 //cornerStampSelector: '.fixed-box',
                 columnWidth: 255

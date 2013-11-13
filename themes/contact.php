@@ -5,7 +5,7 @@ $html=<<<cd
     
     <div id="header-image-container">
         <div id="header-image">
-            <img src="themes/images/demo/contact-header.jpg" alt="" class="stretch-image">
+            <img src="themes/images/contact-header.jpg" alt="Contact page" class="stretch-image">
         </div>
     </div>
     <div id="content-container" class="content-width">

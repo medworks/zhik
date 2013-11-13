@@ -9,7 +9,7 @@
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
-            <img src="themes/images/demo/portfolio/portfolio-header.jpg" alt="" class="stretch-image">
+            <img src="themes/images/portfolio-header.jpg" alt="Project page" class="stretch-image">
         </div>
     </div>
     <div id="content-container" class="content-width">

@@ -5,7 +5,7 @@ $About_System = GetSettingValue('About_System',0);
 $html=<<<cd
     <div id="header-image-container">
         <div id="header-image">
-            <img src="themes/images/demo/about/about-header.jpg" alt="" class="stretch-image">
+            <img src="themes/images/about-header.jpg" alt="About us page" class="stretch-image">
         </div>
     </div>
     <div id="content-container" class="content-width">

@@ -34,7 +34,7 @@ $html=<<<cd
             <div class="large-3 columns for-nested">
                 <div class="row">
                     <div class="large-12 columns no-padding height-255">
-                        <img src="themes/images/demo/contact1.jpg" alt="" class="stretch-image">
+                        <img src="themes/images/contact1.jpg" alt="Contact page" class="stretch-image">
                     </div>
                 </div>
                 <div class="row">

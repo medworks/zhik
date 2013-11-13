@@ -198,8 +198,10 @@
         <a id="header-search-button" href="javascript:;"><i class="icon-search"></i></a>
     </div>
     <div id="header-search-input-wrapper">
-        <form method="get">
-            <input id="header-search-input" type="text" placeholder="Type and hit enter to search ...">
+        <form action="search.html" method="post" name="frmsearch">
+            <input id="searchtxt" type="text" placeholder="Type and hit enter to search ...">
+			<input type="submit" name="submit" class="submit left" value="" />
+			<input type="hidden" name="mark" value="search" />
         </form>
     </div>
 </div>

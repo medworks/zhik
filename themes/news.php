@@ -87,9 +87,35 @@ $html.=<<<cd
                     <div class="large-12 columns">
                         <div class="search-widget">
                             <h4>جستجو</h4>
-                            <form method="get">
-                                <input type="text" placeholder="جستجو...">
+							<fieldset class="info_fieldset">
+								<div id="srhresult"></div>
+							</fieldset>
+                            <form id="frmsearch" method="post" action="">
+                                <input type="text" id="searchtxt" name="searchtxt" placeholder="جستجو...">
+								<p><input type="submit" class="submit" id="submit" value="جستجو" /></p>
+								<input type="hidden" name='mark' value='findnews' />
                             </form>
+							<script type='text/javascript'>
+							$(document).ready(function(){
+								$("#submit").click(function(){
+								
+									$.ajax({
+										type: "POST",
+										url: "manager/ajaxcommand.php?item=search&cat=news",
+										data: $("#frmsearch").serialize(), 
+										success: function(msg)
+										{
+											$("#srhresult").ajaxComplete(function(event, request, settings){
+												$(this).hide();
+												$(this).html(msg).slideDown("slow");
+												$(this).html(msg);
+											});
+										}
+									});
+									return false;
+								});
+						});
+						</script>
                         </div>
                     </div>
                 </div>

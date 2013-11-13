@@ -4,15 +4,16 @@
 	include_once("../classes/functions.php");		
 	$db = Database::GetDatabase();
 
-if ($_GET["item"]=="search")
-{  echo "test"; 
+if ($_GET["items"]=="search")
+{ 
+echo "function";
       $table = $_GET["cat"];
       $field = "subject";
 	  $rownum = 0;
 	  $rows = $db->SelectAll(
 				$table,
 				"*",
-				"{$field} LIKE '%{$_POST[searchtxt]}%'",
+				"{$field} LIKE '%{$_POST[findtxt]}%'",
 				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
@@ -33,9 +34,9 @@ if ($_GET["item"]=="search")
 		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
 		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
 rt;
-  
+        echo $result;
        }
-	   echo $result;
+	   
 }	   
 	
 if ($_GET["news"]=="reg")

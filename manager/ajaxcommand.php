@@ -66,9 +66,9 @@ if ($_GET["news"]=="reg")
 
 if($_GET["contact"]=="reg"){
 
-	$admin = 'info@mediateq.ir';
+	$admin = 'info@zhiktower.com';
 
-	$name    = $_POST['family'];
+	$name    = $_POST['name'];
 	$email   = $_POST['email'];
 	$subject = $_POST['subject'];
 	$text    = $_POST['message'];

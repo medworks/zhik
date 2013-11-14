@@ -88,6 +88,29 @@ $html=<<<cd
                         <p>
                             شما می توانید از طریق فرم زیر ما را از نظرات، پیشنهادات و انتقادات خود بهره مند نمایید.
                         </p>
+                        <script>
+                            $(document).ready(function(){
+                            $("#contact-form").submit(function(){
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "manager/ajaxcommand.php?contact=reg",
+                                    data: $("#contact-form").serialize(),
+                                        success: function(msg)
+                                        {
+                                            $("#note-contact").ajaxComplete(function(event, request, settings){             
+                                                $(this).hide();
+                                                $(this).html(msg).slideDown("slow");
+                                                $(this).html(msg);
+
+
+                                            });
+                                        }
+                                });
+                                return false;
+                            });
+                        });
+                    </script>
                         <form id="contact-form" method="post" class="validate">
                             <div class="row">
                                 <div class="large-5 columns less-padding">
@@ -119,12 +142,7 @@ $html=<<<cd
                                 </div>
                             </div>
                         </form>
-                        <div id="success" class="success box rtl">
-                            متشکریم. نامه شما به دست ما رسید و در اسرع وقت به آن پاسخ خواهیم داد.
-                        </div>
-                        <div id="error" class="error box rtl">
-                            خطا. لطفا از طریق ایمیل و یا تلفن با ما تماس بگیرید. ما برای این مشکل پوزش می طلبیم.
-                        </div>
+                        <div id="note-contact" ></div>
                     </div>
                 </div>
             </div>

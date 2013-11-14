@@ -6,7 +6,7 @@
             $.validationEngineLanguage.allRules = {
                 "required": { // Add your regex rules here, you can take telephone as an example
                     "regex": "none",
-                    "alertText": "* This field is required",
+                    "alertText": "* پر کردن این فیلد الزامی می باشد",
                     "alertTextCheckboxMultiple": "* Please select an option",
                     "alertTextCheckboxe": "* This checkbox is required",
                     "alertTextDateRange": "* Both date range fields are required"
@@ -64,12 +64,12 @@
                 },
                 "minCheckbox": {
                     "regex": "none",
-                    "alertText": "* Please select ",
-                    "alertText2": " options"
+                    "alertText": "* لطفا ",
+                    "alertText2": " مورد از موارد زیر را انتخاب نمایید"
                 },
                 "equals": {
                     "regex": "none",
-                    "alertText": "* Fields do not match"
+                    "alertText": "* تکرار رمز عبور همخوانی ندارد"
                 },
                 "creditCard": {
                     "regex": "none",
@@ -83,7 +83,7 @@
                 "email": {
                     // HTML5 compatible email regex ( http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#    e-mail-state-%28type=email%29 )
                     "regex": /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                    "alertText": "* Invalid email address"
+                    "alertText": "* ایمیل وارد شده اشتباه می باشد"
                 },
                 "integer": {
                     "regex": /^[\-\+]?\d+$/,

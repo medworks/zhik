@@ -605,44 +605,6 @@ jQuery(document).ready(function($) {
                     $submitButton.removeClass().addClass('medium gray button disabled');
                     $submitButton.attr('value', 'ارسال پیام...');
                     $submitButton.attr('disabled', 'disabled');
-                    
-                    $.ajax({
-                        type : 'POST',
-                        url : 'themes/sendmail.php',
-                        data : contactForm.serialize(),
-                        success : function(result) {
-    
-                            if (result == 'true') {
-                                contactForm.stop().animate({
-                                    opacity : '0'
-                                }, 400, function() {
-                                    contactForm.css('display', 'none');
-                                    $('#success').css('display', 'block');
-                                    $('#success').stop().animate({
-                                        opacity : '1'
-                                    }, 900);
-                                });
-    
-                            } else {
-                                $('#error').css('display', 'block');
-                                $('#error').stop().animate({
-                                    opacity : '1'
-                                }, 1000);
-    
-                                // alert('Error Message: ' + result);
-                            }
-    
-                        },
-                        error : function(xmlHttpRequest, textStatus, errorThrown) {
-                            $('#error').css('display', 'block');
-                            $('#error').stop().animate({
-                                opacity : '1'
-                            }, 1000);
-    
-                            alert(errorThrown);
-                        }
-                    });
-                    return false;
                 }
             });
     

@@ -64,6 +64,47 @@
 	margin-left: 5px !important;
 	margin-top: 3px !important;
 }
+/* CSS for Error notification */
+.notification_error{
+	background: #f5d19d;
+    border: 1px solid #f1dfc5;
+	width:100%;
+    height: auto;
+	color: #ca5702;
+    padding: 10px;
+    margin: 10px auto;
+    text-align:center;
+    -webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;
+    margin-bottom:5px;
+}
+/* CSS for Successfully sent notification */
+.notification_ok{
+	background: #e3e988;
+    border: 1px #cbcf8e solid;
+	width:100%;
+    height: auto;
+	padding: 10px;
+    margin:0 auto;
+    text-align: center;
+	-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;
+	margin-bottom:5px;
+}
+
+.info_fieldset{
+	font-size: 16px;
+	font-family: 'bmitra';
+	width: 205px;
+	padding:0;
+	margin:0;
+	margin-bottom:10px;
+	background: none; 
+	border: 0px;
+}
+
+.info_contact{
+	width: 404px;
+	font-size: 18px;
+}
 
 /* #IE alert
 ================================================== */

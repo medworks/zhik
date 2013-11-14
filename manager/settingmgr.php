@@ -46,7 +46,10 @@
 		SetSettingValue("Gplus_Add",$_POST["gplus_add"]);
 		SetSettingValue("Tell_Number",$_POST["tel_number"]);
 		SetSettingValue("Fax_Number",$_POST["fax_number"]);
-		SetSettingValue("Address",$_POST["address"]);		
+		SetSettingValue("Address",$_POST["address"]);
+		SetSettingValue("Cell_Phone1",$_POST["cell1"]);
+		SetSettingValue("Cell_Phone2",$_POST["cell2"]);
+		
 		header('location:?item=settingmgr&act=do');
 		//$_GET['item'] = "settingmgr";
 		//$_GET['act'] = "addresses";
@@ -183,6 +186,8 @@ ht;
 		$Tell_Number = GetSettingValue('Tell_Number',0);
 		$Fax_Number = GetSettingValue('Fax_Number',0);
 		$Address = GetSettingValue('Address',0);
+		$Cell_Phone1 = GetSettingValue('Cell_Phone1',0);
+		$Cell_Phone2 = GetSettingValue('Cell_Phone2',0);
 		$html=<<<ht
 		<div class="title">
 	      <ul>
@@ -228,6 +233,14 @@ ht;
 					<label for="fax">فاکس شرکت</label>
 				</p>    
 				<input type="text" name="fax_number" class="subject ltr" id="fax_number" value='{$Fax_Number}'/>
+				<p>
+					<label for="cell1">تلفن همراه (1)</label>
+				</p>    
+				<input type="text" name="cell1" class="subject ltr" id="cell1" value='{$Cell_Phone1}'/>
+				<p>
+					<label for="cell2">تلفن همراه (2)</label>
+				</p>    
+				<input type="text" name="cell2" class="subject ltr" id="cell2" value='{$Cell_Phone2}'/>
 				<p>
 					<label for="address">آدرس شرکت</label>
 				</p>    

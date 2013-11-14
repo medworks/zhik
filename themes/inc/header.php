@@ -36,9 +36,10 @@
     <!--[if IE 8]>
         <link href="themes/css/foundation-ie8.css" rel="stylesheet">
         <link href="themes/css/archtek-ie8.css" rel="stylesheet">
+		 <script src="themes/js/jquery-1.9.1.min.js"></script>
     <![endif]-->
 
-    <script src="themes/js/jquery-1.9.1.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
     <script src="themes/js/custom.modernizr.js"></script>
     <script src="themes/js/jquery-ui-1.10.2.custom.min.js"></script>
     <script src="themes/js/foundation.min.js"></script>

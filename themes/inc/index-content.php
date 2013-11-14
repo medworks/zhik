@@ -108,9 +108,9 @@ $html.=<<<cd
                         <div class="portfolio-item-hover">
                             <h3><a href='work-fullpage{$works[$i][id]}.html'>{$works[$i][subject]}</a></h3>
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <a href="#">عکسها</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="work-fullpage{$works[$i][id]}.html">مشخصات</a>
                                 </li>

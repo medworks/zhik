@@ -136,9 +136,9 @@ $html.=<<<cd
                 <li>
                     <a href="work-fullpage{$val[id]}.html">مشخصات</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="work-fullpage{$val[id]}.html">عکس ها</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">

@@ -63,13 +63,13 @@ cd;
 foreach($works as $key=>$val)
 {
 $html.=<<<cd
-                    <div class="{$val[catid]} mockup portfolio-item">
+                    <div class="{$val[catid]} portfolio-item">
                         <div class="portfolio-item-hover">
                             <h3><a href="work-fullpage{$val[id]}.html">{$val["subject"]}</a></h3>
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <a href="work-fullpage{$val[id]}.html">عکسها</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="work-fullpage{$val[id]}.html">مشخصات</a>
                                 </li>

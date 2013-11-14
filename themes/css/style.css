@@ -45,6 +45,22 @@
     font-weight: normal;
     font-style: normal;
 }
+/* #Search form
+================================================== */
+.search .font-siz{
+	font-size: 19px;
+}
+
+.search .mar-bot{
+	margin-bottom: 10px;
+	font-size: 17px;
+}
+
+.search .mar-lef{
+	margin-left: 5px !important;
+	margin-top: 3px !important;
+}
+
 /* #IE alert
 ================================================== */
 div.alert{

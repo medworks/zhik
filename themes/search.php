@@ -50,9 +50,9 @@ rt;
 					 {$val['subject']}</a></p>";
 				}
 				$result=<<<rt
-			     <p class="sresult"><span>نتایج یافت شده در بخش: </span>{$cat}</p>
-			     <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
-				 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
+			     <p class="sresult"><span class="font-siz">نتایج یافت شده در بخش: </span>{$cat}</p>
+			     <p class="sresult"><span class="font-siz">عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
+				 <p class="sresult"><span class="font-siz">تعداد نتایج یافت شده: </span>{$success}</p>
 				 {$row}				 
 rt;
    }
@@ -145,56 +145,87 @@ rt;
 			   } 
 			   
 			   $result=<<<rt
-			     <p class="sresult"><span>نتایج یافت شده در بخش: </span>{$cat}</p>
-			     <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
-				 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}<p>
+			     <p class="sresult"><span class="font-siz">نتایج یافت شده در بخش: </span>{$cat}</p>
+			     <p class="sresult"><span class="font-siz">عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
+				 <p class="sresult"><span class="font-siz">تعداد نتایج یافت شده: </span>{$success}<p>
 				 {$row}				 
 rt;
 	}
 		
 $msgs = GetMessage($_GET['msg']);
 $html=<<<cd
-	<div class='content'>
-		<div class='search main-box'>
-			<h2>جستجو</h2>
-			<div class='line'></div>
-			<div class='badboy'></div>
-			<div class='contact box-right'>
-			<div class="mes" id="message">{$msgs}</div>
-			<div id="result">{$result} </div>
-				<form action="" id="searchfrm" method="post">
-				   <p>
-			         <label>عبارت مورد نظر </label>
-			       </p>
-			       <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}"/>
-				   <p>
-			         <label>جستجو در </label>
-			       </p>
-			        <label class="right">اخبار</label>
-			        	<input type="radio" name="category" class="subject" id="category" value="news" checked/>
-			        <label class="right">کارهای ما</label>
-			        	<input type="radio" name="category" class="subject" id="category" value="works" />
-			        <label class="right">مطالب خواندنی</label>
-			        	<input type="radio" name="category" class="subject" id="category"
-						value="articles" />
-			        <div class="badboy"></div>
-			       <p>
-			         <label>قسمت </label>
-			       </p>    
-			       <label class="right">عنوان</label>
-			        	<input type="radio" name="subcat" class="subject" id="category" value="subject" checked/>
-			        <label class="right">توضیحات</label>
-			        	<input type="radio" name="subcat" class="subject" id="category"
-						value="body" />
-			       <div class="badboy"></div>
-			       <p>
-					  <input type="submit" id="submit" class="submit" value="جستجو" />
-			          <input type="hidden" name="mark" value="find" />
-			       </p>
-				</form>
-
-			</div>
-		</div>
+	<div id="header-image-container">
+        <div id="header-image">
+            <img src="themes/images/news-header.jpg" alt="News page" class="stretch-image">
+        </div>
+    </div>
+    <div id="content-container" class="content-width">
+    	<div class="row">
+            <div id="breadcrumbs-wrapper" class="large-12 columns for-nested">
+                <span>مسیر شما:</span>
+                <ul class="breadcrumbs">
+                    <li class="current">
+                        <a>جستجو در ژیک</a>
+                    </li>
+                    <li>
+                        <a href="./">صفحه اصلی</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="intro" class="not-homepage row">
+            <div class="large-9 large-centered columns">
+                <h1>جستجو در <strong>ژیک</strong></h1>
+            </div>
+        </div>
+        <div id="portfolio-item-info-wrapper" class="row search">
+			<form action="" id="searchfrm" method="post">
+	            <div id="portfolio-item-info" class="large-3 columns no-padding">
+	                <ul id="portfolio-item-meta">
+	                	<li>
+	                		<p>
+					        	<label class="mar-bot">عبارت مورد نظر </label>
+					        </p>
+					        <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}"/>
+	                	</li>
+	                    <li>
+	                    	<p>
+					        	<label class="mar-bot">جستجو در: </label>
+					        </p>
+					        <p>
+						        <input type="radio" name="category" class="subject right mar-lef" id="category" value="news" checked/>
+						        <label>اخبار</label>
+					        </p>
+					        <p>
+						        <input type="radio" name="category" class="right subject mar-lef" id="category" value="works" />
+						        <label>کارهای ما</label>
+					        </p>
+					        <p>
+						        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
+						        <label>مطالب خواندنی</label>
+					        </p>
+	                    </li>
+	                    <li>
+	                    	<p>
+					        	<label class="mar-bot">قسمت: </label>
+					        </p>
+					        <p>  
+					        	<input type="radio" name="subcat" class="subject right mar-lef" id="category" value="subject" checked/>
+						        <label>عنوان</label>
+				        	</p>
+					        <p>
+						        <input type="radio" name="subcat" class="subject right mar-lef" id="category" value="body" />
+						        <label>توضیحات</label>
+					        </p>
+	                    </li>              
+	                </ul>
+	            </div>
+	            <div class="large-9 columns">
+			        {$result}
+	            </div>
+				<input type="hidden" name="mark" value="find" />
+	        </form>
+        </div>
 	</div>
 cd;
 return $html;

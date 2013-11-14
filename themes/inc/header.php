@@ -200,8 +200,8 @@
     </div>
     <div id="header-search-input-wrapper">
         <form action="search.html" method="post" name="frmsearch">
-            <input id="searchtxt" type="text" placeholder="Type and hit enter to search ...">
-			<input type="submit" name="submit" class="submit left" value="" />
+            <input name="searchtxt" id="header-search-input" type="text" autocomplete="off" placeholder="عبارت مورد نظرتان را تایپ سپس اینتر نمایید...">
+			<!-- <input type="submit" name="submit" class="submit left" value="" /> -->
 			<input type="hidden" name="mark" value="search" />
         </form>
     </div>

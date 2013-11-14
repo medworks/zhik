@@ -17,6 +17,7 @@ deny from all
 	RewriteRule ^news-fullpage([0-9]+).html zhik/index.php?item=fullnews&act=do&wid=$1 [L]
 	RewriteRule ^work-fullpage([0-9]+).html zhik/index.php?item=fullworks&act=do&wid=$1 [L]
 	RewriteRule ^article-fullpage([0-9]+).html zhik/index.php?item=fullarticles&act=do&wid=$1 [L]		
+	#RewriteRule (.*)\.xml (.*)$1.php [NC]	#sitemap.xml
 	RewriteBase /
 
 #Skip WWW	

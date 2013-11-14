@@ -34,9 +34,9 @@ $html=<<<cd
             </div>
         </div>
         <!-- Portfolio -->
-        <div class="row">
+        <div class="row transparent">
             <div class="large-12 columns no-padding">                   
-                <div class="portfolio-wrapper">
+                <div class="portfolio-wrapper transparent">
                     <div class="portfolio-item fixed-box">
                         <h2 class="smaller">انتخاب گروه:</h2>
                         <p>
@@ -75,7 +75,7 @@ $html.=<<<cd
                                 </li>
                             </ul>
                         </div>
-                        <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image">
+                        <img src="{$val[image]}" alt="{$val[subject]}" class="stretch-image" style="width:255px; height:255px">
                     </div>
 cd;
 }

@@ -50,10 +50,29 @@ cd;
  foreach($uniqcats as $key=>$val)
  {
 	$catname = GetCategoryName($val);
+	if (!empty($_GET["catid"]))
+	{
+	  if ($val == $_GET["catid"])
+	  {
+	$html.=<<<cd
+             <option value=".{$val}" selected="selected">{$catname}</option>
+cd;
+	  }
+	  else
+	  {
 $html.=<<<cd
              <option value=".{$val}">{$catname}</option>
 cd;
- }
+	  }
+	
+    }
+	else
+	{
+$html.=<<<cd
+             <option value=".{$val}">{$catname}</option>
+cd;
+	}
+  }
 $html.=<<<cd
                                 </select>
                             </form>

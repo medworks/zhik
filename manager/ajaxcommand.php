@@ -32,6 +32,7 @@ if ($_GET["items"]=="search")
 		$result=<<<rt
 		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
 		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
+		 {$row}
 rt;
         echo $result;
        }

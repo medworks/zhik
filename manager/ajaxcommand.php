@@ -32,7 +32,7 @@ if ($_GET["items"]=="search")
 					 {$val['subject']}</a></p>";
 		}
 		$result=<<<rt
-		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["searchtxt"]}</p>
+		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["findtxt"]}</p>
 		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
 		 {$row}
 rt;

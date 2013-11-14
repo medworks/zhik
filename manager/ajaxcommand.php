@@ -8,6 +8,8 @@ if ($_GET["items"]=="search")
 { 
       $table = $_GET["cat"];
       $field = "subject";
+	  if ($table =="news") $page = "news";
+	  else if ($table =="articles") $page = "article";
 	  $rownum = 0;
 	  $rows = $db->SelectAll(
 				$table,
@@ -26,7 +28,7 @@ if ($_GET["items"]=="search")
 		 foreach($rows as $key=>$val)
 		 {
 			 ++$rownum;
-			 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='news-fullpage{$val['id']}.html' class='srlink'>
+			 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='{$page}-fullpage{$val['id']}.html' class='srlink'>
 					 {$val['subject']}</a></p>";
 		}
 		$result=<<<rt

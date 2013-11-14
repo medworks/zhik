@@ -4,7 +4,7 @@
   $db = Database::GetDatabase();   
   $works = $db->SelectAll("works","*",null,"fdate DESC");
   foreach($works as $key=>$val) $cats[] = $val["catid"];    
-   $uniqcats = array_unique($cats);
+  $uniqcats = array_unique($cats);
   
 $html=<<<cd
     <div id="header-image-container">
@@ -50,10 +50,29 @@ cd;
  foreach($uniqcats as $key=>$val)
  {
 	$catname = GetCategoryName($val);
+	if (!empty($_GET["catid"]))
+	{
+	  if ($val == $_GET["catid"])
+	  {
+	$html.=<<<cd
+             <option value=".{$val}" selected="selected">{$catname}</option>
+cd;
+	  }
+	  else
+	  {
 $html.=<<<cd
              <option value=".{$val}">{$catname}</option>
 cd;
- }
+	  }
+	
+    }
+	else
+	{
+$html.=<<<cd
+             <option value=".{$val}">{$catname}</option>
+cd;
+	}
+  }
 $html.=<<<cd
                                 </select>
                             </form>

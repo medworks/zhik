@@ -77,7 +77,7 @@ $html.=<<<cd
                                 </select>
                             </form>
                         <p></p>
-                    </div>   
+                    </div> 
 cd;
 foreach($works as $key=>$val)
 {

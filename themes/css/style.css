@@ -513,7 +513,7 @@ span.sf-sub-indicator {
     font-family: 'Roboto', sans-serif;
     font-size: 54px;
     font-weight: 100;
-    padding: 0;
+    padding: 0 25px 0 0;
     border: none;
 }
 

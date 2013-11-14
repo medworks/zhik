@@ -35,7 +35,7 @@
         <!-- Page Intro -->
         <div id="intro" class="not-homepage row">
             <div class="large-9 large-centered columns">
-                <h1>مقالات<strong>ژیک</strong></h1>
+                <h1>مقالات <strong>ژیک</strong></h1>
             </div>
         </div>
 		<!-- Blog List -->

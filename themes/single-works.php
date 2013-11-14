@@ -98,10 +98,12 @@ $html.=<<<cd
                         <strong>گروه</strong><i class="icon-tags"></i>
                         <ul id="portfolio-item-categories">
                             <li>
-                                <a>{$catname}</a>
+							  <a href="work-fullpage{$work[id]}.html">
+                                {$catname}
+							  </a>
                             </li>
                             <li>
-                                <a>{$secname}</a>
+                                {$secname}
                             </li>                           
                         </ul>
                     </li>                    

@@ -6,7 +6,6 @@
 
 if ($_GET["items"]=="search")
 { 
-echo "function";
       $table = $_GET["cat"];
       $field = "subject";
 	  $rownum = 0;

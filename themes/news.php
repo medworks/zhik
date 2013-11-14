@@ -97,8 +97,7 @@ $html.=<<<cd
                             </form>
 							<script type='text/javascript'>
 							$(document).ready(function(){
-								$("#srhsubmit").click(function(){	
-                                 alert("ok ok ");								
+								$("#srhsubmit").click(function(){								
 									$.ajax({									    
 										type: "POST",
 										url: "manager/ajaxcommand.php?items=search&cat=news",
@@ -110,7 +109,6 @@ $html.=<<<cd
 												$(this).html(msg).slideDown("slow");
 												$(this).html(msg);
 											});
-											alert("ok ok ok");	
 										}
 									});
 									return false;

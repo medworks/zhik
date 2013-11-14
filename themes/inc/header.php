@@ -39,6 +39,7 @@
     <![endif]-->
 
     <script src="themes/js/custom.modernizr.js"></script>
+	<script src="lib/js/jquery.js" type="text/javascript"></script>
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">

@@ -1,5 +1,9 @@
 <?php
-
+$address = GetSettingValue('Address',0);
+$tel = GetSettingValue('Tell_Number',0);
+$fax = GetSettingValue('Fax_Number',0);
+$cell_phone1 = GetSettingValue('Cell_Phone1',0);
+$cell_phone2 = GetSettingValue('Cell_Phone2',0);
 $html=<<<cd
     <script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false'></script>
     
@@ -40,25 +44,22 @@ $html=<<<cd
                 <div class="row">
                     <div class="large-12 columns grey-bg">
                         <div class="contact-info-widget">
-                            <h3>اطلاعات تماس</h3>
-                            <!-- <p>
-                                Ut enim ad minim veniam consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p> -->
+                            <h3>اطلاعات تماس</h3>                           
                             <p>
-                                آدرس: مشهد، بلوار معلم، معلم 12، بین سروش 24 و 26، پلاک 82، طبقه اول.
+                               {$address}
                             </p>
                             <ul>
                                 <li>
-                                    +98511.609.3876<i class="icon-phone"></i>
+                                    {$tel}<i class="icon-phone"></i>
                                 </li>
                                 <li>
-                                    +98915.110.2568<i class="icon-mobile-phone"></i>
+                                    {$fax}<i class="icon-mobile-phone"></i>
                                 </li>
                                 <li>
-                                    +98915.303.0781<i class="icon-mobile-phone"></i>
+                                    {$cell_phone1}<i class="icon-mobile-phone"></i>
                                 </li>
                                 <li>
-                                    +98915.520.0272<i class="icon-mobile-phone"></i>
+                                    {$cell_phone2}<i class="icon-mobile-phone"></i>
                                 </li>
                                 <li>
                                     <script type="text/javascript">

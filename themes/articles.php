@@ -86,24 +86,25 @@ $html.=<<<cd
                 <div class="widget-item row">
                                        <div class="large-12 columns">
                         <div class="search-widget">
-                            <h4>جستجو</h4>
-							<fieldset class="info_fieldset">
-								<div id="srhresult"></div>
-							</fieldset>
+                            <h4>جستجو</h4>							
                             <form id="frmsearch" method="post" action="">
                                 <input type="text" id="findtxt" name="findtxt" placeholder="جستجو..." />
 								<p><input type="submit" class="submit" id="srhsubmit" value="جستجو" /></p>
 								<input type="hidden" name='mark' value='findnews' />
                             </form>
+                            <fieldset class="info_fieldset">
+                                <div id="srhresult"></div>
+                            </fieldset>
 							<script type='text/javascript'>
 							$(document).ready(function(){
-								$("#srhsubmit").click(function(){								
+								$("#srhsubmit").click(function(){	
 									$.ajax({									    
 										type: "POST",
 										url: "manager/ajaxcommand.php?items=search&cat=articles",
 										data: $("#frmsearch").serialize(), 
 										success: function(msg)
 										{
+                                            $('.info_fieldset').css('display','block');
 											$("#srhresult").ajaxComplete(function(event, request, settings){
 												$(this).hide();
 												$(this).html(msg).slideDown("slow");

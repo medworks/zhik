@@ -47,6 +47,10 @@
 }
 /* #Search form
 ================================================== */
+.info_fieldset{
+	display: none;
+}
+
 .search .font-siz{
 	font-size: 19px;
 }

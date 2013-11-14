@@ -156,7 +156,7 @@ $msgs = GetMessage($_GET['msg']);
 $html=<<<cd
 	<div id="header-image-container">
         <div id="header-image">
-            <img src="themes/images/news-header.jpg" alt="News page" class="stretch-image">
+            <img src="themes/images/404-header.jpg" alt="News page" class="stretch-image">
         </div>
     </div>
     <div id="content-container" class="content-width">

@@ -98,7 +98,7 @@ $html.=<<<cd
                         <strong>گروه</strong><i class="icon-tags"></i>
                         <ul id="portfolio-item-categories">
                             <li>
-							  <a href="work-fullpage{$work[id]}.html">
+							  <a href="works-cat{$work[catid]}.html">
                                 {$catname}
 							  </a>
                             </li>

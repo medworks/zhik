@@ -4,7 +4,7 @@
   $db = Database::GetDatabase();   
   $works = $db->SelectAll("works","*",null,"fdate DESC");
   foreach($works as $key=>$val) $cats[] = $val["catid"];    
-   $uniqcats = array_unique($cats);
+  $uniqcats = array_unique($cats);
   
 $html=<<<cd
     <div id="header-image-container">

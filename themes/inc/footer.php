@@ -144,23 +144,6 @@
     </div>
 </div> 
 <!-- End id="footer-bar-container" -->
-    <script src="themes/js/jquery-1.9.1.min.js"></script>
-    <script src="themes/js/jquery-ui-1.10.2.custom.min.js"></script>
-    <script src="themes/js/foundation.min.js"></script>
-    <script src="themes/js/jquery.backstretch.min.js"></script>
-    <script src="themes/js/superfish.js"></script>
-    <script src="themes/js/supersubs.js"></script>
-    <script src="themes/js/jquery.hoverIntent.minified.js"></script>
-    <script src="themes/js/jquery.fancybox-1.3.4.js"></script>
-    <script src="themes/js/jquery.transit.min.js"></script>
-    <script src="themes/js/jquery.touchSwipe.min.js"></script>
-    <script src="themes/js/jquery.carouFredSel-6.1.0-packed.js"></script>
-    <script src="themes/js/jquery.easing.1.3.js"></script>
-    <script src="themes/js/jquery.isotope.min.js"></script>
-    <script src="themes/js/jquery.hoverdir.js"></script>
-    <script src="themes/js/jquery.validationEngine-en.js"></script>
-    <script src="themes/js/jquery.validationEngine.js"></script>
-    <script src="themes/js/jquery.scrollUp.min.js"></script>
-    <script src="themes/js/scripts.js?v=1"></script>
+    
 </body>
 </html>

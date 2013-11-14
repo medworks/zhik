@@ -38,9 +38,26 @@
         <link href="themes/css/archtek-ie8.css" rel="stylesheet">
     <![endif]-->
 
+    <script src="themes/js/jquery-1.9.1.min.js"></script>
     <script src="themes/js/custom.modernizr.js"></script>
-	<script src="lib/js/jquery.js" type="text/javascript"></script>
-
+    <script src="themes/js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="themes/js/foundation.min.js"></script>
+    <script src="themes/js/jquery.backstretch.min.js"></script>
+    <script src="themes/js/superfish.js"></script>
+    <script src="themes/js/supersubs.js"></script>
+    <script src="themes/js/jquery.hoverIntent.minified.js"></script>
+    <script src="themes/js/jquery.fancybox-1.3.4.js"></script>
+    <script src="themes/js/jquery.transit.min.js"></script>
+    <script src="themes/js/jquery.touchSwipe.min.js"></script>
+    <script src="themes/js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="themes/js/jquery.easing.1.3.js"></script>
+    <script src="themes/js/jquery.isotope.min.js"></script>
+    <script src="themes/js/jquery.hoverdir.js"></script>
+    <script src="themes/js/jquery.validationEngine-en.js"></script>
+    <script src="themes/js/jquery.validationEngine.js"></script>
+    <script src="themes/js/jquery.scrollUp.min.js"></script>
+    <script src="themes/js/scripts.js?v=1"></script>
+    
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
 </head>

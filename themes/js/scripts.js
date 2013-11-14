@@ -752,7 +752,7 @@ jQuery(document).ready(function($) {
             var href= window.location.href.substr(url.indexOf("/"));
             href= href.split('-');
             href= href[0].split('/');           
-            $('.main-menu a[href*="'+href[3]+'"]').parent().addClass('active');
+            $('#menu-wrapper a[href*="'+href[3]+'"]').addClass('active');
         }
     });
     

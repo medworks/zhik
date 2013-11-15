@@ -66,9 +66,9 @@
     <script type="text/javascript" src="themes/js/CFInstall.js"></script>
     <script>
        CFInstall.check({
-            url: "./ie.html",
+            url: "ie.html",
             mode: "overlay",
-            destination: "http://www.mediateq.ir/zhik",
+            destination: "http://www.zhiktower.com",
        });
     </script>
 <div id="header-container" class="content-width">

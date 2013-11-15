@@ -108,6 +108,9 @@
 
 /* #IE alert
 ================================================== */
+.chromeFrameOverlayContent{
+	margin-top: -1100px !important;
+}
 div.alert{
   background-color: yellow;
   margin: 25px auto 0;

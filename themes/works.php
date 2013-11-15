@@ -103,6 +103,7 @@ $html.=<<<cd
             </div>
         </div>        
     </div>
+		
 cd;
     return $html;
 ?>

@@ -11,7 +11,7 @@
 	$Admin_Email=GetSettingValue("Admin_Email",1);
 	$now = date("D, d M Y H:i:s T");
 	$site = "http://www.zhiktower.com";
-	$uri = "?item=fullnews&act=do&wid=";
+	$uri = "news-fullpage";
 	
 	$rss2_writer = new RSS2Writer(
 									$Site_Title, 
@@ -32,7 +32,7 @@
 		$convert = date("D, j M Y", $date);
 		$date = $convert .' '. $strtime.'  GMT';
 		$rss2_writer->addElement('pubDate', $date);
-		$rss2_writer->addItem($row['subject'],$row['body'],$site."/".$uri.$row['id']);
+		$rss2_writer->addItem($row['subject'],$row['body'],$site."/".$uri.$row['id'].".html");
 	}
 	//header("Content-Type: application/rss+xml");
 	header("Content-type: text/xml");

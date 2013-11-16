@@ -103,10 +103,14 @@ $html.=<<<cd
                                 {$catname}
 							  </a>
 							 -->
+							 <a>
 							 {$catname}
+							 </a>
                             </li>
                             <li>
+							<a>
                                 {$secname}
+								</a>
                             </li>                           
                         </ul>
                     </li>                    

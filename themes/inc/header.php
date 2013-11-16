@@ -35,8 +35,7 @@
     <link href="themes/css/style-init.css" rel="stylesheet">
     <!--[if IE 8]>
         <link href="themes/css/foundation-ie8.css" rel="stylesheet">
-        <link href="themes/css/archtek-ie8.css" rel="stylesheet">
-		 <script src="themes/js/jquery-1.9.1.min.js"></script>
+        <link href="themes/css/style-ie8.css" rel="stylesheet">
     <![endif]-->
 
     <script src="lib/js/jquery.js"></script>

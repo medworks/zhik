@@ -65,7 +65,7 @@
 	margin-top: 3px !important;
 }
 /* CSS for Error notification */
-.notification_error{
+#note-contact .notification_error{
 	background: #f5d19d;
     border: 1px solid #f1dfc5;
 	width:100%;
@@ -78,7 +78,7 @@
     margin-bottom:5px;
 }
 /* CSS for Successfully sent notification */
-.notification_ok{
+#note-contact .notification_ok{
 	background: #e3e988;
     border: 1px #cbcf8e solid;
 	width:100%;
@@ -93,12 +93,10 @@
 .info_fieldset{
 	font-size: 16px;
 	font-family: 'bmitra';
-	width: 205px;
-	padding:0;
+	padding:10px;
 	margin:0;
 	margin-bottom:10px;
-	background: none; 
-	border: 0px;
+	background: none;
 }
 
 .info_contact{

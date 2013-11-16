@@ -30,7 +30,7 @@
 		
 //------------------------------- news part -------------------------	
         $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");
-        $news[0]["body"] =(mb_strlen($articles[0]["body"])>150)?
+        $news[0]["body"] =(mb_strlen($news[0]["body"])>150)?
                 mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");		
 		$news[1]["body"] =(mb_strlen($news[1]["body"])>60)?

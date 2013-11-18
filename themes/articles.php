@@ -89,7 +89,6 @@ $html.=<<<cd
                             <h4>جستجو</h4>							
                             <form id="frmsearch" method="post" action="">
                                 <input type="text" id="findtxt" name="findtxt" placeholder="جستجو..." />
-								<p><input type="submit" class="submit" id="srhsubmit" value="جستجو" /></p>
 								<input type="hidden" name='mark' value='findnews' />
                             </form>
                             <fieldset class="info_fieldset">
@@ -97,7 +96,7 @@ $html.=<<<cd
                             </fieldset>
 							<script type='text/javascript'>
 							$(document).ready(function(){
-								$("#srhsubmit").click(function(){	
+								$("#frmsearch").submit(function(){	
 									$.ajax({									    
 										type: "POST",
 										url: "manager/ajaxcommand.php?items=search&cat=articles",

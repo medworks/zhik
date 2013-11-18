@@ -50,26 +50,26 @@ $html=<<<cd
                             </p>
                             <ul>
                                 <li>
-                                    {$tel}<i class="icon-phone"></i>
+                                    {$tel}<a title="تلفن ثابت"><i class="icon-phone"></i></a>
                                 </li>
                                 <li>
-                                    {$fax}<i class="icon-mobile-phone"></i>
+                                    {$fax}<a title="فاکس"><i class="icon-phone-sign"></i></a>
                                 </li>
                                 <li>
-                                    {$cell_phone1}<i class="icon-mobile-phone"></i>
+                                    {$cell_phone1}<a title="موبایل"><i class="icon-mobile-phone"></i></a>
                                 </li>
                                 <li>
-                                    {$cell_phone2}<i class="icon-mobile-phone"></i>
+                                    {$cell_phone2}<a title="موبایل"><i class="icon-mobile-phone"></i></a>
                                 </li>
                                 <li>
                                     <script type="text/javascript">
 
-                                        emailE='zhik.pro'
+                                        emailE='zhiktower.com'
                                         emailE=('info' + '@' + emailE)
                                         document.write('<a href="mailto:' + emailE + '">' + emailE + '</a>')
 
                                     </script>
-                                    <i class="icon-envelope-alt"></i>
+                                    <a title="ایمیل"><i class="icon-envelope-alt"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -79,7 +79,7 @@ $html=<<<cd
             <div class="large-9 columns for-nested">
                 <div class="row">
                     <div class="large-12 columns no-padding">
-                        <div class="google-map" data-latlng="36.327724, 59.526205" data-display-type="ROADMAP" data-zoom-level="17" data-height="330"></div>
+                        <div class="google-map" data-latlng="36.327724, 59.526205" data-display-type="ROADMAP" data-zoom-level="18" data-height="330"></div>
                     </div>
                 </div>
                 <div class="row">

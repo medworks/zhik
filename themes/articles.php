@@ -44,7 +44,7 @@
 cd;
 foreach($articles as $key => $post)
 {
-	$ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
+	$ndate = ToJalali($post["ndate"]," l d F  Y ");
   	$post["userid"] = GetUserName($post["userid"]);	
     $post["body"]= strip_tags($post["body"]);
     $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
@@ -52,7 +52,7 @@ $html.=<<<cd
                  <div class="blog-item row">
                     <div class="large-12 columns height-255">
                         <div class="blog-meta">
-                            <span class="date">1392/08/15</span>
+                            <span class="date">{$ndate}</span>
                             <ul class="author-comments">
                                 <li>
                                     <a href="#">{$post["userid"]}</a><i class="icon-user"></i>
@@ -89,7 +89,6 @@ $html.=<<<cd
                             <h4>جستجو</h4>							
                             <form id="frmsearch" method="post" action="">
                                 <input type="text" id="findtxt" name="findtxt" placeholder="جستجو..." />
-								<p><input type="submit" class="submit" id="srhsubmit" value="جستجو" /></p>
 								<input type="hidden" name='mark' value='findnews' />
                             </form>
                             <fieldset class="info_fieldset">
@@ -97,7 +96,7 @@ $html.=<<<cd
                             </fieldset>
 							<script type='text/javascript'>
 							$(document).ready(function(){
-								$("#srhsubmit").click(function(){	
+								$("#frmsearch").submit(function(){	
 									$.ajax({									    
 										type: "POST",
 										url: "manager/ajaxcommand.php?items=search&cat=articles",

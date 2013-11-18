@@ -281,7 +281,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   <div class="badboy"></div>
 		   <div id="pricebrowser"></div>
 		   <div class="badboy"></div>
-		   <!-- <p>
+		   <p>
 			<label for="sdate">تاریخ شروع </label>
 			<span>*</span><br /><br />
 			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$row[sdate]}" />
@@ -316,7 +316,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 					weekNumbers : true,
 			  });
 			</script>
-		   </p> -->		  		   
+		   </p>	  		   
 		   {$editorinsert}
 			 <input type="reset" value="پاک کردن" class="reset" /> 	 	 
 		   </p>

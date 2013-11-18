@@ -27,7 +27,7 @@
 				<?php									  					
 					for($i=0 ; $i<3 ; $i++){
 						if($news[$i]['subject']!=null){
-	  						$ndate = ToJalali($news[$i]["ndate"]," l d F ");
+	  						$ndate = ToJalali($news[$i]["ndate"]," l d F  Y ");
 							echo "<li>
                                     <div class='pic'>
     									<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
@@ -50,7 +50,7 @@
     				<?Php
                         for($i=0 ; $i<3 ; $i++){
         					if($works[$i]['subject']!=null){						
-        						$fdate = ToJalali($works[$i]["fworksdate"]," l d F  Y"); 
+        						$fdate = ToJalali($works[$i]["fdate"]," l d F  Y "); 
         						echo "<li>
                                         <div class='pic'>
         								    <a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>
@@ -110,7 +110,7 @@
                         <a href="https://<?php echo $twitter; ?>" target="_blank" title="Twitter"><img src="themes/images/social/twitter-bw.png" alt="Twitter"><img class="hover" src="themes/images/social/twitter.png" alt="Twitter"></a>
                     </li>
                     <li>
-                        <a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Pluse"><img src="themes/images/social/googleplus-bw.png" alt="Google+"><img class="hover" src="themes/images/social/googleplus.png" alt="Google+"></a>
+                        <a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Plus"><img src="themes/images/social/googleplus-bw.png" alt="Google+"><img class="hover" src="themes/images/social/googleplus.png" alt="Google+"></a>
                     </li>
                     <!-- <li>
                         <a href="#" target="_blank"><img src="themes/images/social/linkedin-bw.png" alt="" title=""><img class="hover" src="themes/images/social/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="large-6 columns less-padding">
-            Zhik © Copyright 2013, All rights reserved by Zhik company.<br /><br />
+            Zhik © Copyright 2013, All rights reserved by Zhik company.<br />
             Designed by <a href="http://www.mediateq.ir">Mediateq</a>
         </div>
     </div>

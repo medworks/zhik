@@ -14,6 +14,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="GZjUVpo8ser8XZ5FL2d29mprhsccJIDFoYyODkshD0Q" />
     <meta name="description" content="<?php echo $seo->Site_Describtion;?>"/>
     <meta name="keywords" content="<?php echo $seo->Site_KeyWords;?>"/>
     <meta name="robots" content="INDEX,FOLLOW">
@@ -32,11 +33,11 @@
     <link href="themes/css/isotope.css" rel="stylesheet">
     <link href="themes/css/jquery.fancybox-1.3.4.css" rel="stylesheet">
     <link href="themes/css/validationEngine.jquery.css" rel="stylesheet">
-    <link href="themes/css/style-init.css" rel="stylesheet">
+    <link href="themes/css/style.css" rel="stylesheet">
+    <!-- <link href="themes/css/colors/red.css" rel="stylesheet"> -->
     <!--[if IE 8]>
         <link href="themes/css/foundation-ie8.css" rel="stylesheet">
-        <link href="themes/css/archtek-ie8.css" rel="stylesheet">
-		 <script src="themes/js/jquery-1.9.1.min.js"></script>
+        <link href="themes/css/style-ie8.css" rel="stylesheet">
     <![endif]-->
 
     <script src="lib/js/jquery.js"></script>

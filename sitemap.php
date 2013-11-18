@@ -11,32 +11,32 @@
 	$news = $db->SelectAll("news","*",null,"id ASC");
 	$works = $db->SelectAll("works","*",null,"id ASC");
 	$articles = $db->SelectAll("articles","*",null,"id ASC");	
-	$add ="http://www.mediateq.ir/" ;
+	$add ="http://www.zhiktower.com/" ;
 
 	$sm .="
 	<url>
-	  <loc>http://www.mediateq.ir/</loc>
+	  <loc>http://www.zhiktower.com/</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/search.html</loc>
+	  <loc>http://www.zhiktower.com/search.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/about-us.html</loc>
+	  <loc>http://www.zhiktower.com/about-us.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/works.html</loc>
+	  <loc>http://www.zhiktower.com/works.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/news.html</loc>
+	  <loc>http://www.zhiktower.com/news.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/articles.html</loc>
+	  <loc>http://www.zhiktower.com/articles.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/contact.html</loc>
+	  <loc>http://www.zhiktower.com/contact.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/gallery.html</loc>
+	  <loc>http://www.zhiktower.com/gallery.html</loc>
 	</url>
 ";
 	$date = date("Y-m-d");	

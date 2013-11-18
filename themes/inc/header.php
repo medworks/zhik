@@ -14,6 +14,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="GZjUVpo8ser8XZ5FL2d29mprhsccJIDFoYyODkshD0Q" />
     <meta name="description" content="<?php echo $seo->Site_Describtion;?>"/>
     <meta name="keywords" content="<?php echo $seo->Site_KeyWords;?>"/>
     <meta name="robots" content="INDEX,FOLLOW">

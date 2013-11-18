@@ -48,7 +48,7 @@ $html=<<<cd
                 <div class="blog-item row">
                     <div class="large-12 columns height-255">
                         <div class="blog-meta">
-                            <span class="date">1392/08/15</span>
+                            <span class="date">{$ndate}</span>
                             <ul class="author-comments">
                                 <li>
                                     <a href="#">{$news["userid"]}</a><i class="icon-user"></i>

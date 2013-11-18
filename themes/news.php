@@ -44,7 +44,7 @@
 cd;
 foreach($news as $key => $post)
 {
-	$ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
+	$ndate = ToJalali($post["ndate"]," l d F  Y ");
   	$post["userid"] = GetUserName($post["userid"]);	
     $post["body"]= strip_tags($post["body"]);
     $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
@@ -52,7 +52,7 @@ $html.=<<<cd
                  <div class="blog-item row">
                     <div class="large-12 columns height-255">
                         <div class="blog-meta">
-                            <span class="date">1392/08/15</span>
+                            <span class="date">{$ndate}</span>
                             <ul class="author-comments">
                                 <li>
                                     <a href="#">{$post["userid"]}</a><i class="icon-user"></i>

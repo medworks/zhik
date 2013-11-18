@@ -46,7 +46,7 @@ rt;
 				foreach($rows as $key=>$val)
 				{
 				 ++$rownum;
-				 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='works-fullpage{$val['id']}.html' class='srlink'>
+				 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='work-fullpage{$val['id']}.html' class='srlink'>
 					 {$val['subject']}</a></p>";
 				}
 				$result=<<<rt

@@ -110,7 +110,7 @@
                         <a href="https://<?php echo $twitter; ?>" target="_blank" title="Twitter"><img src="themes/images/social/twitter-bw.png" alt="Twitter"><img class="hover" src="themes/images/social/twitter.png" alt="Twitter"></a>
                     </li>
                     <li>
-                        <a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Pluse"><img src="themes/images/social/googleplus-bw.png" alt="Google+"><img class="hover" src="themes/images/social/googleplus.png" alt="Google+"></a>
+                        <a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Plus"><img src="themes/images/social/googleplus-bw.png" alt="Google+"><img class="hover" src="themes/images/social/googleplus.png" alt="Google+"></a>
                     </li>
                     <!-- <li>
                         <a href="#" target="_blank"><img src="themes/images/social/linkedin-bw.png" alt="" title=""><img class="hover" src="themes/images/social/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>

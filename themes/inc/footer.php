@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="large-6 columns less-padding">
-            Zhik © Copyright 2013, All rights reserved by Zhik company.<br /><br />
+            Zhik © Copyright 2013, All rights reserved by Zhik company.<br />
             Designed by <a href="http://www.mediateq.ir">Mediateq</a>
         </div>
     </div>

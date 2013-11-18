@@ -33,7 +33,8 @@
     <link href="themes/css/isotope.css" rel="stylesheet">
     <link href="themes/css/jquery.fancybox-1.3.4.css" rel="stylesheet">
     <link href="themes/css/validationEngine.jquery.css" rel="stylesheet">
-    <link href="themes/css/style-init.css" rel="stylesheet">
+    <link href="themes/css/style.css" rel="stylesheet">
+    <!-- <link href="themes/css/colors/red.css" rel="stylesheet"> -->
     <!--[if IE 8]>
         <link href="themes/css/foundation-ie8.css" rel="stylesheet">
         <link href="themes/css/style-ie8.css" rel="stylesheet">

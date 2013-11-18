@@ -27,7 +27,7 @@
 				<?php									  					
 					for($i=0 ; $i<3 ; $i++){
 						if($news[$i]['subject']!=null){
-	  						$ndate = ToJalali($news[$i]["ndate"]," l d F ");
+	  						$ndate = ToJalali($news[$i]["ndate"]," l d F  Y ");
 							echo "<li>
                                     <div class='pic'>
     									<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i]["subject"]}'>
@@ -50,7 +50,7 @@
     				<?Php
                         for($i=0 ; $i<3 ; $i++){
         					if($works[$i]['subject']!=null){						
-        						$fdate = ToJalali($works[$i]["fworksdate"]," l d F  Y"); 
+        						$fdate = ToJalali($works[$i]["fdate"]," l d F  Y "); 
         						echo "<li>
                                         <div class='pic'>
         								    <a href='work-fullpage{$works[$i][id]}.html' title='{$works[$i]["subject"]}'>

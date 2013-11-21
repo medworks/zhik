@@ -11,10 +11,11 @@ if ($_GET["items"]=="search")
 	  if ($table =="news") $page = "news";
 	  else if ($table =="articles") $page = "article";
 	  $rownum = 0;
+	  if (!empty($_POST["findtxt"])) $searchtxt = "'%{$_POST[findtxt]}%'";
 	  $rows = $db->SelectAll(
 				$table,
 				"*",
-				"{$field} LIKE '%{$_POST[findtxt]}%'",
+				"{$field} LIKE {$searchtxt}",
 				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
@@ -34,7 +35,7 @@ if ($_GET["items"]=="search")
 		$result=<<<rt
 		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["findtxt"]}</p>
 		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
-		 {$row}
+		 {$row}		
 rt;
         echo $result;
        }

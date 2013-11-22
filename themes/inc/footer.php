@@ -139,7 +139,7 @@
         </div>
         <div class="large-6 columns less-padding">
             Zhik © Copyright 2013, All rights reserved by Zhik company.<br />
-            Designed by <a href="http://www.mediateq.ir">Mediateq</a>
+            Designed by <a href="http://www.mediateq.ir" target="_blank">Mediateq</a>
         </div>
     </div>
 </div> 

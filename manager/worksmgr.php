@@ -49,10 +49,10 @@
 		}
 	}	
     if (!$overall_error && $_POST["mark"]=="saveworks")
-	{						   				
-		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`","`catid`");
+	{			   
+		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`","`catid`","`plan`","`pricetable`");
 		$_POST["detail"] = addslashes($_POST["detail"]);
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'");	
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'","'{$planfile}'","'{$pricefile}'");
 		if (!$db->InsertQuery('works',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -77,24 +77,50 @@
 						 "`link`"=>"'{$_POST[link]}'",
 						 "`sdate`"=>"'{$sdatetime}'",
 						 "`fdate`"=>"'{$fdatetime}'",
-						 "`catid`"=>"'{$_POST[cbcat]}'");		
+						 "`catid`"=>"'{$_POST[cbcat]}'",
+						 "`plan`"=>"'{$_POST[cbcat]}'",
+						 "`pricetable`"=>"'{$_POST[cbcat]}'");
         $db->UpdateQuery("works",$values,array("id='{$_GET[wid]}'"));		
 		header('location:?item=worksmgr&act=mgr');
 		//$_GET["item"] = "worksmgr";
 		//$_GET["act"] = "mgr";			
 	}
 	if (!$overall_error && $_POST["mark"]=="addmorepic")
-	{						   				
-		$fields = array("`wid`","`image`");
-		if(!empty($_POST['picslist'])) 
+	{			
+        $pics = $db->SelectAll("workpics","*","wid = '{$_GET[wid]}'");	
+		$img = array();
+		$reqimg = array();
+		$dif = array();
+		if (empty($pics))
 		{
-		  foreach($_POST['picslist'] as $key=>$val) 		  
-		  {		    
-			$values = array("'{$_GET[wid]}'","'./workspics/{$val}'");
-			$db->InsertQuery('workpics',$fields,$values);		
-		  }	
-		 }		 
-		header('location:?item=worksmgr&act=pic&msg=1');		 
+			$fields = array("`wid`","`image`");
+			if(!empty($_POST['picslist'])) 
+			{
+			  foreach($_POST['picslist'] as $key=>$val)
+			  {		    
+				$values = array("'{$_GET[wid]}'","'./workspics/{$val}'");
+				$db->InsertQuery('workpics',$fields,$values);		
+			  }	
+			 }
+		}
+		else
+		{
+			foreach($pics as $key=>$val) $img[] = $val["image"];
+			foreach($_POST['picslist'] as $key=>$val) $reqimg[] = "./workspics/{$val}";
+			$dif = array_diff($img, $reqimg);
+			foreach($dif as $key=>$val)
+			{
+				$db->Delete("workpics"," image","{$val}");				
+			}
+			$dif = array_diff($reqimg, $img);
+			$fields = array("`wid`","`image`");
+			foreach($dif as $key=>$val)
+			{			
+			    $values = array("'{$_GET[wid]}'","'{$val}'");
+				$db->InsertQuery('workpics',$fields,$values);
+			}
+		}
+		header('location:?item=worksmgr&act=mgr');		 
 	 }
 	if ($overall_error)
 	{
@@ -104,7 +130,9 @@
 					 "link"=>$_POST['link'],
 					 "sdate"=>$_POST['sdate'],
 					 "fdate"=>$_POST['fdate'],
-					  "cat"=>$_POST['cbcat']);
+					  "cat"=>$_POST['cbcat'],
+					  "plan"=>$_POST['plan'],
+					  "pricetable"=>$_POST['pricetable']);
 	}
 	if ($_GET['act']=="new")
 	{
@@ -228,21 +256,24 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   </p>
 		   <textarea cols="50" rows="10" name="detail" class="detail" id="detail">{$row[body]}</textarea>
 		   <p>
-			 <label for='pic'>فایل پلان</label>
+			 <label for="pic">فایل پلان</label>
 			 <span>*</span>
 		   </p>
-		   <div class='upload-file'>
-				<input type='file' name='plan' class='validate[required] pic ltr' id='plan' />  
-				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
-				<span class='action'>انتخاب فایل</span>
-			</div>
-			<div class="badboy"></div>
 		   <p>
-			 <label for='pic'>فایل جدول قیمت</label>
+		   		<input type="text" name="selectpic" class="selectpic" id="selectpic" value='{$row[image]}' />
+		   		<input type="text" class="validate[required] showadd" id="showadd" value='{$row[image]}' />
+		   		<a class="filebrowserbtn" id="planbrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
+		   		<a class="selectbuttton" id="selectplanbuttton" title="انتخاب">انتخاب</a>
+		   </p>
+		   <div class="badboy"></div>
+		   <div id="planbrowser"></div>		   
+		   <div class="badboy"></div>
+		   <p>
+			 <label for='price'>فایل جدول قیمت</label>
 			 <span>*</span>
 		   </p>
 		   <div class='upload-file'>
-				<input type='file' name='price' class='validate[required] pic ltr' id='price' />  
+				<input type='file' name='price' class='validate[required] pic ltr' id='price' value='{$row[price]}'/>  
 				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
 				<span class='action'>انتخاب فایل</span>
 		   </div>
@@ -299,7 +330,7 @@ $html=<<<cd
 <script type='text/javascript'>
 	$(document).ready(function(){		  	 		
 		$("#tab1").click(function(){
-		$.get('ajaxcommand.php?cmd=workpics', function(data) {
+		$.get('ajaxcommand.php?cmd=workpics&id={$_GET[wid]}', function(data) {
 						$('#catab1 ul').html(data);
 				});			
 			return false;

@@ -203,8 +203,8 @@ form .upload-file .action{
   width: 80px;
 }
 
-#filesbrowserbtn,
-#selectbuttton{
+#filesbrowserbtn,#planbrowserbtn,
+#selectbuttton,#selectplanbuttton{
   cursor: pointer;
   margin-right: -4px;
   margin-bottom: 0;

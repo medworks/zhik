@@ -1,0 +1,1 @@
+folder for news post

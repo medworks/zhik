@@ -57,7 +57,7 @@
     <div id="logo-wrapper">
         <div id="logo">
             <a href="./"><img src="themes/images/logo.png" alt="Zhik"></a>
-            <p class="ltr">Zhik.pro</p>
+            <p class="ltr">ZhikTower.com</p>
         </div>
     </div>
     <!-- Menu -->

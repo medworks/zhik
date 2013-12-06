@@ -260,8 +260,8 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   <p>
-		   		<input type="text" name="selectpic" class="selectpic" id="selectpic" value='{$row[image]}' />
-		   		<input type="text" class="validate[required] showadd" id="showadd" value='{$row[image]}' />
+		   		<input type="text" name="selectplan" class="selectpic" id="selectpplan" value='{$row[image]}' />
+		   		<input type="text" class="validate[required] showadd" id="showplanadd" value='{$row[image]}' />
 		   		<a class="filebrowserbtn" id="planbrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
 		   		<a class="selectbuttton" id="selectplanbuttton" title="انتخاب">انتخاب</a>
 		   </p>

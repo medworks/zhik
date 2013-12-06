@@ -114,7 +114,24 @@ $html.=<<<cd
 
 	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
 	               $('#typepreview').html(ext);
-
+cd;
+if ($_GET["item"]=="planfiles")
+{
+$html.=<<<cd
+	               $('#select').click(function(){
+	                    var value= srcimg;
+	                    $('#selectplan').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showplanadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+}
+else
+{
+$html.=<<<cd
 	               $('#select').click(function(){
 	                    var value= srcimg;
 	                    $('#selectpic').val(value);
@@ -125,6 +142,7 @@ $html.=<<<cd
 		});
 	</script>
 cd;
+}
 	echo $pics.$html;
 	 
 }

@@ -80,7 +80,7 @@ if ($_GET["cmd"]=="file")
 					  $filename = basename($file);
 					  $exe = substr($filename, strrpos($filename, '.') + 1);
 					  $name = substr($filename, 0, strrpos($filename, '.'));
-					  $allowedExts = array('jpg','jpeg','png','bmp','gif');
+					  $allowedExts = array('jpg','jpeg','png','bmp','gif','pdf');
 
 					if(in_array($exe, $allowedExts)){
                       $pics.=<<<cd
@@ -99,6 +99,67 @@ cd;
         }
     }
 	closedir($handle);
+if ($_GET["item"]=="planfiles")
+{
+$html.=<<<cd
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.cat-tabs-wrap a.select').click(function(){
+	                var srcimg= $(this).children('img').attr('src');
+	                $('img#planprevimage').attr('src',srcimg);
+	                
+	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+	                $('#plannamepreview').html(filename);
+
+	               var size= getImgSize(srcimg);
+	               $('#plansizepreview').html(size);
+
+	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+	               $('#plantypepreview').html(ext);
+
+	               $('#selectpl').click(function(){
+	                    var value= srcimg;
+	                    $('#selectplan').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showplanadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+}
+else
+if ($_GET["item"]=="pricefiles")
+{
+$html.=<<<cd
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.cat-tabs-wrap a.select').click(function(){
+	                var srcimg= $(this).children('img').attr('src');
+	                $('img#priceprevimage').attr('src',srcimg);
+	                
+	                var filename= $(this).parent().parent().children('h2').children('span.filename').text();
+	                $('#pricenamepreview').html(filename);
+
+	               var size= getImgSize(srcimg);
+	               $('#pricesizepreview').html(size);
+
+	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
+	               $('#pricetypepreview').html(ext);
+
+	               $('#selectpr').click(function(){
+	                    var value= srcimg;
+	                    $('#selectprice').val(value);
+	                    value= value.split('/').reverse()[0];
+	                    $('#showpriceadd').val(value);
+	               });
+	            });
+		});
+	</script>
+cd;
+}
+else
+{
 $html.=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){
@@ -114,24 +175,7 @@ $html.=<<<cd
 
 	               var ext = $(this).children('img').attr('src').split('.').pop().toLowerCase();
 	               $('#typepreview').html(ext);
-cd;
-if ($_GET["item"]=="planfiles")
-{
-$html.=<<<cd
-	               $('#selectpl').click(function(){
-	                    var value= srcimg;
-	                    $('#selectplan').val(value);
-	                    value= value.split('/').reverse()[0];
-	                    $('#showplanadd').val(value);
-	               });
-	            });
-		});
-	</script>
-cd;
-}
-else
-{
-$html.=<<<cd
+
 	               $('#select').click(function(){
 	                    var value= srcimg;
 	                    $('#selectpic').val(value);
@@ -187,10 +231,10 @@ if ($_GET["cmd"]=="workpics")
 								</a>
 							</div>
 cd;
-if(in_array($name.".".$exe, $files))
+if(in_array($filename, $files))
 {
 $pics.=<<<cd
-			<input type="checkbox" name="picslist[]" value="{$name}.{$exe}" checked/>
+			<input type="checkbox" name="picslist[]" value="{$filename}" checked/>
 			<h2><!-- <span class="highlight">نام فایل: </span> --><span class="filename">{$name}</span></h2>
 						</li>
 cd;

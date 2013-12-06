@@ -52,7 +52,7 @@
 	{			   
 		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`","`catid`","`plan`","`pricetable`");
 		$_POST["detail"] = addslashes($_POST["detail"]);
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'","'{$planfile}'","'{$pricefile}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'","'{$_POST[cbcat]}'","'{$_POST[selectplan]}'","'{$_POST[selectprice]}'");
 		if (!$db->InsertQuery('works',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -78,8 +78,8 @@
 						 "`sdate`"=>"'{$sdatetime}'",
 						 "`fdate`"=>"'{$fdatetime}'",
 						 "`catid`"=>"'{$_POST[cbcat]}'",
-						 "`plan`"=>"'{$_POST[cbcat]}'",
-						 "`pricetable`"=>"'{$_POST[cbcat]}'");
+						 "`plan`"=>"'{$_POST[selectplan]}'",
+						 "`pricetable`"=>"'{$_POST[selectprice]}'");
         $db->UpdateQuery("works",$values,array("id='{$_GET[wid]}'"));		
 		header('location:?item=worksmgr&act=mgr');
 		//$_GET["item"] = "worksmgr";
@@ -260,8 +260,8 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   <p>
-		   		<input type="text" name="selectplan" class="selectpic" id="selectpplan" value='{$row[image]}' />
-		   		<input type="text" class="validate[required] showadd" id="showplanadd" value='{$row[image]}' />
+		   		<input type="text" name="selectplan" class="selectpic" id="selectplan" value='{$row[plan]}' />
+		   		<input type="text" class="validate[required] showadd" id="showplanadd" value='{$row[plan]}' />
 		   		<a class="filebrowserbtn" id="planbrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
 		   		<a class="selectbuttton" id="selectplanbuttton" title="انتخاب">انتخاب</a>
 		   </p>
@@ -269,15 +269,18 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   <div id="planbrowser"></div>		   
 		   <div class="badboy"></div>
 		   <p>
-			 <label for='price'>فایل جدول قیمت</label>
+			 <label for="pic">فایل جدول قیمت</label>
 			 <span>*</span>
 		   </p>
-		   <div class='upload-file'>
-				<input type='file' name='price' class='validate[required] pic ltr' id='price' value='{$row[price]}'/>  
-				<span class='filename'>لطفا فابل مورد نظر را انتخاب کنید</span>
-				<span class='action'>انتخاب فایل</span>
-		   </div>
-			<div class="badboy"></div>
+		   <p>
+		   		<input type="text" name="selectprice" class="selectpic" id="selectprice" value='{$row[pricetable]}' />
+		   		<input type="text" class="validate[required] showadd" id="showpriceadd" value='{$row[pricetable]}' />
+		   		<a class="filebrowserbtn" id="pricebrowserbtn" name="worksmgr" title="گالری تصاویر">گالری تصاویر</a>
+		   		<a class="selectbuttton" id="selectpricebuttton" title="انتخاب">انتخاب</a>
+		   </p>
+		   <div class="badboy"></div>
+		   <div id="pricebrowser"></div>
+		   <div class="badboy"></div>
 		   <p>
 			<label for="sdate">تاریخ شروع </label>
 			<span>*</span><br /><br />

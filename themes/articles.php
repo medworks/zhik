@@ -78,7 +78,7 @@ cd;
 $linkFormat = 'article-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
-$html .= '<center>' . $pageNos . '</center>';
+$html .= '<div class="row"><div id="blog-pagination" class="large-12 columns pagination-centered rtl">' . $pageNos . '</div></div>';
 
 $html.=<<<cd
             </div>

@@ -178,31 +178,31 @@ function Pagination($itemsCount, $maxItemsInPage,
 		if ($currentPageNo > 1)
 		{
 			$link = str_replace("%PN%", 1, $linkFormat);
-			$firstPage = '<li class="firstPage"><a href="' . $link . '" class="pagenumber"><p>اولین</p></a></li>';
+			$firstPage = '<li class="firstPage"><a href="' . $link . '"><i class="icon-double-angle-right"></i></a></li>';
 			$link = str_replace("%PN%", $currentPageNo - 1, $linkFormat);
-			$prevPage = '<li class="prevPage"><a href="' . $link . '" class="pagenumber"><p>قبلی</p></a></li>';
+			$prevPage = '<li class="prevPage"><a href="' . $link . '"><i class="icon-angle-right"></i></a></li>';
 		}
 		if ($currentPageNo < $pageCount)
 		{
 			$link = str_replace("%PN%", $currentPageNo + 1, $linkFormat);
-			$nextPage = '<li class="nextPage"><a href="' . $link . '" class="pagenumber"><p>بعدی</p></a></li>';
+			$nextPage = '<li class="nextPage"><a href="' . $link . '"><i class="icon-angle-left"></i></a></li>';
 			$link = str_replace("%PN%", $pageCount, $linkFormat);
-			$lastPage = '<li class="lastPage"><a href="' . $link . '" class="pagenumber"><p>آخرین</p></a></li>';
+			$lastPage = '<li class="lastPage"><a href="' . $link . '"><i class="icon-double-angle-left"></i></a></li>';
 		}
 		$code = "<ul class='pagination'> {$firstPage}{$prevPage}";
 		for($i = $left; $i <= $right; $i++)
 		{
 			if ($i == $currentPageNo)
 			{
-				$code .= '<li><span class="pagenumber_selected"><p>' . $i . '</p></span></li>';
+				$code .= '<li class="current"><a>' . $i . '</a></li>';
 			}
 			else
 			{
 				$link = str_replace("%PN%", $i, $linkFormat);
-				$code .= '<li><a href="' . $link . '" class="pagenumber"><p>' . $i . '</p></a></li>';
+				$code .= '<li><a href="' . $link . '">' . $i . '</a></li>';
 			}
 		}
-		$code .= $nextPage . $lastPage . "</ul><div class='badboy'></div>";
+		$code .= $nextPage . $lastPage . "</ul>";
 		return $code;
 	}
 

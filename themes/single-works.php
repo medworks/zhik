@@ -79,15 +79,19 @@ $html.=<<<cd
                         </p>
                     </li>
                     <li>
-                        <strong>پلان</strong><i class=""></i>
+                        <strong>پلان</strong><i class=" icon-pencil"></i>
                         <p>
-                            Smart Living Co., Ltd.
+                            <a href="#">
+                                دانلود پلان
+                            </a>
                         </p>
                     </li>
 					<li>
-                        <strong>جدول قیمت</strong><i class=""></i>
+                        <strong>جدول قیمت</strong><i class="icon-money"></i>
                         <p>
-                            Smart Living Co., Ltd.
+                            <a href="#">
+                                دانلود قیمتها
+                            </a>
                         </p>
                     </li>
                     <li>

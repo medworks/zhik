@@ -1756,6 +1756,7 @@ ul.children {
 #blog-pagination li {
 	margin: 0;
 	line-height: 1;
+	margin: 0 2px;
 }
 
 #sidebar-wrapper,
